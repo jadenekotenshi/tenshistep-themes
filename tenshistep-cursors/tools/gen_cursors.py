@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate the TenshiSTEP IRIX Xcursor theme and its preview contact sheet.
+Generate the TenshiSTEP-CURSORS Xcursor theme and its preview contact sheet.
 
 Idiom: SGI IRIX / 4Dwm (Motif) pointers -- bold solid-black shapes with a
 crisp white outline for contrast on any background, an engineering crosshair,
@@ -18,7 +18,7 @@ Usage:
     ./gen_cursors.py --preview  # preview only
 
 Outputs (relative to the repo):
-    tenshistep-cursors/TenshiSTEP-IRIX/{index.theme,cursor.theme,cursors/*}
+    tenshistep-cursors/TenshiSTEP-CURSORS/{index.theme,cursor.theme,cursors/*}
     tenshistep-cursors/previews/cursors.png
 """
 import os
@@ -28,7 +28,7 @@ import sys
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
-THEME = os.path.join(ROOT, 'TenshiSTEP-IRIX')
+THEME = os.path.join(ROOT, 'TenshiSTEP-CURSORS')
 PREVIEW = os.path.join(ROOT, 'previews', 'cursors.png')
 
 N = 24          # nominal cursor grid
@@ -287,14 +287,14 @@ def build_theme():
     # to parse the theme (so it never appears in System Settings).
     with open(os.path.join(THEME, 'index.theme'), 'w') as f:
         f.write('[Icon Theme]\n'
-                'Name=TenshiSTEP IRIX\n'
+                'Name=TenshiSTEP-CURSORS\n'
                 'Comment=SGI IRIX-idiom pointers (TenshiNET / TenshiSTEP): bold '
                 'black shapes, white outline, engineering crosshair, Motif '
                 'wristwatch.\n'
                 'Inherits=Adwaita\n')
     # cursor.theme matches the Adwaita convention (Inherits=<own dir name>, no Name).
     with open(os.path.join(THEME, 'cursor.theme'), 'w') as f:
-        f.write('[Icon Theme]\nInherits=TenshiSTEP-IRIX\n')
+        f.write('[Icon Theme]\nInherits=TenshiSTEP-CURSORS\n')
     print('theme: %d pointers, %d aliases -> %s'
           % (len(C), n_alias, os.path.normpath(THEME)))
     return C

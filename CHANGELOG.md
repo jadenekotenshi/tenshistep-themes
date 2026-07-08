@@ -32,7 +32,7 @@ suite was renamed and its versioning restarted at 0.1.0.)
 - An offscreen **QStyle preview harness** (`qstyle-preview/`).
 
 ### Cursors & boot chain
-- Shared **TenshiSTEP-IRIX** SGI-idiom Xcursor set (69 cursors), installed to
+- Shared **TenshiSTEP-CURSORS** SGI-idiom Xcursor set (69 cursors), installed to
   `~/.icons` so the cursor KCM lists it.
 - **SDDM** greeter, **Plymouth** splash, and a **rEFInd** boot theme (light +
   dark) with banner, OS icons and HiDPI EFI splashes — a canonical angel

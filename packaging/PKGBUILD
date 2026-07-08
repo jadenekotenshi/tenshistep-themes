@@ -49,7 +49,7 @@ package() {
   done
 
   # --- shared IRIX cursor theme ------------------------------------------
-  _install_tree "tenshistep-cursors/TenshiSTEP-IRIX"  "icons/TenshiSTEP-IRIX"
+  _install_tree "tenshistep-cursors/TenshiSTEP-CURSORS"  "icons/TenshiSTEP-CURSORS"
 
   # --- boot chain (from the light bundle) --------------------------------
   [ -d tenshistep-plasma/sddm/TenshiSTEP ] && \

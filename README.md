@@ -10,7 +10,7 @@ A complete NeXTSTEP / OPENSTEP-inspired desktop and boot theme, branded
 |---|---|
 | `tenshistep-plasma/` | The light theme: Global Theme, colour scheme, Aurorae decoration, Konsole, Plasma style, Kvantum/QSS/QStyle, GTK3/4 theme, icon theme (~1,650 files — 588 apps, 521 mimetypes, 199 actions, 202 status, 106 devices), wallpaper package, SDDM, Plymouth, launchers, MIME types, and the software-update stack. Run `install.sh`. |
 | `tenshistep-darkmode/` | The dark variant (`TenshiSTEP-darkmode`) — icons, colours, Aurorae, Plasma style, Kvantum, GTK theme, wallpaper. |
-| `tenshistep-cursors/` | The **TenshiSTEP IRIX** Xcursor theme (SGI IRIX / 4Dwm idiom); wired into both Global Themes. |
+| `tenshistep-cursors/` | The **TenshiSTEP-CURSORS** Xcursor theme (SGI IRIX / 4Dwm idiom); wired into both Global Themes. |
 | `tenshistep-refind/` | rEFInd boot theme (light + dark) with 46 OS icons and HiDPI EFI splashes. |
 | `demo/` | The `EFI → rEFInd → Plymouth → SDDM → desktop` boot-sequence animation. |
 | `packaging/` | Arch `PKGBUILD` + AppStream MetaInfo for system-wide / KDE-Store distribution. |

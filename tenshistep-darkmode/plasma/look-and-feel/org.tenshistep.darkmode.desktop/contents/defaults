@@ -35,4 +35,4 @@ Theme=org.tenshistep.darkmode.desktop
 Engine=KSplashQML
 
 [kcminputrc][Mouse]
-cursorTheme=TenshiSTEP-IRIX
+cursorTheme=TenshiSTEP-CURSORS

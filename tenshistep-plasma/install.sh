@@ -38,28 +38,30 @@ if command -v gtk-update-icon-cache >/dev/null 2>&1; then
   gtk-update-icon-cache -q -f -t "$DATA/icons/TenshiSTEP" 2>/dev/null || true
 fi
 
-# 4b. Cursor theme (TenshiSTEP IRIX). ONE shared Xcursor theme used by BOTH the
-#     light and dark Global Themes (cursorTheme=TenshiSTEP-IRIX). It normally
+# 4b. Cursor theme (TenshiSTEP-CURSORS -- named distinctly from the "TenshiSTEP"
+#     icon theme to avoid a name clash). ONE shared Xcursor theme used by BOTH the
+#     light and dark Global Themes (cursorTheme=TenshiSTEP-CURSORS). It normally
 #     lives in the repo sibling dir; also accept a bundled ./cursors/ copy in case
 #     this theme dir was lifted out on its own.
 CURSORS=""
-for _c in "$SRC/../tenshistep-cursors/TenshiSTEP-IRIX" \
-          "$SRC/cursors/TenshiSTEP-IRIX" \
-          "$SRC/../TenshiSTEP-IRIX"; do
+for _c in "$SRC/../tenshistep-cursors/TenshiSTEP-CURSORS" \
+          "$SRC/cursors/TenshiSTEP-CURSORS" \
+          "$SRC/../TenshiSTEP-CURSORS"; do
   [ -d "$_c" ] && CURSORS="$_c" && break
 done
 if [ -n "$CURSORS" ]; then
   # Cursor themes are found via XCURSOR_PATH (~/.icons, /usr/share/icons, ...),
   # which does NOT include ~/.local/share/icons -- so install to ~/.icons, else the
-  # cursor KCM never lists it. Also clear any stale copy under ~/.local/share/icons.
+  # cursor KCM never lists it. Clear the target plus any stale pre-rename copy (the
+  # old TenshiSTEP-IRIX name).
   install -d "$HOME/.icons"
-  rm -rf "$HOME/.icons/TenshiSTEP-IRIX" "$DATA/icons/TenshiSTEP-IRIX"
-  cp -R "$CURSORS" "$HOME/.icons/TenshiSTEP-IRIX"
-  echo "  - cursor theme  -> $HOME/.icons/TenshiSTEP-IRIX/ (shared IRIX cursors)"
+  rm -rf "$HOME/.icons/TenshiSTEP-CURSORS" "$HOME/.icons/TenshiSTEP-IRIX" "$DATA/icons/TenshiSTEP-IRIX"
+  cp -R "$CURSORS" "$HOME/.icons/TenshiSTEP-CURSORS"
+  echo "  - cursor theme  -> $HOME/.icons/TenshiSTEP-CURSORS/ (shared IRIX-idiom cursors)"
 else
-  echo "  !! CURSOR THEME NOT INSTALLED: could not find tenshistep-cursors/TenshiSTEP-IRIX" >&2
+  echo "  !! CURSOR THEME NOT INSTALLED: could not find tenshistep-cursors/TenshiSTEP-CURSORS" >&2
   echo "     next to this theme dir. Keep the repo layout intact, or copy that dir to" >&2
-  echo "     ./cursors/TenshiSTEP-IRIX and re-run." >&2
+  echo "     ./cursors/TenshiSTEP-CURSORS and re-run." >&2
 fi
 
 # 5. Plasma Style (desktop/widget theme)
