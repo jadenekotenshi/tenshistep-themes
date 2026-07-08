@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import "../components"
+import "nextui"
 
 // ─────────────────────────────────────────────────────────────────────────
 // TenshiSTEP lock screen (kscreenlocker greeter) — laid out to echo the SDDM
@@ -49,7 +49,7 @@ Item {
     // brand: angel + title, high on screen so it clears the box
     Image {
         id: brand
-        source: "../splash/images/logo.svg"
+        source: "nextui/logo.svg"
         width: Math.round(root.height * 0.24); height: width
         sourceSize.width: 512; sourceSize.height: 512
         fillMode: Image.PreserveAspectFit

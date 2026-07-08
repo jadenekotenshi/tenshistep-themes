@@ -1,10 +1,10 @@
 import QtQuick 2.15
-import "../components"
+import "nextui"
 
 // ─────────────────────────────────────────────────────────────────────────
-// TenshiSTEP lock screen (kscreenlocker greeter) — laid out to echo the SDDM
-// greeter: brand angel high-centre, a small top-right clock, and a central
-// NeXT box whose bottom holds the control buttons.
+// TenshiSTEP-darkmode lock screen (kscreenlocker greeter) — laid out to echo
+// the SDDM greeter: brand angel high-centre, a small top-right clock, and a
+// central NeXT box whose bottom holds the control buttons.
 //
 // Auth uses the documented kscreenlocker contract: the greeter injects an
 // `authenticator` context object; the password is submitted with
@@ -25,12 +25,12 @@ Item {
     property string userName: (typeof kscreenlocker_userName !== "undefined" && kscreenlocker_userName)
                               ? ("" + kscreenlocker_userName) : "Screen Locked"
 
-    // dimmed OPENSTEP-blue backdrop (matches the SDDM greeter)
+    // dimmed gunmetal backdrop (matches the SDDM greeter)
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
-            GradientStop { position: 0.0; color: "#93a6ba" }
-            GradientStop { position: 1.0; color: "#5f7186" }
+            GradientStop { position: 0.0; color: "#242730" }
+            GradientStop { position: 1.0; color: "#14161a" }
         }
     }
 
@@ -38,7 +38,7 @@ Item {
     Text {
         id: clock
         anchors.right: parent.right; anchors.top: parent.top; anchors.margins: 26
-        color: "#ffffff"; font.family: "Helvetica"; font.pixelSize: 17; font.bold: true
+        color: "#eef2f6"; font.family: "Helvetica"; font.pixelSize: 17; font.bold: true
         style: Text.Raised; styleColor: "#40000000"
     }
     Timer {
@@ -49,7 +49,7 @@ Item {
     // brand: angel + title, high on screen so it clears the box
     Image {
         id: brand
-        source: "../splash/images/logo.svg"
+        source: "nextui/logo.svg"
         width: Math.round(root.height * 0.24); height: width
         sourceSize.width: 512; sourceSize.height: 512
         fillMode: Image.PreserveAspectFit
@@ -61,7 +61,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         y: brand.y + brand.height + Math.round(root.height * 0.015)
         text: "TenshiNET"
-        color: "#ffffff"; font.family: "Helvetica"; font.bold: true
+        color: "#eef2f6"; font.family: "Helvetica"; font.bold: true
         font.pixelSize: Math.round(root.height * 0.046)
         style: Text.Raised; styleColor: "#40000000"
     }
@@ -69,7 +69,7 @@ Item {
     // hard drop shadow behind the box
     Rectangle {
         x: dialog.x + 6; y: dialog.y + 6; z: -1
-        width: dialog.width; height: dialog.height; color: "#33000000"
+        width: dialog.width; height: dialog.height; color: "#55000000"
     }
 
     // central NeXT unlock box
@@ -79,19 +79,19 @@ Item {
         height: 58 + body.implicitHeight
         anchors.horizontalCenter: parent.horizontalCenter
         y: Math.round(root.height * 0.50)
-        base: "#a6adb8"
+        base: "#3b4048"
         raised: true
 
         Rectangle {
             id: titleBar
-            x: 2; y: 2; width: parent.width - 4; height: 26; color: "#4a3fa0"
+            x: 2; y: 2; width: parent.width - 4; height: 26; color: "#6a5fd6"
             Rectangle {
                 anchors { top: parent.top; left: parent.left; right: parent.right }
-                height: 1; color: "#ffffff"; opacity: 0.45
+                height: 1; color: "#ffffff"; opacity: 0.40
             }
             Rectangle {
                 anchors { bottom: parent.bottom; left: parent.left; right: parent.right }
-                height: 1; color: "#1a1a1a"; opacity: 0.35
+                height: 1; color: "#1a1a1a"; opacity: 0.40
             }
             Text {
                 anchors.centerIn: parent; text: root.userName
@@ -108,7 +108,7 @@ Item {
 
             Text {
                 text: "Password:"
-                color: "#1a1a1a"; font.family: "Helvetica"; font.pixelSize: 12; font.bold: true
+                color: "#dcdfe4"; font.family: "Helvetica"; font.pixelSize: 12; font.bold: true
             }
             NeXTField {
                 id: pw
@@ -120,14 +120,14 @@ Item {
                 id: err
                 width: parent.width
                 text: root.message; visible: root.message !== ""
-                color: "#8f2218"; font.family: "Helvetica"; font.pixelSize: 12; wrapMode: Text.Wrap
+                color: "#d67a6f"; font.family: "Helvetica"; font.pixelSize: 12; wrapMode: Text.Wrap
             }
 
             // NeXT groove separator
             Item {
                 width: parent.width; height: 3
-                Rectangle { width: parent.width; height: 1; color: "#5c626b" }
-                Rectangle { y: 1; width: parent.width; height: 1; color: "#ffffff" }
+                Rectangle { width: parent.width; height: 1; color: "#14161a" }
+                Rectangle { y: 1; width: parent.width; height: 1; color: "#565d67" }
             }
 
             // control buttons, bottom of the box
@@ -135,12 +135,12 @@ Item {
                 width: parent.width; height: 30
                 NeXTButton {
                     anchors.left: parent.left; anchors.verticalCenter: parent.verticalCenter
-                    width: 120; height: 28; text: "Cancel"; textColor: "#5c626b"
+                    width: 120; height: 28; text: "Cancel"; textColor: "#9aa0a8"
                     onClicked: { pw.text = ""; root.message = ""; pw.field.forceActiveFocus() }
                 }
                 NeXTButton {
                     anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter
-                    width: 120; height: 28; text: "Unlock"; textColor: "#4a3fa0"
+                    width: 120; height: 28; text: "Unlock"; textColor: "#dcdfe4"
                     onClicked: root.submit()
                 }
             }

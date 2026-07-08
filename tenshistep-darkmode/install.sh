@@ -133,6 +133,37 @@ if [ -d "$SRC/plasma/kwin/tabbox/org.tenshistep.darkmode.switcher" ]; then
   echo "  - alt-tab switch-> $DATA/kwin/tabbox/org.tenshistep.darkmode.switcher/"
 fi
 
+# 6c. Lock screen (NeXT unlock box). Plasma 6 loads the lock screen ONLY from the
+#     desktop shell package -- NOT from a Global Theme/look-and-feel -- so it has
+#     to be installed there, which needs root. The distro original is backed up as
+#     *.tenshistep-orig (once); revert instructions are printed at the end. Without
+#     root this step is skipped with instructions rather than failing the install.
+LOCK_SRC="$SRC/lockscreen"
+SHELL_LOCK="/usr/share/plasma/shells/org.kde.plasma.desktop/contents/lockscreen"
+if [ -d "$LOCK_SRC" ] && [ -d "$SHELL_LOCK" ]; then
+  _sudo=""
+  if [ "$(id -u)" -eq 0 ]; then :
+  elif sudo -n true 2>/dev/null; then _sudo="sudo"
+  elif [ -t 0 ] && sudo -v 2>/dev/null; then _sudo="sudo"
+  fi
+  if [ "$(id -u)" -eq 0 ] || [ -n "$_sudo" ]; then
+    if $_sudo test ! -f "$SHELL_LOCK/LockScreenUi.qml.tenshistep-orig"; then
+      $_sudo cp -a "$SHELL_LOCK/LockScreenUi.qml" "$SHELL_LOCK/LockScreenUi.qml.tenshistep-orig" || true
+    fi
+    if $_sudo cp "$LOCK_SRC/LockScreenUi.qml" "$SHELL_LOCK/LockScreenUi.qml" \
+       && $_sudo rm -rf "$SHELL_LOCK/nextui" \
+       && $_sudo cp -R "$LOCK_SRC/nextui" "$SHELL_LOCK/nextui"; then
+      echo "  - lock screen   -> $SHELL_LOCK/ (NeXT unlock box; original backed up)"
+    else
+      echo "  !! LOCK SCREEN install failed (could not write $SHELL_LOCK)." >&2
+    fi
+  else
+    echo "  -- lock screen  -> skipped (needs root). To install the NeXT lock screen:" >&2
+    echo "       sudo cp '$LOCK_SRC/LockScreenUi.qml' '$SHELL_LOCK/'" >&2
+    echo "       sudo cp -R '$LOCK_SRC/nextui' '$SHELL_LOCK/'" >&2
+  fi
+fi
+
 cat <<'EOF'
 
 Done. Now apply it:
@@ -159,6 +190,14 @@ Done. Now apply it:
     System Settings -> Global Theme -> "TenshiSTEP-darkmode"
     (or:  lookandfeeltool -a org.tenshistep.darkmode.desktop)
     To revert:  lookandfeeltool -a org.kde.breeze.desktop
+
+  Lock screen (NeXT unlock box):
+    Installed into the desktop shell package (Plasma 6 loads the lock screen only
+    from there, not from a Global Theme). It is active on the next lock -- test
+    with Meta+L. To revert to the stock lock screen:
+      L=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/lockscreen
+      sudo cp "$L/LockScreenUi.qml.tenshistep-orig" "$L/LockScreenUi.qml"
+      sudo rm -rf "$L/nextui"
 
   Cursor + application style:
     The Global Theme applies the TenshiSTEP IRIX cursors automatically. The

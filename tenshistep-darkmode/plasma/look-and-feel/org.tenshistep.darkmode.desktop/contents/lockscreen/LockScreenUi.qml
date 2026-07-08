@@ -157,23 +157,41 @@ Item {
         }
     }
 
+    // Begin/restart the PAM conversation — required before respond() does anything.
+    function startAuth() {
+        if (typeof authenticator !== "undefined" && authenticator
+                && typeof authenticator.startAuthenticating === "function")
+            authenticator.startAuthenticating()
+    }
+
     Connections {
         target: (typeof authenticator !== "undefined") ? authenticator : null
         ignoreUnknownSignals: true
-        function onSucceeded() { /* greeter dismisses the lock screen */ }
-        function onFailed() {
-            root.message = "Incorrect password."
+        function onSucceeded() {
+            // password unlock: quit the greeter so kscreenlocker unlocks the session
+            if (authenticator.hadPrompt) Qt.quit()
+        }
+        function onFailed(kind) {
+            if (kind !== undefined && kind !== 0) return   // ignore non-interactive authenticators
+            root.message = "Authentication failed — please try again."
             pw.text = ""
             pw.field.forceActiveFocus()
-        }
-        function onErrorMessageChanged() {
-            if (authenticator.errorMessage) root.message = authenticator.errorMessage
+            root.startAuth()                                // re-arm PAM for the next attempt
         }
         function onInfoMessageChanged() {
             if (authenticator.infoMessage) root.message = authenticator.infoMessage
         }
+        function onErrorMessageChanged() {
+            if (authenticator.errorMessage) root.message = authenticator.errorMessage
+        }
+        function onPromptChanged() {
+            if (authenticator.prompt) root.message = authenticator.prompt
+        }
+        function onPromptForSecretChanged() {
+            pw.field.forceActiveFocus()
+        }
     }
 
     Keys.onEscapePressed: { pw.text = ""; root.message = "" }
-    Component.onCompleted: pw.field.forceActiveFocus()
+    Component.onCompleted: { root.startAuth(); pw.field.forceActiveFocus() }
 }

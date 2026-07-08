@@ -1,5 +1,6 @@
 {
     "KPackageStructure": "Plasma/LookAndFeel",
+    "X-Plasma-APIVersion": "2",
     "KPlugin": {
         "Authors": [
             {
