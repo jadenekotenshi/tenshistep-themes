@@ -1,0 +1,9 @@
+{
+    "KPackageStructure": "Wallpaper/Images",
+    "KPlugin": {
+        "Authors": [{ "Name": "TenshiNET" }],
+        "Id": "TenshiSTEP-darkmode",
+        "License": "MIT",
+        "Name": "TenshiSTEP-darkmode"
+    }
+}

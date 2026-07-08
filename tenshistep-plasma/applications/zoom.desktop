@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Zoom
+Comment=Video conferencing
+Exec=zoom
+Icon=zoom
+Terminal=false
+Categories=Network;
+StartupWMClass=zoom

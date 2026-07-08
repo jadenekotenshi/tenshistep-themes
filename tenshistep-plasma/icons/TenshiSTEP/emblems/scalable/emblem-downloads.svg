@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP downloads emblem: down arrow to tray -->
+  <path d="M10 34 V40 H38 V34" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M20 6 H28 V18 H35 L24 31 L13 18 H20 Z" fill="#9cafc4" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M21.3 8 V18 H15" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+</svg>

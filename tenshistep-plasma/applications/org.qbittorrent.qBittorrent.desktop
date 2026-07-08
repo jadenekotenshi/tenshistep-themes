@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=qBittorrent
+Comment=BitTorrent client
+Exec=qbittorrent
+Icon=qbittorrent
+Terminal=false
+Categories=Network;FileTransfer;
+StartupWMClass=qbittorrent

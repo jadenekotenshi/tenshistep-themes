@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <path d="M11 5 H30 L38 13 V43 H11 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M30 5 V13 H38 Z" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.2" stroke-linejoin="round"/>
+  <text x="24" y="34" font-family="Georgia,serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#4a3fa0">Ag</text>
+</svg>

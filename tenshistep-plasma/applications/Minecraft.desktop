@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Minecraft
+Comment=Minecraft launcher
+Exec=minecraft-launcher
+Icon=minecraft
+Terminal=false
+Categories=Game;
+StartupWMClass=Minecraft

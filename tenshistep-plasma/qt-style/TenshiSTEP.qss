@@ -1,0 +1,221 @@
+/* TenshiSTEP — OPENSTEP/NeXT Qt Style Sheet.
+   A lightweight "widget style" for any Qt app: apply via qt5ct/qt6ct
+   (Appearance -> Style Sheets) or `app -stylesheet TenshiSTEP.qss`.
+   Chiselled two-tone bevels (white top/left, dark bottom/right) in the
+   OPENSTEP-muted palette. Pairs with the TenshiSTEP colour scheme. */
+
+QWidget {
+    background-color: #a0a7b2;
+    color: #1a1a1a;
+    selection-background-color: #4a3fa0;
+    selection-color: #ffffff;
+}
+
+QToolTip {
+    background-color: #e9e7db;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 3px;
+}
+
+/* --- raised beveled buttons --- */
+QPushButton, QToolButton, QComboBox, QSpinBox, QDoubleSpinBox,
+QDateTimeEdit, QTabBar::tab {
+    background-color: #a6adb8;
+    color: #1a1a1a;
+    border: 2px solid;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #5f6b76;
+    border-bottom-color: #5f6b76;
+    padding: 3px 10px;
+}
+QPushButton:hover, QToolButton:hover, QComboBox:hover {
+    background-color: #b8b8b8;
+}
+QPushButton:pressed, QToolButton:pressed, QComboBox:on,
+QPushButton:checked, QToolButton:checked {
+    background-color: #8e95a0;
+    border-top-color: #5f6b76;
+    border-left-color: #5f6b76;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    padding-top: 4px;
+    padding-left: 11px;
+}
+QPushButton:default { border-color: #4a3fa0 #241d58 #241d58 #4a3fa0; }
+QPushButton:disabled, QToolButton:disabled {
+    color: #7a7a7a; background-color: #b0b7c2;
+    border-color: #c9ced6 #8e95a0 #8e95a0 #c9ced6;
+}
+QPushButton:focus, QComboBox:focus { border-color: #4a3fa0; }
+
+/* --- recessed inputs --- */
+QLineEdit, QPlainTextEdit, QTextEdit, QAbstractSpinBox, QComboBox:editable,
+QListView, QTreeView, QTableView, QAbstractItemView {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 2px solid;
+    border-top-color: #5c626b;
+    border-left-color: #5c626b;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    selection-background-color: #4a3fa0;
+    selection-color: #ffffff;
+}
+QLineEdit:focus, QPlainTextEdit:focus, QTextEdit:focus { border-color: #4a3fa0; }
+
+/* NeXT pop-up button: a recessed inset well holds the arrow, so a dropdown
+   reads clearly differently from a (uniformly raised) push button. */
+QComboBox { padding-right: 26px; }
+QComboBox::drop-down {
+    subcontrol-origin: padding; subcontrol-position: top right;
+    width: 18px; margin: 4px 4px 4px 0;
+    background-color: #9aa1ac;
+    border: 2px solid;
+    border-top-color: #5c626b; border-left-color: #5c626b;
+    border-right-color: #ffffff; border-bottom-color: #ffffff;
+}
+QComboBox::down-arrow {
+    width: 0; height: 0;
+    border-left: 4px solid transparent; border-right: 4px solid transparent;
+    border-top: 5px solid #1a1a1a;
+}
+QComboBox::down-arrow:on { top: 1px; }
+
+/* spin buttons: recessed inset wells (matching the combobox), one per arrow */
+QAbstractSpinBox::up-button {
+    subcontrol-origin: border; subcontrol-position: top right;
+    width: 18px; margin: 3px 3px 0 0;
+    background-color: #9aa1ac; border: 2px solid;
+    border-top-color: #5c626b; border-left-color: #5c626b;
+    border-right-color: #ffffff; border-bottom-color: #ffffff;
+}
+QAbstractSpinBox::down-button {
+    subcontrol-origin: border; subcontrol-position: bottom right;
+    width: 18px; margin: 0 3px 3px 0;
+    background-color: #9aa1ac; border: 2px solid;
+    border-top-color: #5c626b; border-left-color: #5c626b;
+    border-right-color: #ffffff; border-bottom-color: #ffffff;
+}
+QAbstractSpinBox::up-arrow {
+    width: 0; height: 0;
+    border-left: 4px solid transparent; border-right: 4px solid transparent;
+    border-bottom: 5px solid #1a1a1a;
+}
+QAbstractSpinBox::down-arrow {
+    width: 0; height: 0;
+    border-left: 4px solid transparent; border-right: 4px solid transparent;
+    border-top: 5px solid #1a1a1a;
+}
+
+/* --- menus --- */
+QMenuBar { background-color: #9ba2ad; border-bottom: 1px solid #1a1a1a; }
+QMenuBar::item { background: transparent; padding: 4px 10px; }
+QMenuBar::item:selected { background-color: #4a3fa0; color: #ffffff; }
+QMenu {
+    background-color: #a6adb8;
+    border: 2px solid;
+    border-top-color: #ffffff; border-left-color: #ffffff;
+    border-right-color: #5f6b76; border-bottom-color: #5f6b76;
+}
+QMenu::item { padding: 4px 24px; }
+QMenu::item:selected { background-color: #4a3fa0; color: #ffffff; }
+QMenu::separator { height: 1px; background: #5c626b; margin: 3px 6px; }
+
+/* --- checkboxes / radios --- */
+QCheckBox::indicator, QRadioButton::indicator {
+    width: 14px; height: 14px;
+    background-color: #ffffff;
+    border: 1px solid #1a1a1a;
+}
+QRadioButton::indicator { border-radius: 8px; }
+QCheckBox::indicator:checked  { image: none; background-color: #6ba85d; }
+QRadioButton::indicator:checked { background-color: #241d58; }
+QCheckBox::indicator:disabled, QRadioButton::indicator:disabled { background-color: #c9ced6; }
+
+/* --- NeXT scrollbars: beveled groove + raised handle --- */
+/* NeXTSTEP grouped both arrows together at the far end (bottom / right) of the
+   scrollbar rather than one at each end. Qt's QScrollBar only has two arrow
+   sub-controls (sub-line = up/left, add-line = down/right), so we position both
+   at that far end. A third top/left arrow and the handle's centre dimple aren't
+   expressible in a plain QScrollBar — they need a real QStyle/Kvantum engine
+   (see the theme's preview mock for the intended full look). */
+QScrollBar:vertical   { background: #8f96a1; width: 16px; border: 1px solid #1a1a1a; }
+QScrollBar:horizontal { background: #8f96a1; height: 16px; border: 1px solid #1a1a1a; }
+QScrollBar::handle {
+    background-color: #a6adb8;
+    border: 2px solid;
+    border-top-color: #ffffff; border-left-color: #ffffff;
+    border-right-color: #5f6b76; border-bottom-color: #5f6b76;
+}
+QScrollBar::handle:vertical   { min-height: 28px; }
+QScrollBar::handle:horizontal { min-width: 28px; }
+QScrollBar::add-line, QScrollBar::sub-line {
+    background-color: #a6adb8; border: 1px solid #1a1a1a;
+    width: 16px; height: 16px; subcontrol-origin: margin;
+}
+/* group both arrows at the bottom (vertical) / right (horizontal) — NeXT style */
+QScrollBar::sub-line:vertical   { subcontrol-position: bottom; }
+QScrollBar::add-line:vertical   { subcontrol-position: bottom; }
+QScrollBar::sub-line:horizontal { subcontrol-position: right; }
+QScrollBar::add-line:horizontal { subcontrol-position: right; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
+
+/* --- progress bar: 3D metallic groove + fill --- */
+QProgressBar {
+    color: #120d33;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8a95a1, stop:0.18 #c4ced8, stop:0.55 #a6b0ba, stop:1 #b8c2cc);
+    border: 2px solid; border-top-color: #5c626b; border-left-color: #5c626b;
+    border-right-color: #ffffff; border-bottom-color: #ffffff;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #a79cec, stop:0.12 #d2caf7, stop:0.5 #4a3fa0,
+        stop:0.54 #453a97, stop:0.9 #312a7a, stop:1 #241d58);
+    border-top: 1px solid #e4defc;
+    border-bottom: 1px solid #191341;
+}
+
+/* --- sliders --- */
+QSlider::groove:horizontal { height: 6px; background: #888f9a; border: 1px solid #1a1a1a; }
+QSlider::groove:vertical   { width: 6px; background: #888f9a; border: 1px solid #1a1a1a; }
+/* slider handle: raised bevel + a centre inset bar, like the scrollbar thumb */
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #a6adb8, stop:0.44 #a6adb8, stop:0.44 #5c626b, stop:0.50 #5c626b,
+        stop:0.50 #ffffff, stop:0.56 #ffffff, stop:0.56 #a6adb8, stop:1 #a6adb8);
+    border: 2px solid; border-top-color: #ffffff; border-left-color: #ffffff;
+    border-right-color: #5f6b76; border-bottom-color: #5f6b76;
+    width: 16px; height: 22px; margin: -8px 0;
+}
+QSlider::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #a6adb8, stop:0.44 #a6adb8, stop:0.44 #5c626b, stop:0.50 #5c626b,
+        stop:0.50 #ffffff, stop:0.56 #ffffff, stop:0.56 #a6adb8, stop:1 #a6adb8);
+    border: 2px solid; border-top-color: #ffffff; border-left-color: #ffffff;
+    border-right-color: #5f6b76; border-bottom-color: #5f6b76;
+    height: 16px; width: 22px; margin: 0 -8px;
+}
+
+/* --- tabs / group boxes / headers --- */
+QTabWidget::pane {
+    border: 2px solid; border-top-color: #ffffff; border-left-color: #ffffff;
+    border-right-color: #5f6b76; border-bottom-color: #5f6b76;
+    background: #a6adb8;
+}
+QTabBar::tab:selected { background-color: #a6adb8; }
+QTabBar::tab:!selected { background-color: #8e959f; }
+QGroupBox {
+    border: 2px solid; border-top-color: #5c626b; border-left-color: #5c626b;
+    border-right-color: #ffffff; border-bottom-color: #ffffff;
+    margin-top: 10px; padding-top: 6px;
+}
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 4px; }
+QHeaderView::section {
+    background-color: #a6adb8; color: #1a1a1a; padding: 3px 6px;
+    border: 1px solid #1a1a1a;
+    border-top-color: #ffffff; border-left-color: #ffffff;
+}

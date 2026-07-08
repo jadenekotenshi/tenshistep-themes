@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Cool Retro Term
+Comment=Retro CRT terminal
+Exec=cool-retro-term
+Icon=cool-retro-term
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=cool-retro-term

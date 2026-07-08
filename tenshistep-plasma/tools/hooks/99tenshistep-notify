@@ -1,0 +1,2 @@
+// Install to /etc/apt/apt.conf.d/99tenshistep-notify (needs root).
+APT::Update::Post-Invoke-Success { "for u in $(loginctl list-users --no-legend | awk '{print $2}'); do sudo -u \"$u\" XDG_RUNTIME_DIR=/run/user/$(id -u \"$u\") systemctl --user start tenshistep-update-notifier.service 2>/dev/null || true; done"; };

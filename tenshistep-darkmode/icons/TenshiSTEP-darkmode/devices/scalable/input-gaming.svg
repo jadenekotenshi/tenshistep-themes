@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP gamepad -->
+  <path d="M17 17 H31 Q39 17 42 27 Q44 35 38 36 Q34 36.5 31 32 H17 Q14 36.5 10 36 Q4 35 6 27 Q9 17 17 17 Z" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M17 18.6 H31" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <g fill="#3a3a3a"><rect x="12" y="24" width="9" height="2.6"/><rect x="14.7" y="21.3" width="2.6" height="8"/></g>
+  <circle cx="32" cy="24" r="1.9" fill="#3a3a3a"/>
+  <circle cx="36" cy="27.5" r="1.9" fill="#3a3a3a"/>
+  <circle cx="32" cy="31" r="1.9" fill="#3a3a3a"/>
+  <circle cx="28" cy="27.5" r="1.9" fill="#3a3a3a"/>
+</svg>

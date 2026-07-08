@@ -1,0 +1,14 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Id": "org.tenshistep.updates",
+        "Name": "TenshiSTEP Updates",
+        "Description": "Shows available software updates with the TenshiSTEP status icons",
+        "Icon": "system-software-update",
+        "Category": "System Information",
+        "Authors": [ { "Name": "TenshiSTEP" } ],
+        "Version": "1.0",
+        "License": "MIT",
+        "EnabledByDefault": true
+    }
+}

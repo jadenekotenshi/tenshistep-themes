@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP mail client: envelope -->
+  <rect x="5" y="12" width="38" height="24" rx="2" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="1.6"/>
+  <path d="M6.5 13.5 H41.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M6 13 L24 27 L42 13" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M6 35 L18 24 M42 35 L30 24" fill="none" stroke="#322c78" stroke-width="1.3"/>
+</svg>

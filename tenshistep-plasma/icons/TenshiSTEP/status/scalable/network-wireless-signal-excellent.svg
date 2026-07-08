@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP wifi -->
+  <path d="M19.05 29.05 A 7 7 0 0 1 28.95 29.05" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M14.81 24.81 A 13 13 0 0 1 33.19 24.81" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M10.56 20.56 A 19 19 0 0 1 37.44 20.56" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M6.32 16.32 A 25 25 0 0 1 41.68 16.32" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="33" r="2.6" fill="#1a1a1a"/>
+</svg>

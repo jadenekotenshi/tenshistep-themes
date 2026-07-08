@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Claws Mail
+Comment=Lightweight email client
+Exec=claws-mail
+Icon=claws-mail
+Terminal=false
+Categories=Network;Email;
+StartupWMClass=Claws-mail

@@ -1,0 +1,12 @@
+# Install to /etc/pacman.d/hooks/50-tenshistep-notify.hook (needs root).
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = TenshiSTEP update-notifier
+When = PostTransaction
+Exec = /bin/sh -c 'for u in $(loginctl list-users --no-legend | awk "{print \$2}"); do sudo -u "$u" XDG_RUNTIME_DIR=/run/user/$(id -u "$u") systemctl --user start tenshistep-update-notifier.service 2>/dev/null || true; done'

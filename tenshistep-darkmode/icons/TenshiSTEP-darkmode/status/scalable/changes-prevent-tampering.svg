@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP changes-prevent-tampering: closed padlock -->
+  <path d="M15 22 V16 A9 9 0 0 1 33 16 V22" fill="none" stroke="#cdd1d7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M17.6 22 V16 A6.4 6.4 0 0 1 30.4 16 V22" fill="none" stroke="#b0b0b0" stroke-width="1.3"/>
+  <rect x="10" y="22" width="28" height="19" rx="3" fill="#d3b64f" stroke="#cdd1d7" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M11.5 23.5 H36" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M11 39.5 H37 M36.5 23.5 V40" fill="none" stroke="#7e6d2f" stroke-width="1.2"/>
+  <circle cx="24" cy="30" r="3" fill="#cdd1d7"/>
+  <path d="M24 30 V36" fill="none" stroke="#cdd1d7" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Gmail
+Comment=Google email
+Exec=xdg-open https://mail.google.com
+Icon=gmail
+Terminal=false
+Categories=Network;Email;

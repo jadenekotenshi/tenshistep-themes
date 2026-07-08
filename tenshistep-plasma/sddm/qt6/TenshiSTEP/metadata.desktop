@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=TenshiSTEP
+Description=OPENSTEP-inspired colour login theme with a chiselled NeXT panel
+Author=themes
+License=MIT
+Type=sddm-theme
+Version=1.0
+Website=
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=
+Theme-Id=TenshiSTEP
+Theme-API=2.0
+QtVersion=6

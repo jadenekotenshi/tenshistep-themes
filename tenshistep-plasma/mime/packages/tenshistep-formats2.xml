@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- config / data -->
+  <mime-type type="text/x-toml"><comment>TOML document</comment><glob pattern="*.toml"/><glob pattern="Cargo.lock"/></mime-type>
+  <mime-type type="text/x-ini"><comment>INI configuration</comment><glob pattern="*.ini"/></mime-type>
+  <mime-type type="text/x-config"><comment>Configuration file</comment><glob pattern="*.conf"/><glob pattern="*.cfg"/></mime-type>
+  <mime-type type="application/x-ms-reg">
+    <comment>Windows registry export</comment>
+    <magic priority="60"><match type="string" offset="0" value="Windows Registry Editor"/><match type="string" offset="0" value="REGEDIT4"/></magic>
+    <glob pattern="*.reg"/>
+  </mime-type>
+  <mime-type type="application/x-windows-registry-hive">
+    <comment>Windows registry hive</comment>
+    <magic priority="70"><match type="string" offset="0" value="regf"/></magic>
+    <glob pattern="NTUSER.DAT"/><glob pattern="*.hive"/>
+  </mime-type>
+  <!-- libraries -->
+  <mime-type type="application/x-dylib"><comment>Mach-O dynamic library</comment><glob pattern="*.dylib"/></mime-type>
+  <mime-type type="application/x-ms-dll"><comment>Windows dynamic-link library</comment><glob pattern="*.dll"/></mime-type>
+  <!-- disk / VM images -->
+  <mime-type type="application/x-floppy-image"><comment>Floppy disk image</comment><glob pattern="*.ima"/><glob pattern="*.adf"/><glob pattern="*.flp" weight="20"/></mime-type>
+  <mime-type type="application/x-raw-disk-image"><comment>Raw disk image</comment><glob pattern="*.img" weight="20"/></mime-type>
+  <mime-type type="application/x-vdi"><comment>VirtualBox disk image</comment><glob pattern="*.vdi"/></mime-type>
+  <mime-type type="application/x-vmdk"><comment>VMware disk image</comment><glob pattern="*.vmdk"/></mime-type>
+  <mime-type type="application/x-vhd"><comment>Virtual hard disk</comment><glob pattern="*.vhd"/><glob pattern="*.vhdx"/></mime-type>
+  <mime-type type="application/x-qcow2"><comment>QEMU disk image</comment><magic priority="60"><match type="string" offset="0" value="QFI\xfb"/></magic><glob pattern="*.qcow2"/><glob pattern="*.qcow"/><glob pattern="*.qed"/></mime-type>
+  <mime-type type="application/x-fla"><comment>Adobe Flash source</comment><glob pattern="*.fla"/></mime-type>
+  <!-- scripts -->
+  <mime-type type="text/x-bash"><comment>Bash script</comment><glob pattern="*.bash"/><glob pattern=".bashrc"/><glob pattern=".bash_profile"/></mime-type>
+  <mime-type type="text/x-zsh"><comment>Zsh script</comment><glob pattern="*.zsh"/><glob pattern=".zshrc"/></mime-type>
+  <mime-type type="text/x-ksh"><comment>Ksh script</comment><glob pattern="*.ksh"/></mime-type>
+  <mime-type type="text/x-tcsh"><comment>Tcsh script</comment><glob pattern="*.tcsh"/></mime-type>
+  <mime-type type="application/x-awk"><comment>AWK script</comment><glob pattern="*.awk"/></mime-type>
+  <!-- build systems -->
+  <mime-type type="text/x-imakefile"><comment>Imake makefile</comment><glob pattern="Imakefile"/><glob pattern="*.imake"/></mime-type>
+  <mime-type type="text/x-meson"><comment>Meson build file</comment><glob pattern="meson.build"/><glob pattern="meson_options.txt"/></mime-type>
+  <mime-type type="text/x-ninja"><comment>Ninja build file</comment><glob pattern="*.ninja"/><glob pattern="build.ninja"/></mime-type>
+  <mime-type type="text/x-scons"><comment>SCons build file</comment><glob pattern="SConstruct"/><glob pattern="SConscript"/></mime-type>
+  <mime-type type="text/x-automake"><comment>Automake/autoconf file</comment><glob pattern="Makefile.am"/><glob pattern="configure.ac"/><glob pattern="configure.in"/></mime-type>
+  <!-- dotfiles (non-script rc files) -->
+  <mime-type type="text/x-generic-dotfile"><comment>Configuration dotfile</comment><glob pattern=".gitconfig"/><glob pattern=".editorconfig"/><glob pattern=".npmrc"/><glob pattern=".curlrc"/><glob pattern=".wgetrc"/></mime-type>
+</mime-info>

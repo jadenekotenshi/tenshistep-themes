@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="1.5 1.5 45 45">
+  <!-- TenshiSTEP mail-replied: envelope + green return arrow -->
+  <rect x="6" y="12" width="32" height="22" rx="1.5" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M7.2 13.2 H36.8" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M6.5 12.5 L22 24 L37.5 12.5" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="35" cy="34" r="10" fill="#3e8e5a" stroke="#1a1a1a" stroke-width="1.4"/>
+  <path d="M37 39 A6 6 0 0 0 37 30 H30 M33 27 L29 30.5 L33 34" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=MongoDB Compass
+Comment=MongoDB GUI
+Exec=mongodb-compass
+Icon=mongodb-compass
+Terminal=false
+Categories=Development;Database;
+StartupWMClass=MongoDB Compass

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=GIMP
+Comment=Image editor
+Exec=gimp %U
+Icon=gimp
+Terminal=false
+Categories=Graphics;RasterGraphics;
+StartupWMClass=Gimp

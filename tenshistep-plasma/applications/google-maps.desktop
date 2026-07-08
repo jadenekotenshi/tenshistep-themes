@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Google Maps
+Comment=Maps and navigation
+Exec=xdg-open https://maps.google.com
+Icon=google-maps
+Terminal=false
+Categories=Utility;Maps;

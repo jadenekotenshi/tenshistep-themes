@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="2.5 2.5 43 43">
+  <!-- TenshiSTEP keyboard settings -->
+  <rect x="4" y="10" width="40" height="20" rx="2.5" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.6"/>
+  <path d="M5.5 11.5 H42.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <g fill="#5d6975">
+    <rect x="8" y="14" width="3" height="3"/><rect x="13" y="14" width="3" height="3"/><rect x="18" y="14" width="3" height="3"/><rect x="23" y="14" width="3" height="3"/><rect x="28" y="14" width="3" height="3"/><rect x="33" y="14" width="3" height="3"/>
+    <rect x="8" y="19" width="3" height="3"/><rect x="13" y="19" width="3" height="3"/><rect x="18" y="19" width="3" height="3"/><rect x="23" y="19" width="3" height="3"/><rect x="28" y="19" width="3" height="3"/><rect x="33" y="19" width="3" height="3"/>
+  </g>
+  <rect x="13" y="24" width="16" height="3" fill="#5d6975"/>
+  <g transform="translate(31,29)">
+    <circle cx="6" cy="6" r="6.5" fill="#8494a6" stroke="#cdd1d7" stroke-width="1.4"/>
+    <g stroke="#cdd1d7" stroke-width="1.4"><path d="M6 -1 V1.5"/><path d="M6 10.5 V13"/><path d="M-1 6 H1.5"/><path d="M10.5 6 H13"/><path d="M1 1 L2.8 2.8"/><path d="M11 11 L9.2 9.2"/><path d="M11 1 L9.2 2.8"/><path d="M1 11 L2.8 9.2"/></g>
+    <circle cx="6" cy="6" r="2.4" fill="#3a3a3a"/>
+  </g>
+</svg>

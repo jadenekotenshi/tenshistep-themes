@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=KDE Connect
+Comment=Link your phone and desktop
+Exec=kdeconnect-app
+Icon=kdeconnect
+Terminal=false
+Categories=Utility;
+StartupWMClass=kdeconnect

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Webex
+Comment=Video conferencing
+Exec=webex
+Icon=webex
+Terminal=false
+Categories=Network;
+StartupWMClass=Webex

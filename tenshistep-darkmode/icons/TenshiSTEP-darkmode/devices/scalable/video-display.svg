@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="2.5 2.5 43 43">
+  <!-- monitor body -->
+  <rect x="4" y="7" width="40" height="28" rx="2" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.6"/>
+  <path d="M5.5 8.5 H42.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M5.5 33.5 H42.5" fill="none" stroke="#5d6975" stroke-width="1"/>
+  <!-- screen -->
+  <rect x="8" y="11" width="32" height="20" rx="1" fill="#3daee9" stroke="#cdd1d7" stroke-width="1.4"/>
+  <path d="M9.5 12.5 H38.5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+  <!-- power LED -->
+  <circle cx="24" cy="33" r="0.9" fill="#5fd07a"/>
+  <!-- stand -->
+  <rect x="21" y="35" width="6" height="6" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.5"/>
+  <!-- base -->
+  <rect x="15" y="40" width="18" height="3" rx="1.5" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.6"/>
+  <path d="M16.5 40.5 H31.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+</svg>

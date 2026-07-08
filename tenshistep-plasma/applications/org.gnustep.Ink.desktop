@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Ink
+Comment=GNUstep rich-text editor
+Exec=sh -c 'openapp Ink 2>/dev/null || Ink'
+Icon=ink
+Terminal=false
+Categories=Office;WordProcessor;
+StartupWMClass=Ink

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=TenshiSTEP
+Description=OPENSTEP-inspired boot splash — chiselled cube on a muted blue gradient
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/tenshistep
+ScriptFile=/usr/share/plymouth/themes/tenshistep/tenshistep.script

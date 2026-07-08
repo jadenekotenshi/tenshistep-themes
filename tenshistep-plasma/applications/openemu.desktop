@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=OpenEmu
+Comment=Retro game emulator
+Exec=openemu
+Icon=openemu
+Terminal=false
+Categories=Game;Emulator;
+StartupWMClass=openemu

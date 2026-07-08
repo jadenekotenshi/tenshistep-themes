@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=86Box
+Comment=Emulator of x86 machines
+Exec=86Box
+Icon=86box
+Terminal=false
+Categories=System;Emulator;
+StartupWMClass=86Box

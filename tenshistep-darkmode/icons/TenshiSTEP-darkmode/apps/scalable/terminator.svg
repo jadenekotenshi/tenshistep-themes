@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP Terminator: terminal with red corner brackets -->
+  <rect x="6" y="9" width="36" height="30" rx="3" fill="#31353c" stroke="#cdd1d7" stroke-width="1.5"/>
+  <rect x="6" y="9" width="36" height="5" fill="#2b2e34"/>
+  <circle cx="11" cy="11.5" r="1.2" fill="#e05a5a"/>
+  <circle cx="15" cy="11.5" r="1.2" fill="#e0b04a"/>
+  <circle cx="19" cy="11.5" r="1.2" fill="#5fd07a"/>
+  <path d="M15 22 L20 26 L15 30" fill="none" stroke="#a5b7c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="22" y="27.5" width="7" height="2.5" fill="#ffffff"/>
+  <!-- red corner brackets -->
+  <path d="M9 20 V16 H13 M39 20 V16 H35 M9 33 V37 H13 M39 33 V37 H35" fill="none" stroke="#c0492f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

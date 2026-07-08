@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3 3 42 42">
+  <!-- TenshiSTEP new document -->
+  <path d="M10 5 H27 L35 13 V39 H10 Z" fill="#ffffff" stroke="#cdd1d7" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M27 5 V13 H35 Z" fill="#b0b0b0" stroke="#cdd1d7" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M14 20 H30 M14 24 H30" fill="none" stroke="#6e6e6e" stroke-width="1.3"/>
+  <circle cx="34" cy="35" r="8.5" fill="#e8e8e8" stroke="#cdd1d7" stroke-width="1.4"/>
+  <path d="M34 30.5 V39.5 M29.5 35 H38.5" fill="none" stroke="#cdd1d7" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

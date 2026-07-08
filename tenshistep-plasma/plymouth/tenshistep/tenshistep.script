@@ -1,0 +1,82 @@
+// TenshiSTEP Plymouth boot splash — OPENSTEP look.
+// Muted blue gradient, chiselled angel logo, filling steel-blue bar.
+// Canonical brand layout (shared by EFI splash, rEFInd, SDDM, wallpaper):
+//   angel centred horizontally, top at 7% of screen height, height 26% —
+//   high enough to sit above the SDDM login box in the handoff.
+
+Window.SetBackgroundTopColor(0.576, 0.651, 0.729);
+Window.SetBackgroundBottomColor(0.373, 0.443, 0.525);
+
+screen_w = Window.GetWidth();
+screen_h = Window.GetHeight();
+
+// --- logo (scaled relative to screen height, placed high) ---
+logo.orig = Image("logo.png");
+logo.h = screen_h * 0.26;
+logo.image = logo.orig.Scale(logo.h, logo.h);
+logo.sprite = Sprite(logo.image);
+logo.x = screen_w / 2 - logo.image.GetWidth() / 2;
+logo.y = screen_h * 0.07;
+logo.sprite.SetPosition(logo.x, logo.y, 10);
+
+// --- title text under the logo ---
+title.image = Image.Text("TenshiNET", 1, 1, 1);
+title.sprite = Sprite(title.image);
+title.sprite.SetPosition(screen_w / 2 - title.image.GetWidth() / 2,
+                         logo.y + logo.image.GetHeight() + screen_h * 0.02, 10);
+
+// --- progress groove + fill (kept clear of the login-box zone) ---
+box.image = Image("progress_box.png");
+box.sprite = Sprite(box.image);
+box.x = screen_w / 2 - box.image.GetWidth() / 2;
+box.y = screen_h * 0.42;
+box.sprite.SetPosition(box.x, box.y, 10);
+
+bar.original = Image("progress_bar.png");
+bar.sprite = Sprite();
+bar.x = box.x + 4;
+bar.y = box.y + 3;
+
+fun progress_callback(duration, progress) {
+    w = bar.original.GetWidth() * progress;
+    if (w < 1) w = 1;
+    bar.image = bar.original.Scale(w, bar.original.GetHeight());
+    bar.sprite.SetImage(bar.image);
+    bar.sprite.SetPosition(bar.x, bar.y, 11);
+}
+Plymouth.SetBootProgressFunction(progress_callback);
+
+// --- status / messages ---
+message.sprite = Sprite();
+fun message_callback(text) {
+    message.image = Image.Text(text, 1, 1, 1);
+    message.sprite.SetImage(message.image);
+    message.sprite.SetPosition(screen_w / 2 - message.image.GetWidth() / 2,
+                               box.y + 40, 10);
+}
+Plymouth.SetMessageFunction(message_callback);
+
+// --- password prompt (encrypted disks) ---
+prompt.sprite = Sprite();
+bullets.sprite = Sprite();
+fun display_password_callback(prompt_text, bullets_count) {
+    prompt.image = Image.Text(prompt_text, 1, 1, 1);
+    prompt.sprite.SetImage(prompt.image);
+    prompt.sprite.SetPosition(screen_w / 2 - prompt.image.GetWidth() / 2,
+                              box.y + 40, 10);
+    dots = "";
+    i = 0;
+    while (i < bullets_count) { dots = dots + "*"; i++; }
+    if (dots == "") dots = " ";
+    bullets.image = Image.Text(dots, 1, 1, 1);
+    bullets.sprite.SetImage(bullets.image);
+    bullets.sprite.SetPosition(screen_w / 2 - bullets.image.GetWidth() / 2,
+                               box.y + 64, 10);
+}
+Plymouth.SetDisplayPasswordFunction(display_password_callback);
+
+fun display_normal_callback() {
+    prompt.sprite.SetOpacity(0);
+    bullets.sprite.SetOpacity(0);
+}
+Plymouth.SetDisplayNormalFunction(display_normal_callback);

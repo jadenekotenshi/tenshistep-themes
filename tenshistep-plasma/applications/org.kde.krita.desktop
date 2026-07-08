@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Krita
+Comment=Digital painting
+Exec=krita
+Icon=krita
+Terminal=false
+Categories=Graphics;RasterGraphics;
+StartupWMClass=krita

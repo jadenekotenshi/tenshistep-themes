@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP Zed: dark rounded square with Z thunderbolt -->
+  <rect x="8" y="8" width="32" height="32" rx="4" fill="#31353c" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M16 15 H32 L20 27 H31 L20 33 H16 L28 21 H17 Z" fill="#d8b83a" stroke="#1a1a1a" stroke-width="1" stroke-linejoin="round"/>
+</svg>

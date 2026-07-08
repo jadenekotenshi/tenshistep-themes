@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP stop: red octagon + white bar -->
+  <path d="M18 7 H30 L41 18 V30 L30 41 H18 L7 30 V18 Z" fill="#c25a4d" stroke="#cdd1d7" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M18.6 8.6 H29.4 M8.6 18.6 L18.6 8.6 M8.6 18.6 V29.4" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M39.4 18.6 V29.4 L29.4 39.4 H18.6 M39.4 29.4 L29.4 39.4" fill="none" stroke="#74362e" stroke-width="1.2"/>
+  <rect x="13.5" y="21" width="21" height="6" rx="1.4" fill="#ffffff" stroke="#cdd1d7" stroke-width="1.3"/>
+</svg>

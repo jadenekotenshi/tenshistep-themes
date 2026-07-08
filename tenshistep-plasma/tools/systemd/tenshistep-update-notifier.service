@@ -1,0 +1,7 @@
+[Unit]
+Description=TenshiSTEP software-update notifier
+Documentation=man:tenshistep-update-notifier
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/tenshistep-update-notifier --quiet

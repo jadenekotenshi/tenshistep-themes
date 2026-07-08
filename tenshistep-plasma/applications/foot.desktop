@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=foot
+Comment=Wayland terminal
+Exec=foot
+Icon=foot
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=foot

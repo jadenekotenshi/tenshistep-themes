@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <rect x="8" y="8" width="32" height="32" rx="1.5" fill="#31353c" stroke="#cdd1d7" stroke-width="1.5"/>
+  <rect x="8" y="8" width="32" height="32" rx="1.5" fill="none" stroke="#5d6975" stroke-width="1"/>
+  <path d="M12 12 H36 M12 12 V36 M36 12 V36 M12 36 H36" fill="none" stroke="#5d6975" stroke-width="0.8" opacity="0.6"/>
+  <text x="22" y="33" font-family="Courier,monospace" font-size="24" font-weight="bold" text-anchor="middle" fill="#d08a2e">@</text>
+  <!-- spork: bowl + tines -->
+  <g stroke="#cdd6de" stroke-width="1.4" stroke-linecap="round">
+    <path d="M33 12 V22" fill="none"/>
+    <path d="M31 12 V16 M33 12 V16 M35 12 V16" fill="none"/>
+  </g>
+  <path d="M31 21 Q33 25 35 21 Z" fill="#cdd6de" stroke="#cdd1d7" stroke-width="0.8"/>
+</svg>

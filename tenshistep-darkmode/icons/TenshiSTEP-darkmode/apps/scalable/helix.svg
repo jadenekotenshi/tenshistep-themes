@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP Helix: blue helix strands / H -->
+  <rect x="8" y="8" width="32" height="32" rx="4" fill="#31353c" stroke="#cdd1d7" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M17 13 C31 19 17 29 31 35" fill="none" stroke="#3daee9" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M31 13 C17 19 31 29 17 35" fill="none" stroke="#6ac6d8" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M20 17 H28 M20 24 H28 M20 31 H28" fill="none" stroke="#dfe8f0" stroke-width="1.3" stroke-linecap="round"/>
+</svg>

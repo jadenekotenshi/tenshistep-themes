@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Godot Engine
+Comment=Game engine
+Exec=godot
+Icon=godot
+Terminal=false
+Categories=Development;Game;
+StartupWMClass=Godot

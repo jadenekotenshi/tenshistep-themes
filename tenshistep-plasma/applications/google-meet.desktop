@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Google Meet
+Comment=Video meetings
+Exec=xdg-open https://meet.google.com
+Icon=google-meet
+Terminal=false
+Categories=Network;

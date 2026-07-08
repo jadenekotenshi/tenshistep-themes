@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+Name=TenshiSTEP Software Updates
+Comment=Check for and open software updates from KRunner
+Icon=system-software-update
+X-KDE-ServiceTypes=Plasma/Runner
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=org.tenshistep.updatesrunner
+X-Plasma-DBusRunner-Path=/runner
+X-KDE-PluginInfo-Name=tenshistepupdates
+X-KDE-PluginInfo-Author=TenshiSTEP
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-EnabledByDefault=true

@@ -1,0 +1,14 @@
+# CMake build trees (regenerable via each qstyle's build-and-install.sh /
+# qstyle-preview's render.sh)
+build/
+
+# qstyle-preview render outputs
+qstyle-preview/preview-*.png
+
+# editor / OS cruft
+*.bak
+*~
+.DS_Store
+
+# Claude Code local settings
+.claude/

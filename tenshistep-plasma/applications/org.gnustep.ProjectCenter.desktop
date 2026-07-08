@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=ProjectCenter
+Comment=GNUstep IDE
+Exec=sh -c 'openapp ProjectCenter 2>/dev/null || ProjectCenter'
+Icon=projectcenter
+Terminal=false
+Categories=Development;IDE;
+StartupWMClass=ProjectCenter

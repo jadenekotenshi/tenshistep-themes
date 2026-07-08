@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Dolphin Emulator
+Comment=GameCube/Wii emulator
+Exec=dolphin-emu
+Icon=dolphin-emu
+Terminal=false
+Categories=Game;Emulator;
+StartupWMClass=dolphin-emu

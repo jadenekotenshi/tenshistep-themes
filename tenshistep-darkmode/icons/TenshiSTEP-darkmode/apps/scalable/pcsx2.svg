@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <circle cx="24" cy="24" r="18" fill="#8494a6" stroke="#cdd1d7" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="12" fill="#a5b7c9" stroke="#cdd1d7" stroke-width="1.1"/>
+  <circle cx="24" cy="24" r="4" fill="#31353c" stroke="#cdd1d7" stroke-width="1.1"/>
+  <text x="24" y="17" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#2f6db0">PS</text>
+  <text x="30" y="36" font-family="Helvetica,Arial,sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="#cdd1d7">2</text>
+</svg>

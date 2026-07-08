@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GTK-Theme-Directory
+Name=TenshiSTEP-darkmode
+Comment=OPENSTEP/NeXT chiselled GTK theme (dark)
+
+[X-GTK-Theme]
+Name=TenshiSTEP-darkmode
+GTK=3.0;4.0
+Variant=dark

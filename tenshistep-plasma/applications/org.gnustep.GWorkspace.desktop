@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=GWorkspace
+Comment=GNUstep workspace & file manager
+Exec=sh -c 'openapp GWorkspace 2>/dev/null || GWorkspace'
+Icon=gworkspace
+Terminal=false
+Categories=System;FileManager;
+StartupWMClass=GWorkspace

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP font file: serif glyph on a sheet -->
+  <path d="M11 5 H30 L38 13 V43 H11 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M30 5 V13 H38 Z" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M16 36 L23 16 L30 36 M18.5 29 H27.5" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 36 H20 M26 36 H32" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=System Settings
+Comment=Configure your desktop
+Exec=systemsettings
+Icon=systemsettings
+Terminal=false
+Categories=Settings;
+StartupWMClass=systemsettings

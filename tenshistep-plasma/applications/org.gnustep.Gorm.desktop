@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Gorm
+Comment=GNUstep interface builder
+Exec=sh -c 'openapp Gorm 2>/dev/null || Gorm'
+Icon=gorm
+Terminal=false
+Categories=Development;GUIDesigner;
+StartupWMClass=Gorm

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=XTerm
+Comment=Standard X terminal
+Exec=xterm
+Icon=xterm
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=XTerm

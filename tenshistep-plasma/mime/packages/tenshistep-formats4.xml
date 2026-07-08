@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- Scientific / data -->
+  <mime-type type="application/fits"><comment>FITS data</comment><magic priority="70"><match type="string" offset="0" value="SIMPLE  ="/></magic><glob pattern="*.fits"/><glob pattern="*.fit"/><glob pattern="*.fts"/></mime-type>
+  <mime-type type="application/x-hdf"><comment>HDF4 data</comment><magic priority="60"><match type="string" offset="0" value="\016\003\023\001"/></magic><glob pattern="*.hdf"/><glob pattern="*.h4"/><glob pattern="*.hdf4"/></mime-type>
+  <mime-type type="application/x-netcdf"><comment>NetCDF data</comment><magic priority="60"><match type="string" offset="0" value="CDF"/></magic><glob pattern="*.nc"/><glob pattern="*.cdf"/></mime-type>
+  <mime-type type="application/vnd.apache.parquet"><comment>Apache Parquet</comment><magic priority="70"><match type="string" offset="0" value="PAR1"/></magic><glob pattern="*.parquet"/></mime-type>
+  <mime-type type="application/vnd.apache.arrow"><comment>Apache Arrow / Feather</comment><glob pattern="*.arrow"/><glob pattern="*.feather"/></mime-type>
+  <mime-type type="application/vnd.apache.avro"><comment>Apache Avro</comment><magic priority="60"><match type="string" offset="0" value="Obj\001"/></magic><glob pattern="*.avro"/></mime-type>
+  <mime-type type="application/x-orc"><comment>Apache ORC</comment><glob pattern="*.orc"/></mime-type>
+  <mime-type type="application/x-root"><comment>CERN ROOT data</comment><magic priority="60"><match type="string" offset="0" value="root"/></magic><glob pattern="*.root"/></mime-type>
+  <mime-type type="application/x-matlab-data"><comment>MATLAB data</comment><glob pattern="*.mat"/></mime-type>
+  <mime-type type="application/x-r-data"><comment>R data</comment><glob pattern="*.rds"/><glob pattern="*.rdata"/><glob pattern="*.RData"/></mime-type>
+  <mime-type type="application/x-stata-dta"><comment>Stata dataset</comment><glob pattern="*.dta"/></mime-type>
+  <mime-type type="application/x-spss-sav"><comment>SPSS dataset</comment><glob pattern="*.sav"/><glob pattern="*.zsav"/></mime-type>
+  <mime-type type="application/x-sas-data"><comment>SAS dataset</comment><glob pattern="*.sas7bdat"/></mime-type>
+  <mime-type type="application/x-arff"><comment>Weka ARFF</comment><glob pattern="*.arff"/></mime-type>
+  <mime-type type="application/x-msgpack"><comment>MessagePack</comment><glob pattern="*.msgpack"/><glob pattern="*.mpk"/></mime-type>
+  <mime-type type="text/x-protobuf"><comment>Protocol Buffers schema</comment><glob pattern="*.proto"/></mime-type>
+  <mime-type type="application/x-fasta"><comment>FASTA sequence</comment><glob pattern="*.fasta"/><glob pattern="*.fa"/><glob pattern="*.faa"/></mime-type>
+  <mime-type type="application/x-fastq"><comment>FASTQ sequence</comment><glob pattern="*.fastq"/><glob pattern="*.fq"/></mime-type>
+  <!-- CAD / 3D -->
+  <mime-type type="image/vnd.dxf"><comment>AutoCAD DXF</comment><glob pattern="*.dxf"/></mime-type>
+  <mime-type type="image/vnd.dwg"><comment>AutoCAD DWG</comment><magic priority="60"><match type="string" offset="0" value="AC10"/></magic><glob pattern="*.dwg"/></mime-type>
+  <mime-type type="model/stl"><comment>STL model</comment><glob pattern="*.stl"/></mime-type>
+  <mime-type type="model/obj"><comment>Wavefront OBJ</comment><glob pattern="*.obj"/></mime-type>
+  <mime-type type="model/gltf+json"><comment>glTF model</comment><magic priority="60"><match type="string" offset="0" value="glTF"/></magic><glob pattern="*.gltf"/><glob pattern="*.glb"/></mime-type>
+  <mime-type type="model/step"><comment>STEP model</comment><glob pattern="*.step"/><glob pattern="*.stp"/></mime-type>
+  <mime-type type="model/3mf"><comment>3MF model</comment><glob pattern="*.3mf"/></mime-type>
+  <mime-type type="model/ply"><comment>PLY model</comment><glob pattern="*.ply"/></mime-type>
+  <mime-type type="application/x-fbx"><comment>Autodesk FBX</comment><glob pattern="*.fbx"/></mime-type>
+  <mime-type type="model/vnd.collada+xml"><comment>COLLADA model</comment><glob pattern="*.dae"/></mime-type>
+  <mime-type type="text/x-scad"><comment>OpenSCAD source</comment><glob pattern="*.scad"/></mime-type>
+  <mime-type type="text/x-gcode"><comment>G-code</comment><glob pattern="*.gcode"/><glob pattern="*.gco"/><glob pattern="*.nc" weight="20"/></mime-type>
+  <!-- GIS -->
+  <mime-type type="application/x-esri-shape"><comment>ESRI Shapefile</comment><glob pattern="*.shp"/></mime-type>
+  <mime-type type="application/geo+json"><comment>GeoJSON</comment><glob pattern="*.geojson"/></mime-type>
+  <mime-type type="application/x-geotiff"><comment>GeoTIFF</comment><glob pattern="*.geotiff"/><glob pattern="*.gtiff"/></mime-type>
+  <mime-type type="application/geopackage+sqlite3"><comment>GeoPackage</comment><glob pattern="*.gpkg"/></mime-type>
+  <mime-type type="application/gml+xml"><comment>GML</comment><glob pattern="*.gml"/></mime-type>
+  <mime-type type="application/x-openstreetmap+xml"><comment>OpenStreetMap XML</comment><glob pattern="*.osm"/></mime-type>
+  <mime-type type="application/vnd.las"><comment>LiDAR LAS</comment><magic priority="60"><match type="string" offset="0" value="LASF"/></magic><glob pattern="*.las"/><glob pattern="*.laz"/></mime-type>
+  <!-- HDLs / BASIC -->
+  <mime-type type="text/x-verilog"><comment>Verilog source</comment><glob pattern="*.v" weight="40"/><glob pattern="*.vh"/><glob pattern="*.sv"/><glob pattern="*.svh"/></mime-type>
+  <mime-type type="text/x-basic"><comment>BASIC source</comment><glob pattern="*.bas"/><glob pattern="*.bi"/></mime-type>
+</mime-info>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Iceweasel
+Comment=Web browser
+Exec=iceweasel %u
+Icon=iceweasel
+Terminal=false
+Categories=Network;WebBrowser;
+StartupWMClass=Iceweasel

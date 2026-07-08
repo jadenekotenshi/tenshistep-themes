@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=SuperTuxKart
+Comment=Kart racing
+Exec=supertuxkart
+Icon=supertuxkart
+Terminal=false
+Categories=Game;ArcadeGame;
+StartupWMClass=supertuxkart

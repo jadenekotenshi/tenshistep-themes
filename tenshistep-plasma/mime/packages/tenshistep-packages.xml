@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-xar">
+    <comment>macOS installer package</comment>
+    <magic priority="80"><match type="string" offset="0" value="xar!"/></magic>
+    <glob pattern="*.pkg" weight="50"/>
+    <glob pattern="*.xar"/>
+    <glob pattern="*.mpkg" weight="50"/>
+  </mime-type>
+  <mime-type type="application/x-svr4-package">
+    <comment>System V / Solaris package</comment>
+    <magic priority="80"><match type="string" offset="0" value="# PaCkAgE DaTaStReAm"/></magic>
+  </mime-type>
+  <mime-type type="application/x-freebsd-package">
+    <comment>FreeBSD package</comment>
+    <magic priority="70"><match type="string" offset="0" value="+COMPACT_MANIFEST"/></magic>
+    <magic priority="70"><match type="string" offset="0" value="+MANIFEST"/></magic>
+  </mime-type>
+  <mime-type type="application/x-nextstep-package">
+    <comment>NeXTSTEP installer package</comment>
+    <magic priority="70"><match type="string" offset="0:6" value="typedstream"/></magic>
+  </mime-type>
+  <mime-type type="application/x-arch-package">
+    <comment>Arch Linux package</comment>
+    <glob pattern="*.pkg.tar.zst"/>
+    <glob pattern="*.pkg.tar.xz"/>
+    <glob pattern="*.pkg.tar.gz"/>
+  </mime-type>
+  <mime-type type="application/x-tardist">
+    <comment>IRIX software distribution</comment>
+    <glob pattern="*.tardist"/>
+    <glob pattern="*.sw"/>
+  </mime-type>
+</mime-info>

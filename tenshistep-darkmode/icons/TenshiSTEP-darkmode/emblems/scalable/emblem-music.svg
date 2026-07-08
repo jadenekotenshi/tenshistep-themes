@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP music emblem: note -->
+  <path d="M22.5 34 V9 L35 6 V15" fill="none" stroke="#cdd1d7" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="15" cy="35" rx="7.6" ry="6" fill="#5d6975" stroke="#cdd1d7" stroke-width="2"/>
+  <path d="M10.5 32 A6 6 0 0 1 15.5 30" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M23.7 11 V32" fill="none" stroke="#ffffff" stroke-width="1"/>
+</svg>

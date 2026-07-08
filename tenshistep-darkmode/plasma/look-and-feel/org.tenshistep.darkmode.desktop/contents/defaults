@@ -1,0 +1,38 @@
+[kdeglobals][KDE]
+# Safe default. install.sh upgrades this to kvantum or the compiled TenshiSTEP
+# QStyle when one of them is actually present on the system.
+widgetStyle=Breeze
+
+[kdeglobals][General]
+ColorScheme=TenshiSTEP-darkmode
+font=Nimbus Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Nimbus Sans,10,-1,5,50,0,0,0,0,0
+toolBarFont=Nimbus Sans,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Nimbus Sans,8,-1,5,50,0,0,0,0,0
+fixed=Liberation Mono,10,-1,5,50,0,0,0,0,0
+
+[kdeglobals][WM]
+activeFont=Nimbus Sans,10,-1,5,75,0,0,0,0,0
+
+[kdeglobals][Icons]
+Theme=TenshiSTEP-darkmode
+
+[plasmarc][Theme]
+name=TenshiSTEP-darkmode
+
+[Wallpaper]
+Image=wallpaper.png
+
+[kwinrc][org.kde.kdecoration2]
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__TenshiSTEP-darkmode
+
+[kwinrc][TabBox]
+LayoutName=org.tenshistep.darkmode.switcher
+
+[ksplashrc][KSplash]
+Theme=org.tenshistep.darkmode.desktop
+Engine=KSplashQML
+
+[kcminputrc][Mouse]
+cursorTheme=TenshiSTEP-IRIX

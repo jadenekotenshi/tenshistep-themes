@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP VPN: secure shield -->
+  <path d="M24 6 L39 11 V24 C39 33 32 39 24 42 C16 39 9 33 9 24 V11 Z" fill="#4a3fa0" stroke="#cdd1d7" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M24 8.2 L11 12.5 V24" fill="none" stroke="#ffffff" stroke-width="1.3"/>
+  <circle cx="24" cy="21" r="3.6" fill="#3a3a3a"/>
+  <path d="M22.4 23 H25.6 L27 32 H21 Z" fill="#3a3a3a"/>
+</svg>

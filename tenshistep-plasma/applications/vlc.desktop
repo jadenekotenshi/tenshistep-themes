@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=VLC media player
+Comment=Play media files
+Exec=vlc %U
+Icon=vlc
+Terminal=false
+Categories=AudioVideo;Player;
+StartupWMClass=vlc

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Telegram
+Comment=Messaging
+Exec=telegram-desktop
+Icon=telegram
+Terminal=false
+Categories=Network;InstantMessaging;
+StartupWMClass=TelegramDesktop

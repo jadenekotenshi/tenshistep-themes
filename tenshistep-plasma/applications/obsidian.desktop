@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Obsidian
+Comment=Markdown knowledge base
+Exec=obsidian
+Icon=obsidian
+Terminal=false
+Categories=Office;
+StartupWMClass=obsidian

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP insert link (chain) -->
+  <path d="M18 30 L30 18" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M21 34 L15 40 A8.5 8.5 0 0 1 8 33 L14 27 A8.5 8.5 0 0 1 21 34 Z" fill="#d3b64f" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M27 14 L33 8 A8.5 8.5 0 0 1 40 15 L34 21 A8.5 8.5 0 0 1 27 14 Z" fill="#d3b64f" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M14.5 28 A8.5 8.5 0 0 1 20 33.5" fill="none" stroke="#ffffff" stroke-width="1.0"/>
+  <path d="M33.5 9 A8.5 8.5 0 0 1 39 14.5" fill="none" stroke="#ffffff" stroke-width="1.0"/>
+</svg>

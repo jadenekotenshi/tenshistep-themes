@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=OBS Studio
+Comment=Streaming & recording
+Exec=obs
+Icon=obs-studio
+Terminal=false
+Categories=AudioVideo;Recorder;
+StartupWMClass=com.obsproject.Studio

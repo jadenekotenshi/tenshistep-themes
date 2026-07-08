@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Thunderbird
+Comment=Email client
+Exec=thunderbird
+Icon=thunderbird
+Terminal=false
+Categories=Network;Email;
+StartupWMClass=thunderbird

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- TenshiSTEP storm -->
+  <path d="M15 36 Q8 36 8 29 Q8 23 15 23 Q16 15 25 15 Q34 15 35 23 Q42 23 42 29 Q42 36 35 36 Z" fill="#ccd4da" stroke="#1a1a1a" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M15.5 24.3 Q16.4 16.3 25 16.3" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M27 37 L19 45 L24 45 L21.5 48 L31 40 L26 40 Z" fill="#d3b64f" stroke="#1a1a1a" stroke-width="0.8" stroke-linejoin="round"/>
+</svg>

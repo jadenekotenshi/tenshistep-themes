@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Signal
+Comment=Private messenger
+Exec=signal-desktop
+Icon=signal
+Terminal=false
+Categories=Network;InstantMessaging;
+StartupWMClass=signal

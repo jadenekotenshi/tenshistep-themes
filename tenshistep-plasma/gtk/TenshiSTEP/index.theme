@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GTK-Theme-Directory
+Name=TenshiSTEP
+Comment=OPENSTEP/NeXT chiselled GTK theme (light)
+
+[X-GTK-Theme]
+Name=TenshiSTEP
+GTK=3.0;4.0
+Variant=light

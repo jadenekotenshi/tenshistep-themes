@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Lutris
+Comment=Game manager
+Exec=lutris
+Icon=lutris
+Terminal=false
+Categories=Game;
+StartupWMClass=lutris

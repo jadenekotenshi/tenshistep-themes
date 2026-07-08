@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Blender
+Comment=3D creation suite
+Exec=blender
+Icon=blender
+Terminal=false
+Categories=Graphics;3DGraphics;
+StartupWMClass=Blender

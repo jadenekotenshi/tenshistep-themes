@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP wired network: RJ45 plug -->
+  <path d="M16 8 H32 V26 H28 V31 H20 V26 H16 Z" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M17.3 9.3 H30.7" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <g fill="#322c78"><rect x="18" y="12" width="2" height="5"/><rect x="21.5" y="12" width="2" height="5"/><rect x="25" y="12" width="2" height="5"/><rect x="28" y="12" width="2" height="5"/></g>
+  <path d="M24 31 V41 M14 41 H34" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+</svg>

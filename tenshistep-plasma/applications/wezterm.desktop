@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=WezTerm
+Comment=GPU terminal + multiplexer
+Exec=wezterm
+Icon=wezterm
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=org.wezfurlong.wezterm

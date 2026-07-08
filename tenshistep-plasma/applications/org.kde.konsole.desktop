@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Konsole
+Comment=KDE terminal
+Exec=konsole
+Icon=konsole
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=org.kde.konsole

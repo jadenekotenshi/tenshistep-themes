@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Spotify
+Comment=Music streaming
+Exec=spotify
+Icon=spotify
+Terminal=false
+Categories=AudioVideo;Player;
+StartupWMClass=spotify

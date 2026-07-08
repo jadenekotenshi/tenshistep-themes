@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Google Calendar
+Comment=Calendar
+Exec=xdg-open https://calendar.google.com
+Icon=google-calendar
+Terminal=false
+Categories=Office;Calendar;

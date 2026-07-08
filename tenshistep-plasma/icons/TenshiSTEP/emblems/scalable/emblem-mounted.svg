@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP emblem: mounted -->
+  <circle cx="24" cy="24" r="15" fill="#6ba85d" stroke="#1a1a1a" stroke-width="2"/>
+  <path d="M24 9 A15 15 0 0 0 11.5 15.5" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M16 27 L24 18 L32 27" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 18 V32" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+</svg>

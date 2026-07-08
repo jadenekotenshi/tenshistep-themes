@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Inkscape
+Comment=Vector graphics editor
+Exec=inkscape %U
+Icon=inkscape
+Terminal=false
+Categories=Graphics;VectorGraphics;
+StartupWMClass=org.inkscape.Inkscape

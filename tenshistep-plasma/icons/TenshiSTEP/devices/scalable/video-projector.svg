@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="2.5 2.5 43 43">
+  <!-- light cone -->
+  <path d="M13 20 L4 12 L4 32 Z" fill="#e0b04a" stroke="#1a1a1a" stroke-width="1.4" opacity="0.85"/>
+  <!-- projector body -->
+  <rect x="12" y="16" width="30" height="18" rx="2.5" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6"/>
+  <path d="M13.5 17.5 H40.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M13.5 32.5 H40.5" fill="none" stroke="#5d6975" stroke-width="1"/>
+  <!-- lens -->
+  <circle cx="17" cy="25" r="4.5" fill="#31353c" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="17" cy="25" r="2" fill="#3daee9" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- vents / controls -->
+  <path d="M27 21 H39 M27 24 H39 M27 27 H39" stroke="#5d6975" stroke-width="1.4"/>
+  <!-- status LED -->
+  <circle cx="37" cy="30" r="1" fill="#5fd07a"/>
+  <!-- feet -->
+  <rect x="15" y="34" width="4" height="3" fill="#5d6975" stroke="#1a1a1a" stroke-width="1.2"/>
+  <rect x="35" y="34" width="4" height="3" fill="#5d6975" stroke="#1a1a1a" stroke-width="1.2"/>
+</svg>

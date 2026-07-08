@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Terminal (GNUstep)
+Comment=GNUstep terminal
+Exec=sh -c 'openapp Terminal 2>/dev/null || Terminal'
+Icon=gnustep-terminal
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=Terminal

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <rect x="12" y="12" width="24" height="24" rx="2" fill="#5d6975" stroke="#cdd1d7" stroke-width="1.5" stroke-linejoin="round"/>
+  <g stroke="#cdd1d7" stroke-width="1.2" stroke-linecap="round">
+    <path d="M17 12 V7 M23 12 V7 M29 12 V7"/>
+    <path d="M17 36 V41 M23 36 V41 M29 36 V41"/>
+    <path d="M12 17 H7 M12 23 H7 M12 29 H7"/>
+    <path d="M36 17 H41 M36 23 H41 M36 29 H41"/>
+  </g>
+  <rect x="17" y="17" width="14" height="14" rx="1" fill="#31353c" stroke="#cdd1d7" stroke-width="1.1"/>
+  <text x="24" y="29" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#d8b83a">Q</text>
+</svg>

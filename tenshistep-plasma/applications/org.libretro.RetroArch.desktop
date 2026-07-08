@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=RetroArch
+Comment=Multi-system emulator frontend
+Exec=retroarch
+Icon=retroarch
+Terminal=false
+Categories=Game;Emulator;
+StartupWMClass=retroarch

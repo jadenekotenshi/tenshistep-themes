@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BlueJeans
+Comment=Video conferencing
+Exec=bluejeans
+Icon=bluejeans
+Terminal=false
+Categories=Network;
+StartupWMClass=bluejeans

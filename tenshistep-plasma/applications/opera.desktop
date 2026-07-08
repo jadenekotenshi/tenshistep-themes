@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Opera
+Comment=Web browser
+Exec=opera %u
+Icon=opera
+Terminal=false
+Categories=Network;WebBrowser;
+StartupWMClass=opera

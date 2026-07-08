@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Audacity
+Comment=Audio editor
+Exec=audacity
+Icon=audacity
+Terminal=false
+Categories=AudioVideo;AudioEditing;
+StartupWMClass=audacity

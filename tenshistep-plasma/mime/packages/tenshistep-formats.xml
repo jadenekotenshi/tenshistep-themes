@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- AI / ML model + tensor formats -->
+  <mime-type type="application/x-safetensors">
+    <comment>Safetensors model weights</comment>
+    <glob pattern="*.safetensors"/>
+  </mime-type>
+  <mime-type type="application/x-gguf">
+    <comment>GGUF model (llama.cpp)</comment>
+    <magic priority="60"><match type="string" offset="0" value="GGUF"/></magic>
+    <glob pattern="*.gguf"/>
+  </mime-type>
+  <mime-type type="application/x-ggml">
+    <comment>GGML model</comment>
+    <glob pattern="*.ggml"/>
+    <glob pattern="*.bin" weight="10"/>
+  </mime-type>
+  <mime-type type="application/x-onnx">
+    <comment>ONNX model</comment>
+    <glob pattern="*.onnx"/>
+  </mime-type>
+  <mime-type type="application/x-pytorch">
+    <comment>PyTorch model</comment>
+    <glob pattern="*.pt"/>
+    <glob pattern="*.pth"/>
+  </mime-type>
+  <mime-type type="application/x-tensorflow">
+    <comment>TensorFlow model</comment>
+    <glob pattern="*.pb" weight="20"/>
+  </mime-type>
+  <mime-type type="application/x-hdf5">
+    <comment>HDF5 / Keras model</comment>
+    <magic priority="60"><match type="string" offset="0" value="\211HDF"/></magic>
+    <glob pattern="*.h5"/>
+    <glob pattern="*.hdf5"/>
+  </mime-type>
+  <mime-type type="application/x-tflite">
+    <comment>TensorFlow Lite model</comment>
+    <glob pattern="*.tflite"/>
+  </mime-type>
+  <mime-type type="application/x-checkpoint">
+    <comment>Model checkpoint</comment>
+    <glob pattern="*.ckpt"/>
+  </mime-type>
+  <mime-type type="application/x-numpy">
+    <comment>NumPy array</comment>
+    <glob pattern="*.npy"/>
+    <glob pattern="*.npz"/>
+  </mime-type>
+  <mime-type type="application/x-python-pickle">
+    <comment>Python pickle</comment>
+    <glob pattern="*.pkl"/>
+    <glob pattern="*.pickle"/>
+  </mime-type>
+  <mime-type type="application/x-coreml">
+    <comment>Core ML model</comment>
+    <glob pattern="*.mlmodel"/>
+  </mime-type>
+  <!-- Text encodings -->
+  <mime-type type="application/x-base64">
+    <comment>Base64-encoded data</comment>
+    <glob pattern="*.b64"/>
+  </mime-type>
+  <mime-type type="text/x-uuencode">
+    <comment>uuencoded data</comment>
+    <glob pattern="*.uu"/>
+    <glob pattern="*.uue"/>
+  </mime-type>
+  <mime-type type="application/x-ascii85">
+    <comment>Ascii85-encoded data</comment>
+    <glob pattern="*.a85"/>
+    <glob pattern="*.ascii85"/>
+  </mime-type>
+  <!-- Niche archives not always in shared-mime-info -->
+  <mime-type type="application/x-arj"><comment>ARJ archive</comment><glob pattern="*.arj"/></mime-type>
+  <mime-type type="application/x-arc"><comment>ARC archive</comment><glob pattern="*.arc"/></mime-type>
+  <mime-type type="application/x-lha"><comment>LHA/LZH archive</comment><glob pattern="*.lha"/><glob pattern="*.lzh"/></mime-type>
+  <mime-type type="application/x-ace-compressed"><comment>ACE archive</comment><glob pattern="*.ace"/></mime-type>
+  <mime-type type="application/x-stuffit"><comment>StuffIt archive</comment><glob pattern="*.sit"/><glob pattern="*.sitx"/></mime-type>
+  <mime-type type="application/x-lzop"><comment>lzop-compressed</comment><glob pattern="*.lzo"/></mime-type>
+</mime-info>

@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+#
+# TenshiSTEP update notifier — checks the system package manager for available
+# updates and raises a desktop notification using the themed status icons
+# (update-none / update-low|medium|high / security-high / system-software-update).
+#
+# Usage:
+#   tenshistep-update-notifier            # notify with the right icon + count
+#   tenshistep-update-notifier --quiet    # only notify if updates are available
+#   tenshistep-update-notifier --print    # just print the summary, no notification
+#
+# Wire it in with the bundled systemd user timer, or call it from a package
+# manager hook (see tools/hooks/). Exit status: 0 = up to date, 10 = updates,
+# 20 = security updates available.
+#
+set -uo pipefail
+
+QUIET=0; PRINT=0
+for a in "$@"; do
+  case "$a" in
+    --quiet) QUIET=1 ;;
+    --print) PRINT=1 ;;
+    -h|--help) sed -n '2,20p' "$0"; exit 0 ;;
+  esac
+done
+
+count=0; sec=0; mgr="none"
+
+if command -v checkupdates >/dev/null 2>&1; then                 # Arch (pacman-contrib)
+  mgr="pacman"
+  count=$(checkupdates 2>/dev/null | grep -c . || true)
+elif command -v apt-get >/dev/null 2>&1; then                    # Debian / Ubuntu
+  mgr="apt"
+  sim=$(apt-get -s -o Debug::NoLocking=true upgrade 2>/dev/null | grep '^Inst' || true)
+  count=$(printf '%s\n' "$sim" | grep -c '^Inst' || true)
+  sec=$(printf '%s\n' "$sim" | grep -ci 'security' || true)
+elif command -v dnf >/dev/null 2>&1; then                        # Fedora / RHEL
+  mgr="dnf"
+  count=$(dnf -q check-update 2>/dev/null | grep -cE '^[[:alnum:]._+-]+[[:space:]]+[[:graph:]]+[[:space:]]+[[:graph:]]+$' || true)
+  sec=$(dnf -q updateinfo list --security 2>/dev/null | grep -c . || true)
+elif command -v zypper >/dev/null 2>&1; then                     # openSUSE
+  mgr="zypper"
+  count=$(zypper -q lu 2>/dev/null | grep -c '^v |' || true)
+  sec=$(zypper -q lp 2>/dev/null | grep -ci 'security' || true)
+elif command -v flatpak >/dev/null 2>&1; then                    # Flatpak fallback
+  mgr="flatpak"
+  count=$(flatpak remote-ls --updates 2>/dev/null | grep -c . || true)
+fi
+count=${count:-0}; sec=${sec:-0}
+
+if   [ "$sec"   -gt 0 ]; then icon="security-high";          title="Security updates"; body="$sec security update(s) available"; rc=20
+elif [ "$count" -eq 0 ]; then icon="update-none";            title="Software Updates"; body="Your system is up to date"; rc=0
+elif [ "$count" -lt 10 ]; then icon="update-low";            title="Software Updates"; body="$count update(s) available"; rc=10
+elif [ "$count" -lt 50 ]; then icon="update-medium";         title="Software Updates"; body="$count updates available"; rc=10
+else                          icon="update-high";            title="Software Updates"; body="$count updates available"; rc=10
+fi
+
+[ "$PRINT" -eq 1 ] && { echo "$body [$mgr]"; exit "$rc"; }
+[ "$QUIET" -eq 1 ] && [ "$rc" -eq 0 ] && exit 0
+
+if command -v notify-send >/dev/null 2>&1; then
+  urg="normal"; [ "$rc" -eq 20 ] && urg="critical"; [ "$rc" -eq 0 ] && urg="low"
+  notify-send -a "Software Updates" -u "$urg" -i "$icon" \
+    -h "string:x-kde-display-appname:TenshiSTEP" \
+    -h "string:desktop-entry:org.kde.discover" \
+    "$title" "$body" || true
+fi
+echo "$body [$mgr]"
+exit "$rc"

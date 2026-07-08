@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP Workspace/file viewer: beveled window holding a folder -->
+  <rect x="5" y="8" width="38" height="32" rx="1.5" fill="#92a4b8" stroke="#cdd1d7" stroke-width="1.6"/>
+  <rect x="6.5" y="9.5" width="35" height="6" fill="#8494a6"/>
+  <path d="M6.5 9.5 H41.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M15 21 H23 L25.5 24 H33 V34 H15 Z" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M16 22 H22.6 L25 25 H32" fill="none" stroke="#ffffff" stroke-width="0.9"/>
+</svg>

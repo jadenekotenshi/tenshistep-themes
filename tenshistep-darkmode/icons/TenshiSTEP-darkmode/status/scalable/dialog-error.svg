@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP error -->
+  <circle cx="24" cy="24" r="17" fill="#c25a4d" stroke="#cdd1d7" stroke-width="2"/>
+  <path d="M24 7.5 A16 16 0 0 0 11 14" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M24 40.5 A16 16 0 0 0 37 34" fill="none" stroke="#74362e" stroke-width="1.4"/>
+  <path d="M16 16 L32 32 M32 16 L16 32" fill="none" stroke="#cdd1d7" stroke-width="4.4" stroke-linecap="round"/>
+</svg>

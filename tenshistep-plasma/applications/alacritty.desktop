@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Alacritty
+Comment=OpenGL terminal emulator
+Exec=alacritty
+Icon=alacritty
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=Alacritty

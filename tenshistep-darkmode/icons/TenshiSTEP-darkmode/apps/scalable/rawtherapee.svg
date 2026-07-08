@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <circle cx="24" cy="24" r="17" fill="#3e8e5a" stroke="#cdd1d7" stroke-width="1.5"/>
+  <path d="M24 8 L30 18 H18 Z" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M40 24 L30 30 V18 Z" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M24 40 L18 30 H30 Z" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M8 24 L18 18 V30 Z" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linejoin="round"/>
+  <text x="24" y="28.5" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#ffffff">R</text>
+</svg>

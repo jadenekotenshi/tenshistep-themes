@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=GNUMail
+Comment=GNUstep mail client
+Exec=sh -c 'openapp GNUMail 2>/dev/null || GNUMail'
+Icon=gnumail
+Terminal=false
+Categories=Network;Email;
+StartupWMClass=GNUMail

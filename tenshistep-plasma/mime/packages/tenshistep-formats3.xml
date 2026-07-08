@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- Console ROMs -->
+  <mime-type type="application/x-nes-rom"><comment>NES ROM</comment><magic priority="60"><match type="string" offset="0" value="NES\x1a"/></magic><glob pattern="*.nes"/></mime-type>
+  <mime-type type="application/x-snes-rom"><comment>SNES ROM</comment><glob pattern="*.sfc"/><glob pattern="*.smc"/></mime-type>
+  <mime-type type="application/x-gameboy-rom"><comment>Game Boy ROM</comment><glob pattern="*.gb"/><glob pattern="*.gbc"/></mime-type>
+  <mime-type type="application/x-gba-rom"><comment>Game Boy Advance ROM</comment><glob pattern="*.gba"/></mime-type>
+  <mime-type type="application/x-n64-rom"><comment>Nintendo 64 ROM</comment><glob pattern="*.n64"/><glob pattern="*.z64"/><glob pattern="*.v64"/></mime-type>
+  <mime-type type="application/x-genesis-rom"><comment>Sega Genesis/Mega Drive ROM</comment><glob pattern="*.gen"/><glob pattern="*.md"/><glob pattern="*.smd"/></mime-type>
+  <mime-type type="application/x-atari-2600-rom"><comment>Atari 2600 ROM</comment><glob pattern="*.a26"/></mime-type>
+  <mime-type type="application/x-sms-rom"><comment>Sega Master System ROM</comment><glob pattern="*.sms"/></mime-type>
+  <mime-type type="application/x-pc-engine-rom"><comment>PC Engine / TurboGrafx ROM</comment><glob pattern="*.pce"/></mime-type>
+  <mime-type type="application/x-msx-rom"><comment>MSX ROM</comment><glob pattern="*.mx1"/><glob pattern="*.mx2"/></mime-type>
+  <!-- Vintage disk / tape images -->
+  <mime-type type="application/x-d64"><comment>Commodore 1541 disk image</comment><glob pattern="*.d64"/><glob pattern="*.d71"/><glob pattern="*.d81"/></mime-type>
+  <mime-type type="application/x-atari-disk"><comment>Atari disk image</comment><glob pattern="*.atr"/><glob pattern="*.atx"/></mime-type>
+  <mime-type type="application/x-apple2-disk"><comment>Apple II disk image</comment><glob pattern="*.2mg"/><glob pattern="*.woz"/><glob pattern="*.nib"/></mime-type>
+  <mime-type type="application/x-t64"><comment>Commodore tape image</comment><glob pattern="*.t64"/><glob pattern="*.tap"/></mime-type>
+  <mime-type type="application/x-c64-program"><comment>Commodore program</comment><glob pattern="*.prg"/></mime-type>
+  <!-- Newer / uncommon languages not always in shared-mime-info -->
+  <mime-type type="text/x-nim"><comment>Nim source</comment><glob pattern="*.nim"/><glob pattern="*.nims"/></mime-type>
+  <mime-type type="text/x-zig"><comment>Zig source</comment><glob pattern="*.zig"/></mime-type>
+  <mime-type type="text/x-elixir"><comment>Elixir source</comment><glob pattern="*.ex"/><glob pattern="*.exs"/></mime-type>
+  <mime-type type="text/x-julia"><comment>Julia source</comment><glob pattern="*.jl"/></mime-type>
+  <mime-type type="text/x-vala"><comment>Vala source</comment><glob pattern="*.vala"/><glob pattern="*.vapi"/></mime-type>
+  <mime-type type="text/x-forth"><comment>Forth source</comment><glob pattern="*.fth"/><glob pattern="*.4th"/></mime-type>
+  <mime-type type="text/x-dsrc"><comment>D source</comment><glob pattern="*.d" weight="40"/><glob pattern="*.di"/></mime-type>
+  <mime-type type="text/x-prolog"><comment>Prolog source</comment><glob pattern="*.pro"/><glob pattern="*.plg"/></mime-type>
+  <mime-type type="text/x-smalltalk"><comment>Smalltalk source</comment><glob pattern="*.st" weight="20"/></mime-type>
+  <mime-type type="text/x-cobol"><comment>COBOL source</comment><glob pattern="*.cob"/><glob pattern="*.cbl"/></mime-type>
+  <mime-type type="text/x-asm"><comment>Assembly source</comment><glob pattern="*.asm"/><glob pattern="*.nasm"/></mime-type>
+  <mime-type type="text/x-vhdl"><comment>VHDL source</comment><glob pattern="*.vhdl"/></mime-type>
+  <mime-type type="text/x-clojure"><comment>Clojure source</comment><glob pattern="*.clj"/><glob pattern="*.cljs"/><glob pattern="*.edn"/></mime-type>
+  <!-- Comic-book archives + extra fonts -->
+  <mime-type type="application/x-cbz"><comment>Comic book (ZIP)</comment><glob pattern="*.cbz"/></mime-type>
+  <mime-type type="application/x-cbr"><comment>Comic book (RAR)</comment><glob pattern="*.cbr"/></mime-type>
+  <mime-type type="application/x-cb7"><comment>Comic book (7z)</comment><glob pattern="*.cb7"/></mime-type>
+  <mime-type type="application/x-mac-dfont"><comment>Mac font suitcase</comment><glob pattern="*.dfont"/></mime-type>
+  <mime-type type="application/vnd.font-fontforge-sfd"><comment>FontForge source</comment><glob pattern="*.sfd"/></mime-type>
+  <mime-type type="application/x-font-linux-psf"><comment>Console font</comment><glob pattern="*.psf"/><glob pattern="*.psfu"/></mime-type>
+</mime-info>

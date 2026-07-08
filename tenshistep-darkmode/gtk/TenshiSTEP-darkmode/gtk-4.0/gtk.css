@@ -1,0 +1,438 @@
+/*
+ * TenshiSTEP - GTK 4 theme
+ * OPENSTEP/NeXT chiselled look. Dark variant.
+ * Self-contained core (no Adwaita @import).
+ * Adjusted for GTK4 node names (windowcontrols, popover, modelbutton).
+ */
+
+@define-color bg          #3b4048;
+@define-color bg_dark     #32363d;
+@define-color fg          #e6e6e6;
+@define-color fg_dim      #8a9099;
+@define-color accent      #4a3fa0;
+@define-color accent_fg   #ffffff;
+@define-color light       #565d68;
+@define-color shadow      #202329;
+@define-color field       #2b2f35;
+@define-color field_fg    #e6e6e6;
+
+* {
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0;
+  font-family: "Helvetica", "Helvetica Neue", "Nimbus Sans", "Arial", sans-serif;
+}
+
+/* ---- Windows / backgrounds ---- */
+window,
+window.background,
+.background,
+.view,
+dialog,
+box,
+grid,
+notebook,
+paned,
+scrolledwindow,
+viewport {
+  background-color: @bg;
+  color: @fg;
+}
+
+window.csd {
+  border: 1px solid @shadow;
+}
+
+label {
+  color: @fg;
+}
+
+label:disabled,
+*:disabled {
+  color: @fg_dim;
+}
+
+/* ---- Headerbar / titlebar ---- */
+headerbar,
+.titlebar {
+  background-color: @bg;
+  color: @fg;
+  border: 0;
+  border-top: 1px solid @light;
+  border-bottom: 1px solid @shadow;
+  padding: 4px 6px;
+  min-height: 28px;
+}
+
+headerbar .title {
+  font-weight: bold;
+  color: @fg;
+}
+
+headerbar > windowcontrols > button {
+  min-height: 20px;
+  min-width: 20px;
+  padding: 2px;
+}
+
+/* ---- Buttons ---- */
+button {
+  background-color: @bg;
+  color: @fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  padding: 3px 10px;
+  min-height: 18px;
+}
+
+button:hover {
+  background-color: @bg_dark;
+}
+
+button:active,
+button:checked {
+  background-color: @bg_dark;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+button:disabled {
+  color: @fg_dim;
+}
+
+button.flat {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+button.flat:hover {
+  background-color: @bg_dark;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+button.flat:active {
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+/* ---- Entries / recessed fields ---- */
+entry,
+spinbutton,
+.entry,
+text {
+  background-color: @field;
+  color: @field_fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  padding: 3px 5px;
+  min-height: 18px;
+}
+
+entry:focus,
+entry:focus-within,
+spinbutton:focus-within {
+  border-color: @accent;
+}
+
+entry:disabled {
+  color: @fg_dim;
+  background-color: @bg;
+}
+
+selection,
+entry selection {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+/* ---- Frames ---- */
+frame > border,
+.frame {
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+/* ---- Menus (GTK4 popover-based) ---- */
+menubar,
+.menubar {
+  background-color: @bg;
+  color: @fg;
+  border-bottom: 1px solid @shadow;
+}
+
+menubar > item {
+  padding: 3px 8px;
+}
+
+popover > contents,
+popover > arrow {
+  background-color: @bg;
+  color: @fg;
+  border: 1px solid @shadow;
+  border-top-color: @light;
+  border-left-color: @light;
+  padding: 1px;
+}
+
+modelbutton {
+  color: @fg;
+  padding: 3px 8px;
+  min-height: 18px;
+}
+
+modelbutton:hover,
+menubar > item:hover,
+.menu item:hover {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+modelbutton:disabled {
+  color: @fg_dim;
+}
+
+separator {
+  background-color: @shadow;
+  border: 0;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+/* ---- Notebook / tabs ---- */
+notebook > header {
+  background-color: @bg;
+  border-color: @shadow;
+}
+
+notebook > header > tabs > tab {
+  background-color: @bg;
+  color: @fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  padding: 3px 10px;
+  min-height: 18px;
+}
+
+notebook > header > tabs > tab:checked {
+  background-color: @bg_dark;
+  border-bottom-color: @bg_dark;
+  font-weight: bold;
+}
+
+notebook > header > tabs > tab:hover:not(:checked) {
+  background-color: @bg_dark;
+}
+
+/* ---- Check / radio buttons ---- */
+checkbutton,
+radiobutton {
+  color: @fg;
+}
+
+check,
+radio {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+}
+
+radio {
+  border-radius: 50%;
+}
+
+check:checked,
+check:indeterminate {
+  background-color: @accent;
+  color: @accent_fg;
+  -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
+}
+
+radio:checked {
+  background-color: @accent;
+  color: @accent_fg;
+  -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
+}
+
+/* ---- Scrollbars ---- */
+scrollbar {
+  background-color: @bg_dark;
+  border: 1px solid @shadow;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+scrollbar slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 14px;
+  min-height: 14px;
+  border-radius: 0;
+}
+
+scrollbar slider:hover {
+  background-color: @bg_dark;
+}
+
+/* ---- Lists / columnview ---- */
+columnview,
+listview,
+list,
+.view {
+  background-color: @field;
+  color: @field_fg;
+}
+
+row:selected,
+list row:selected,
+listview > row:selected,
+columnview row:selected,
+.view:selected {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+columnview header button,
+treeview.view header button {
+  background-color: @bg;
+  color: @fg;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+/* ---- Tooltip ---- */
+tooltip,
+tooltip.background {
+  background-color: #2b2f35;
+  color: #e6e6e6;
+  border: 1px solid @light;
+  border-radius: 0;
+}
+
+tooltip label {
+  color: #e6e6e6;
+  padding: 2px 4px;
+}
+
+/* ---- Switch ---- */
+switch {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-width: 36px;
+  min-height: 18px;
+}
+
+switch:checked {
+  background-color: @accent;
+}
+
+switch > slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* ---- Progressbar ---- */
+progressbar {
+  color: @fg;
+}
+
+progressbar > trough,
+trough {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-height: 14px;
+}
+
+progressbar > trough > progress {
+  background-color: @accent;
+  border: 0;
+  min-height: 14px;
+}
+
+/* ---- Scale / slider ---- */
+scale > trough {
+  background-color: @field;
+  border: 1px solid @shadow;
+  min-height: 6px;
+}
+
+scale > trough > slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+scale > trough > highlight {
+  background-color: @accent;
+}
+
+/* ---- Separators ---- */
+separator.horizontal {
+  min-height: 1px;
+  background-color: @shadow;
+}
+
+separator.vertical {
+  min-width: 1px;
+  background-color: @shadow;
+}

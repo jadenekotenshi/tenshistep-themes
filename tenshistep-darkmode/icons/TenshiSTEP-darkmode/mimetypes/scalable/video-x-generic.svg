@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP video: filmstrip with play -->
+  <rect x="6" y="11" width="36" height="26" rx="2" fill="#8494a6" stroke="#cdd1d7" stroke-width="1.6"/>
+  <g fill="#ececec">
+    <rect x="8" y="13" width="4" height="3"/><rect x="15" y="13" width="4" height="3"/><rect x="22" y="13" width="4" height="3"/><rect x="29" y="13" width="4" height="3"/><rect x="36" y="13" width="4" height="3"/>
+    <rect x="8" y="32" width="4" height="3"/><rect x="15" y="32" width="4" height="3"/><rect x="22" y="32" width="4" height="3"/><rect x="29" y="32" width="4" height="3"/><rect x="36" y="32" width="4" height="3"/>
+  </g>
+  <rect x="13" y="18" width="22" height="12" fill="#202020"/>
+  <path d="M21 21 L29 24 L21 27 Z" fill="#d0d0d0"/>
+</svg>

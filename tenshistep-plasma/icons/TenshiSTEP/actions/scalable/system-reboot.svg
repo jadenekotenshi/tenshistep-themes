@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP reboot: cyclic arrows -->
+  <path d="M36 20 A13 13 0 1 0 38 27" fill="none" stroke="#1a1a1a" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M28 8 L38 12 L34 22 Z" fill="#1a1a1a"/>
+</svg>

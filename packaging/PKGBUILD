@@ -1,0 +1,67 @@
+# Maintainer: TenshiNET <jadenekotenshi@users.noreply.github.com>
+#
+# System-wide install of the TenshiSTEP / TenshiNET theme suite (light + dark):
+# Global Theme, colour schemes, Aurorae decoration, Plasma style, Kvantum, GTK
+# theme, icons, IRIX cursors, wallpapers, SDDM, Plymouth and MIME definitions.
+#
+# Build a release tarball for the tag first (see CHANGELOG), or use the -git
+# variant that tracks main.
+
+pkgname=tenshistep-theme
+pkgver=1.1.2
+pkgrel=1
+pkgdesc="NeXTSTEP/OPENSTEP-inspired Plasma theme suite (light + dark): Global Theme, icons, cursors, Aurorae, Kvantum, GTK, SDDM, Plymouth"
+arch=('any')
+url="https://github.com/jadenekotenshi/tenshistep-themes"
+license=('MIT')
+optdepends=(
+  'kvantum: chiselled NeXT Qt widget style (widgetStyle=kvantum)'
+  'plasma-workspace: KDE Plasma Global Theme + Plasma style'
+  'sddm: login theme'
+  'plymouth: boot splash'
+  'kde-gtk-config: apply the bundled GTK theme to GTK apps'
+)
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')  # pinned to v1.1.2 tarball in a follow-up
+
+package() {
+  cd "$srcdir/tenshistep-themes-$pkgver"
+  local S="usr/share"
+
+  _install_tree() {  # $1 = repo subdir, $2 = dest under /usr/share
+    install -d "$pkgdir/$S/$2"
+    cp -R "$1"/. "$pkgdir/$S/$2/"
+  }
+
+  # --- light + dark shared components -------------------------------------
+  for v in "tenshistep-plasma:TenshiSTEP:org.tenshistep.desktop" \
+           "tenshistep-darkmode:TenshiSTEP-darkmode:org.tenshistep.darkmode.desktop"; do
+    IFS=: read -r dir name lnf <<<"$v"
+    install -Dm644 "$dir/color-schemes/$name.colors" "$pkgdir/$S/color-schemes/$name.colors"
+    _install_tree "$dir/aurorae/$name"                "aurorae/themes/$name"
+    install -Dm644 "$dir/konsole/$name.colorscheme"   "$pkgdir/$S/konsole/$name.colorscheme"
+    _install_tree "$dir/icons/$name"                  "icons/$name"
+    _install_tree "$dir/plasma/desktoptheme/$name"    "plasma/desktoptheme/$name"
+    _install_tree "$dir/plasma/look-and-feel/$lnf"    "plasma/look-and-feel/$lnf"
+    _install_tree "$dir/kvantum/$name"                "Kvantum/$name"
+    _install_tree "$dir/gtk/$name"                    "themes/$name"
+    _install_tree "$dir/wallpaper/$name"              "wallpapers/$name"
+  done
+
+  # --- shared IRIX cursor theme ------------------------------------------
+  _install_tree "tenshistep-cursors/TenshiSTEP-IRIX"  "icons/TenshiSTEP-IRIX"
+
+  # --- boot chain (from the light bundle) --------------------------------
+  [ -d tenshistep-plasma/sddm/TenshiSTEP ] && \
+    _install_tree "tenshistep-plasma/sddm/TenshiSTEP" "sddm/themes/TenshiSTEP"
+  [ -d tenshistep-plasma/plymouth/TenshiSTEP ] && \
+    _install_tree "tenshistep-plasma/plymouth/TenshiSTEP" "plymouth/themes/TenshiSTEP"
+
+  # --- MIME definitions + AppStream metadata -----------------------------
+  install -Dm644 tenshistep-plasma/mime/packages/*.xml -t "$pkgdir/$S/mime/packages/"
+  install -Dm644 packaging/org.tenshistep.desktop.metainfo.xml \
+    "$pkgdir/$S/metainfo/org.tenshistep.desktop.metainfo.xml"
+
+  install -Dm644 README.md   "$pkgdir/usr/share/doc/$pkgname/README.md"
+  install -Dm644 CHANGELOG.md "$pkgdir/usr/share/doc/$pkgname/CHANGELOG.md"
+}

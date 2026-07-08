@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <path d="M8 40 L34 12" fill="none" stroke="#cdd1d7" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M8 40 L34 12" fill="none" stroke="#a5b7c9" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M40 40 L14 12" fill="none" stroke="#cdd1d7" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M40 40 L14 12" fill="none" stroke="#a5b7c9" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M18 6 H34 V30 L26 25 L18 30 Z" fill="#a83b32" stroke="#cdd1d7" stroke-width="1.4" stroke-linejoin="round"/>
+  <text x="26" y="20" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#ffffff">GW</text>
+</svg>

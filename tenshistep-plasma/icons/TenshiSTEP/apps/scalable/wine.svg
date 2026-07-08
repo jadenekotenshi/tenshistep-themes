@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP Wine: burgundy wine glass -->
+  <ellipse cx="24" cy="40" rx="9" ry="2.6" fill="#cdd6de" stroke="#1a1a1a" stroke-width="1.4"/>
+  <rect x="22.6" y="23" width="2.8" height="15" fill="#cdd6de" stroke="#1a1a1a" stroke-width="1.2"/>
+  <path d="M14 7 H34 Q34 21 24 24 Q14 21 14 7 Z" fill="#7a2f3a" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M16 8.5 H32" fill="none" stroke="#b06576" stroke-width="1"/>
+</svg>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=VMware Workstation
+Comment=Run virtual machines
+Exec=vmware
+Icon=vmware
+Terminal=false
+Categories=System;Emulator;
+StartupWMClass=vmware

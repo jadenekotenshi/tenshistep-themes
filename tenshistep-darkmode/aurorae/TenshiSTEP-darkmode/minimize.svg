@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="16">
+  <!-- NeXT/OPENSTEP miniaturize button; glyph = a small "miniwindow" tile:
+       dark frame + distinct title-bar strip over a light body, so it clearly
+       reads as the miniwindow a window collapses into when iconified. -->
+
+  <g id="minimize" transform="translate(0,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#cfd3d9"/>
+    <rect x="1" y="1" width="16" height="14" fill="#3b4048"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#565d67"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#565d67"/>
+    <rect x="1" y="14" width="16" height="1" fill="#14161a"/>
+    <rect x="16" y="1" width="1" height="14" fill="#14161a"/>
+    <rect x="4" y="3" width="10" height="10" fill="#14161a"/>
+    <rect x="5" y="4" width="8"  height="8"  fill="#dfe3e8"/>
+    <rect x="5" y="4" width="8"  height="3"  fill="#565d67"/>
+  </g>
+
+  <g id="active-center" transform="translate(22,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#cfd3d9"/>
+    <rect x="1" y="1" width="16" height="14" fill="#3b4048"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#565d67"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#565d67"/>
+    <rect x="1" y="14" width="16" height="1" fill="#14161a"/>
+    <rect x="16" y="1" width="1" height="14" fill="#14161a"/>
+    <rect x="4" y="3" width="10" height="10" fill="#14161a"/>
+    <rect x="5" y="4" width="8"  height="8"  fill="#dfe3e8"/>
+    <rect x="5" y="4" width="8"  height="3"  fill="#565d67"/>
+  </g>
+
+  <g id="hover-center" transform="translate(44,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#cfd3d9"/>
+    <rect x="1" y="1" width="16" height="14" fill="#454b54"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#565d67"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#565d67"/>
+    <rect x="1" y="14" width="16" height="1" fill="#14161a"/>
+    <rect x="16" y="1" width="1" height="14" fill="#14161a"/>
+    <rect x="4" y="3" width="10" height="10" fill="#14161a"/>
+    <rect x="5" y="4" width="8"  height="8"  fill="#f0f2f5"/>
+    <rect x="5" y="4" width="8"  height="3"  fill="#6a5fd6"/>
+  </g>
+
+  <g id="pressed-center" transform="translate(66,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#cfd3d9"/>
+    <rect x="1" y="1" width="16" height="14" fill="#2c3138"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#14161a"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#14161a"/>
+    <rect x="1" y="14" width="16" height="1" fill="#565d67"/>
+    <rect x="16" y="1" width="1" height="14" fill="#565d67"/>
+    <rect x="5" y="4" width="10" height="10" fill="#14161a"/>
+    <rect x="6" y="5" width="8"  height="8"  fill="#dfe3e8"/>
+    <rect x="6" y="5" width="8"  height="3"  fill="#565d67"/>
+  </g>
+
+  <g id="inactive-center" transform="translate(88,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#5a5f66"/>
+    <rect x="1" y="1" width="16" height="14" fill="#3d4045"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#4f545c"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#4f545c"/>
+    <rect x="1" y="14" width="16" height="1" fill="#26282c"/>
+    <rect x="16" y="1" width="1" height="14" fill="#26282c"/>
+    <rect x="4" y="3" width="10" height="10" fill="#26282c"/>
+    <rect x="5" y="4" width="8"  height="8"  fill="#9298a0"/>
+    <rect x="5" y="4" width="8"  height="3"  fill="#5c6067"/>
+  </g>
+
+  <g id="deactivated-center" transform="translate(110,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#5a5f66"/>
+    <rect x="1" y="1" width="16" height="14" fill="#3d4045"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#4f545c"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#4f545c"/>
+    <rect x="1" y="14" width="16" height="1" fill="#26282c"/>
+    <rect x="16" y="1" width="1" height="14" fill="#26282c"/>
+    <rect x="4" y="3" width="10" height="10" fill="#26282c"/>
+    <rect x="5" y="4" width="8"  height="8"  fill="#6f747c"/>
+    <rect x="5" y="4" width="8"  height="3"  fill="#4c5057"/>
+  </g>
+</svg>

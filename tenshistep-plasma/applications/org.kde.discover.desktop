@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Discover
+Comment=Software center
+Exec=plasma-discover
+Icon=discover
+Terminal=false
+Categories=System;PackageManager;
+StartupWMClass=org.kde.discover

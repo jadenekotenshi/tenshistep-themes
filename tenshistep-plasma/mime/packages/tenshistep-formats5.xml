@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <!-- Network captures -->
+  <mime-type type="application/vnd.tcpdump.pcap">
+    <comment>Packet capture (pcap)</comment>
+    <magic priority="70"><match type="string" offset="0" value="\xd4\xc3\xb2\xa1"/><match type="string" offset="0" value="\xa1\xb2\xc3\xd4"/></magic>
+    <glob pattern="*.pcap"/><glob pattern="*.cap"/><glob pattern="*.dmp"/>
+  </mime-type>
+  <mime-type type="application/x-pcapng">
+    <comment>Packet capture (pcapng)</comment>
+    <magic priority="70"><match type="string" offset="0" value="\x0a\x0d\x0d\x0a"/></magic>
+    <glob pattern="*.pcapng"/><glob pattern="*.ntar"/>
+  </mime-type>
+  <mime-type type="application/x-har"><comment>HTTP Archive</comment><glob pattern="*.har"/></mime-type>
+  <mime-type type="application/x-netflow"><comment>NetFlow capture</comment><glob pattern="*.nflow"/><glob pattern="*.netflow"/></mime-type>
+  <mime-type type="application/x-etl"><comment>Event Trace Log</comment><glob pattern="*.etl"/></mime-type>
+  <mime-type type="application/x-snoop"><comment>snoop capture</comment><magic priority="60"><match type="string" offset="0" value="snoop"/></magic><glob pattern="*.snoop"/></mime-type>
+  <!-- MIDI / notation / SoundFont / tracker modules -->
+  <mime-type type="application/vnd.recordare.musicxml"><comment>MusicXML score</comment><glob pattern="*.musicxml"/><glob pattern="*.mxl"/></mime-type>
+  <mime-type type="application/x-musescore"><comment>MuseScore score</comment><glob pattern="*.mscz"/><glob pattern="*.mscx"/></mime-type>
+  <mime-type type="audio/x-soundfont"><comment>SoundFont</comment><glob pattern="*.sf2"/><glob pattern="*.sf3"/></mime-type>
+  <mime-type type="audio/x-karaoke"><comment>Karaoke MIDI</comment><glob pattern="*.kar"/></mime-type>
+  <mime-type type="audio/x-mod"><comment>Amiga module</comment><glob pattern="*.mod" weight="40"/></mime-type>
+  <mime-type type="audio/x-xm"><comment>FastTracker module</comment><magic priority="60"><match type="string" offset="0" value="Extended Module: "/></magic><glob pattern="*.xm"/></mime-type>
+  <mime-type type="audio/x-it"><comment>Impulse Tracker module</comment><magic priority="60"><match type="string" offset="0" value="IMPM"/></magic><glob pattern="*.it"/></mime-type>
+  <mime-type type="audio/x-s3m"><comment>ScreamTracker module</comment><magic priority="60"><match type="string" offset="44" value="SCRM"/></magic><glob pattern="*.s3m"/></mime-type>
+  <!-- DAW project files -->
+  <mime-type type="application/x-ableton-live"><comment>Ableton Live set</comment><glob pattern="*.als"/><glob pattern="*.alp"/></mime-type>
+  <mime-type type="application/x-flstudio"><comment>FL Studio project</comment><glob pattern="*.flp" weight="60"/></mime-type>
+  <mime-type type="application/x-logic"><comment>Logic Pro project</comment><glob pattern="*.logicx"/></mime-type>
+  <mime-type type="application/x-protools"><comment>Pro Tools session</comment><glob pattern="*.ptx"/><glob pattern="*.pts"/></mime-type>
+  <mime-type type="application/x-cubase"><comment>Cubase project</comment><glob pattern="*.cpr"/></mime-type>
+  <mime-type type="application/x-reaper"><comment>REAPER project</comment><glob pattern="*.rpp"/></mime-type>
+  <mime-type type="application/x-ardour"><comment>Ardour session</comment><glob pattern="*.ardour"/></mime-type>
+  <mime-type type="application/x-lmms"><comment>LMMS project</comment><glob pattern="*.mmp"/><glob pattern="*.mmpz"/></mime-type>
+  <mime-type type="application/x-bitwig"><comment>Bitwig Studio project</comment><glob pattern="*.bwproject"/></mime-type>
+  <mime-type type="application/x-reason"><comment>Reason song</comment><glob pattern="*.reason"/></mime-type>
+  <mime-type type="application/x-renoise"><comment>Renoise song</comment><glob pattern="*.xrns"/></mime-type>
+</mime-info>

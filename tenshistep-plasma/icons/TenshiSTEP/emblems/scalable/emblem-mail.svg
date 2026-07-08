@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP mail emblem: envelope -->
+  <rect x="6" y="11" width="36" height="26" rx="2.5" fill="#9cafc4" stroke="#1a1a1a" stroke-width="2"/>
+  <path d="M7 12 L24 26 L41 12" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M8 13 H40" fill="none" stroke="#ffffff" stroke-width="1"/>
+</svg>

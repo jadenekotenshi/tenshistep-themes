@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP encrypted emblem: padlock -->
+  <path d="M17 22 V16 A7 7 0 0 1 31 16 V22" fill="none" stroke="#cdd1d7" stroke-width="3"/>
+  <rect x="12" y="22" width="24" height="18" rx="2.5" fill="#9cafc4" stroke="#cdd1d7" stroke-width="2"/>
+  <circle cx="24" cy="29.5" r="3" fill="#cdd1d7"/>
+  <rect x="22.7" y="29.5" width="2.6" height="6.5" fill="#cdd1d7"/>
+  <path d="M13.5 24 H34 M13.5 24 V38" fill="none" stroke="#ffffff" stroke-width="1"/>
+</svg>

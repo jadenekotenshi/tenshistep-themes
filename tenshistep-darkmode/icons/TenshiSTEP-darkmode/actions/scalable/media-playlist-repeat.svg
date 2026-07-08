@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP repeat: loop -->
+  <path d="M15 16 H31 A7 7 0 0 1 38 23 V25" fill="none" stroke="#cdd1d7" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M33 32 H17 A7 7 0 0 1 10 25 V23" fill="none" stroke="#cdd1d7" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M18 11 L13 16 L18 21" fill="none" stroke="#cdd1d7" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 37 L35 32 L30 27" fill="none" stroke="#cdd1d7" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

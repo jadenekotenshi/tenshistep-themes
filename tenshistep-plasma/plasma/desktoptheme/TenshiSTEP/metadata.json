@@ -1,0 +1,11 @@
+{
+    "KPackageStructure": "Plasma/Theme",
+    "KPlugin": {
+        "Authors": [ { "Name": "themes" } ],
+        "Description": "OPENSTEP-inspired NeXT chiselled widget style",
+        "Id": "TenshiSTEP",
+        "License": "MIT",
+        "Name": "TenshiSTEP",
+        "Version": "1.0"
+    }
+}

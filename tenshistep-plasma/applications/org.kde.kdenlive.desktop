@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Kdenlive
+Comment=Video editor
+Exec=kdenlive %U
+Icon=kdenlive
+Terminal=false
+Categories=AudioVideo;AudioVideoEditing;
+StartupWMClass=org.kde.kdenlive

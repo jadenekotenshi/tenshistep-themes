@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Heroic
+Comment=Epic/GOG games launcher
+Exec=heroic
+Icon=heroic
+Terminal=false
+Categories=Game;
+StartupWMClass=heroic

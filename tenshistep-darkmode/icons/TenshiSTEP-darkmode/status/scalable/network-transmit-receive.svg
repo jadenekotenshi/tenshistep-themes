@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP network-transmit-receive: up green + down blue -->
+  <path d="M17 40 V16 M9 24 L17 14 L25 24" fill="none" stroke="#cdd1d7" stroke-width="6.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 8 V32 M23 24 L31 34 L39 24" fill="none" stroke="#cdd1d7" stroke-width="6.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17 40 V16 M9 24 L17 14 L25 24" fill="none" stroke="#3e8e5a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 8 V32 M23 24 L31 34 L39 24" fill="none" stroke="#3daee9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

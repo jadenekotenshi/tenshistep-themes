@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs><style>.ColorScheme-Text{color:#232629;}</style></defs>
+  <g class="ColorScheme-Text" fill="currentColor">
+    <path d="M8.72 8.46 L4.22 2.46 L2.78 3.54 L7.28 9.54 zM8.72 9.54 L13.22 3.54 L11.78 2.46 L7.28 8.46 zM7.5 8.25 L4.5 10.25 L5.5 11.75 L8.5 9.75 zM7.5 9.75 L10.5 11.75 L11.5 10.25 L8.5 8.25 zM6.9 9 a1.1 1.1 0 1 0 2.2 0 a1.1 1.1 0 1 0 -2.2 0 z"/>
+    <path fill-rule="evenodd" d="M3.2 12.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0 zM4.1 12.5 a0.9 0.9 0 1 0 1.8 0 a0.9 0.9 0 1 0 -1.8 0 zM9.2 12.5 a1.8 1.8 0 1 0 3.6 0 a1.8 1.8 0 1 0 -3.6 0 zM10.1 12.5 a0.9 0.9 0 1 0 1.8 0 a0.9 0.9 0 1 0 -1.8 0 z"/>
+  </g>
+</svg>

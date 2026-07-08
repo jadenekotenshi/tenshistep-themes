@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP IntelliJ IDEA: dark square, colorful corner ticks, IJ -->
+  <rect x="8" y="8" width="32" height="32" rx="2" fill="#31353c" stroke="#cdd1d7" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="10" y="10" width="9" height="9" fill="#c0492f"/>
+  <rect x="29" y="10" width="9" height="9" fill="#d08a2e"/>
+  <rect x="10" y="29" width="9" height="9" fill="#3daee9"/>
+  <rect x="29" y="29" width="9" height="9" fill="#6a4fa0"/>
+  <text x="24" y="28" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#ffffff">IJ</text>
+</svg>

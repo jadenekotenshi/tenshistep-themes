@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP presence: busy -->
+  <circle cx="24" cy="24" r="14" fill="#c25a4d" stroke="#1a1a1a" stroke-width="2"/>
+  <path d="M16 24 H32" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
+</svg>

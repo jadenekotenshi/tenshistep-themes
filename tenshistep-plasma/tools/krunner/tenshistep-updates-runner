@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""
+TenshiSTEP KRunner plugin (D-Bus runner) — type "updates" / "check for updates"
+in KRunner (Alt+Space) to check for and open software updates.
+
+Needs python3-dbus + python3-gi (PyGObject). Registered via the .desktop in
+~/.local/share/krunner/dbusplugins/ and the D-Bus service activation file.
+"""
+import os
+import shutil
+import subprocess
+
+import dbus
+import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+from gi.repository import GLib
+
+IFACE = "org.kde.krunner1"
+KEYWORDS = ("update", "updates", "upgrade", "check for updates", "software updates")
+NOTIFIER = os.path.expanduser("~/.local/bin/tenshistep-update-notifier")
+
+
+class UpdatesRunner(dbus.service.Object):
+    # RemoteMatch: (id, text, iconName, type(int), relevance(double), properties)
+    @dbus.service.method(IFACE, in_signature="s", out_signature="a(sssida{sv})")
+    def Match(self, query):
+        q = query.strip().lower()
+        if not q:
+            return []
+        if q in KEYWORDS or q.startswith("update") or q.startswith("upgrade") or "software update" in q:
+            props = {"subtext": dbus.String("Open Discover and check for software updates")}
+            # id, text, icon, ExactMatch(100), relevance, properties
+            return [("check-updates", "Check for software updates",
+                     "system-software-update", 100, 1.0, props)]
+        return []
+
+    # secondary actions shown on the match
+    @dbus.service.method(IFACE, out_signature="a(sss)")
+    def Actions(self):
+        return [("notify", "Show update count", "update-medium")]
+
+    @dbus.service.method(IFACE, in_signature="ss")
+    def Run(self, match_id, action_id):
+        if action_id == "notify" and os.access(NOTIFIER, os.X_OK):
+            subprocess.Popen([NOTIFIER])
+            return
+        if shutil.which("plasma-discover"):
+            subprocess.Popen(["plasma-discover", "--mode", "update"])
+        elif os.access(NOTIFIER, os.X_OK):
+            subprocess.Popen([NOTIFIER])
+
+    @dbus.service.method(IFACE)
+    def Teardown(self):
+        pass
+
+
+def main():
+    DBusGMainLoop(set_as_default=True)
+    bus = dbus.SessionBus()
+    dbus.service.BusName("org.tenshistep.updatesrunner", bus)
+    UpdatesRunner(bus, "/runner")
+    GLib.MainLoop().run()
+
+
+if __name__ == "__main__":
+    main()

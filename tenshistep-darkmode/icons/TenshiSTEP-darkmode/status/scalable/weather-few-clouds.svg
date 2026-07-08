@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="2 2 44 44">
+  <!-- TenshiSTEP few clouds -->
+  <g stroke="#cdd1d7" stroke-width="2.2" stroke-linecap="round">
+  <path d="M27.5 17.0 L31.0 17.0"/>
+  <path d="M24.7 23.7 L27.2 26.2"/>
+  <path d="M18.0 26.5 L18.0 30.0"/>
+  <path d="M11.3 23.7 L8.8 26.2"/>
+  <path d="M8.5 17.0 L5.0 17.0"/>
+  <path d="M11.3 10.3 L8.8 7.8"/>
+  <path d="M18.0 7.5 L18.0 4.0"/>
+  <path d="M24.7 10.3 L27.2 7.8"/>
+  </g>
+  <circle cx="18" cy="17" r="6.5" fill="#ccd4da" stroke="#cdd1d7" stroke-width="1.8"/>
+  <path d="M18 11.0 A5.5 5.5 0 0 0 13.5 16" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M20 37 Q15 37 15 33 Q15 29 20 29 Q21 23.5 27.5 23.5 Q34 23.5 34.5 29 Q39 29 39 33 Q39 37 34 37 Z" fill="#ccd4da" stroke="#cdd1d7" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>

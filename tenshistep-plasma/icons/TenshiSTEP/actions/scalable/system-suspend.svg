@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP suspend: crescent moon -->
+  <path d="M27 8 A16 16 0 1 0 34 38 A13 13 0 1 1 27 8 Z" fill="#b0b0b0" stroke="#1a1a1a" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M22 11 A16 16 0 0 0 11 21" fill="none" stroke="#ffffff" stroke-width="1.3"/>
+  <path d="M33 10 H40 L33 16 H40" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

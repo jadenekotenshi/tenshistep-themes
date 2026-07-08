@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "themes"
+            }
+        ],
+        "Category": "",
+        "Description": "OPENSTEP-inspired colour Global Theme \u2014 chiselled NeXT bevel, gold folders, steel-blue accents",
+        "Id": "org.tenshistep.desktop",
+        "License": "MIT",
+        "Name": "TenshiSTEP",
+        "Version": "1.0",
+        "Icon": "tenshistep"
+    }
+}

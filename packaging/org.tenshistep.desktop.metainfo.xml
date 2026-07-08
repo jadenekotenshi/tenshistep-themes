@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStream MetaInfo for the TenshiSTEP Global Theme (KDE Store / distros) -->
+<component type="desktop-application">
+  <id>org.tenshistep.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>TenshiSTEP</name>
+  <summary>NeXTSTEP/OPENSTEP-inspired Global Theme for KDE Plasma</summary>
+  <description>
+    <p>
+      TenshiSTEP (brand: TenshiNET) is a complete NeXTSTEP / OPENSTEP-inspired
+      theme suite for the whole boot-to-desktop chain, in coordinated light and
+      dark variants: Global Theme, colour scheme, Aurorae window decoration,
+      Plasma style, Kvantum widget style, a GTK3/4 theme, an encyclopedic icon
+      theme, SGI IRIX-idiom cursors, wallpapers, SDDM and Plymouth.
+    </p>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <keywords>
+    <keyword>plasma</keyword>
+    <keyword>nextstep</keyword>
+    <keyword>openstep</keyword>
+    <keyword>theme</keyword>
+    <keyword>icons</keyword>
+    <keyword>cursors</keyword>
+  </keywords>
+  <url type="homepage">https://github.com/jadenekotenshi/tenshistep-themes</url>
+  <url type="bugtracker">https://github.com/jadenekotenshi/tenshistep-themes/issues</url>
+  <developer id="net.tenshi">
+    <name>TenshiNET</name>
+  </developer>
+  <provides>
+    <id>org.tenshistep.desktop</id>
+  </provides>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.1.2" date="2026-07-06">
+      <description>
+        <p>
+          Live-KDE fixes: the Global Theme no longer forces an unavailable
+          widget style (safe Breeze default, installer auto-upgrades to Kvantum
+          or the compiled TenshiSTEP style when present), and Aurorae titlebar
+          buttons render again (state elements renamed to the names Aurorae
+          expects). A transparent-frame gap is diagnosed and pending live rework.
+        </p>
+      </description>
+    </release>
+    <release version="1.1.1" date="2026-07-06">
+      <description>
+        <p>
+          Brought the dark icon theme to full parity with the expanded light set,
+          added the MIT LICENSE and the dark Global Theme preview, and fixed a
+          stale darkmode README note.
+        </p>
+      </description>
+    </release>
+    <release version="1.1.0" date="2026-07-06">
+      <description>
+        <p>
+          Wired the IRIX cursors and Kvantum widget style into the Global Theme;
+          added a GTK3/4 theme, monochrome panel symbolic icons, more Plasma
+          style widgets and Aurorae buttons, a selectable wallpaper package, and
+          a large application/action/device/emblem icon expansion.
+        </p>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-07-02">
+      <description><p>First stable release.</p></description>
+    </release>
+  </releases>
+</component>

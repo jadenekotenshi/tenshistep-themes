@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Google
+Comment=Google Search
+Exec=xdg-open https://www.google.com
+Icon=google
+Terminal=false
+Categories=Network;

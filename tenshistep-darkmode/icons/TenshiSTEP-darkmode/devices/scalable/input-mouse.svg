@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP mouse -->
+  <rect x="14" y="7" width="20" height="34" rx="10" fill="#9cafc4" stroke="#cdd1d7" stroke-width="1.6"/>
+  <path d="M16.5 12 A10 10 0 0 1 24 8.6" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M24 8 V21" fill="none" stroke="#cdd1d7" stroke-width="1.2"/>
+  <path d="M14 21 H34" fill="none" stroke="#cdd1d7" stroke-width="1.2"/>
+  <rect x="22.5" y="11" width="3" height="6" rx="1.5" fill="#5d6975" stroke="#cdd1d7" stroke-width="0.8"/>
+</svg>

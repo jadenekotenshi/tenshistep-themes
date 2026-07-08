@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Discord
+Comment=Voice and text chat
+Exec=discord
+Icon=discord
+Terminal=false
+Categories=Network;InstantMessaging;
+StartupWMClass=discord
