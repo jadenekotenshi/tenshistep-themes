@@ -36,38 +36,16 @@
   </provides>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.1.2" date="2026-07-06">
+    <release version="0.1.0" date="2026-07-08">
       <description>
         <p>
-          Live-KDE fixes: the Global Theme no longer forces an unavailable
-          widget style (safe Breeze default, installer auto-upgrades to Kvantum
-          or the compiled TenshiSTEP style when present), and Aurorae titlebar
-          buttons render again (state elements renamed to the names Aurorae
-          expects). A transparent-frame gap is diagnosed and pending live rework.
+          Initial release of TenshiSTEP, a NeXTSTEP/OPENSTEP-inspired KDE Plasma
+          theme suite in coordinated light and dark variants: Global Themes,
+          ~1000 chiselled icons, shared IRIX cursors, a compiled NeXT-style
+          QStyle, and a boot chain (SDDM, Plymouth, rEFInd). Formerly developed
+          as AngelLevel; renamed and versioning restarted at 0.1.0.
         </p>
       </description>
-    </release>
-    <release version="1.1.1" date="2026-07-06">
-      <description>
-        <p>
-          Brought the dark icon theme to full parity with the expanded light set,
-          added the MIT LICENSE and the dark Global Theme preview, and fixed a
-          stale darkmode README note.
-        </p>
-      </description>
-    </release>
-    <release version="1.1.0" date="2026-07-06">
-      <description>
-        <p>
-          Wired the IRIX cursors and Kvantum widget style into the Global Theme;
-          added a GTK3/4 theme, monochrome panel symbolic icons, more Plasma
-          style widgets and Aurorae buttons, a selectable wallpaper package, and
-          a large application/action/device/emblem icon expansion.
-        </p>
-      </description>
-    </release>
-    <release version="1.0.0" date="2026-07-02">
-      <description><p>First stable release.</p></description>
     </release>
   </releases>
 </component>

@@ -2,170 +2,49 @@
 
 All notable changes to the **TenshiSTEP / TenshiNET** theme suite are documented
 here. Format based on [Keep a Changelog](https://keepachangelog.com/); this
-project aims to follow [Semantic Versioning](https://semver.org/).
+project follows [Semantic Versioning](https://semver.org/).
 
-## [1.1.2] — 2026-07-06
+## [0.1.0] — 2026-07-08
 
-First round of live-KDE fixes.
+Initial release of **TenshiSTEP** — a NeXTSTEP / OPENSTEP-inspired KDE Plasma
+theme suite spanning the whole boot-to-desktop chain, in coordinated **light**
+and **dark** variants. (Previously developed under the name *AngelLevel*; the
+suite was renamed and its versioning restarted at 0.1.0.)
 
-### Fixed
-- **Widget style no longer breaks on systems without Kvantum.** The Global Theme
-  previously hard-set `widgetStyle=kvantum`, so on machines with neither the
-  Kvantum engine nor the compiled TenshiSTEP QStyle installed, applying the theme
-  left Qt apps unstyled. Now the shipped default is **Breeze** (always present),
-  and `install.sh` detects Kvantum (or the compiled `TenshiSTEP` QStyle) and
-  patches the installed Global Theme's `widgetStyle` to it only when present —
-  with clear guidance on installing/building one otherwise.
-- **Aurorae window buttons now render.** The button SVGs named their states
-  `close`/`close-active`/`close-hover`/… but Aurorae identifies a button by its
-  *filename* and requires the state elements to be named `active`/`hover`/
-  `pressed`/`inactive`/`deactivated`. Renamed all state elements across every
-  button (light + dark) and added `appmenu.svg`, so titlebar buttons appear
-  instead of an empty button area.
+### Plasma Global Themes — light (`tenshistep-plasma`) + dark (`tenshistep-darkmode`)
+- **Look-and-Feel** Global Themes (`org.tenshistep.desktop`, `…darkmode.desktop`)
+  tying colours, icons, decoration and splash together, with a stylized OPENSTEP
+  angel as the application-launcher icon.
+- **Colour schemes**, **Aurorae** window decoration (NeXT 9-slice bevels,
+  symmetric close-X, chunky bottom resize bar), **Konsole** schemes, **Plasma
+  Style**, **GTK3/4** themes, **wallpapers**, and an **Alt-Tab** switcher.
+- **Icon theme** — ~1,000 hand-authored NeXT-idiom icons per variant across
+  apps / mimetypes / actions / status / devices / places / emblems, plus 56
+  monochrome symbolic tray glyphs; the dark variant is recoloured for a dark
+  desktop. Includes a wrapping-fox Firefox icon and the angel menu launcher.
 
-### Known issue
-- **Transparent gaps in the window frame** (diagnosed, fix pending live testing):
-  `decoration.svg`'s 9-slice has inconsistent column widths (left column
-  topleft=8 / left=2 / bottomleft=24), which breaks FrameSvg tiling — the chunky
-  NeXT resize grips conflict with the thin side borders. To be reworked and
-  verified on a live KWin session.
+### Widget styling
+- A compiled NeXT-style **QStyle** (`TenshiSTEPStyle` / `TenshiSTEP-darkmode`):
+  chiselled bevels, a grey raised checkbox with a silvery check, and raised
+  combo/spin controls. A **Kvantum** theme and **QSS** are provided as
+  alternatives; `install.sh` prefers the compiled QStyle when installed, then
+  Kvantum, else Breeze.
+- An offscreen **QStyle preview harness** (`qstyle-preview/`).
 
-## [1.1.1] — 2026-07-06
+### Cursors & boot chain
+- Shared **TenshiSTEP-IRIX** SGI-idiom Xcursor set (69 cursors), installed to
+  `~/.icons` so the cursor KCM lists it.
+- **SDDM** greeter, **Plymouth** splash, and a **rEFInd** boot theme (light +
+  dark) with banner, OS icons and HiDPI EFI splashes — a canonical angel
+  position is carried across EFI → rEFInd → Plymouth → SDDM → desktop.
 
-- **Dark icon parity**: propagated the full expanded icon set into
-  `TenshiSTEP-darkmode` (503 icons + 69 alias symlinks), so the dark theme now
-  matches the light one exactly across apps/mimetypes/actions/status/devices/
-  places/emblems (chiselled outline recoloured `#1a1a1a` → `#cdd1d7`).
-- Added a top-level **`LICENSE`** (MIT) — previously only referenced in
-  metadata.
-- Fixed a stale note in the darkmode README (it claimed the dark theme reused
-  the light icon set; it ships its own full set).
+### Applications, MIME & updates
+- Branded `.desktop` launchers, shared-mime-info definitions with content magic,
+  and a `tenshistep-update-notifier` stack (systemd user timer, KRunner runner,
+  updates plasmoid) covering pacman / apt / dnf / zypper / flatpak.
 
-## [1.1.0] — 2026-07-06
+### Packaging & install
+- Per-theme `install.sh` deploying every component into `~/.local`, a **PKGBUILD**
+  for a system-wide Arch install, and **AppStream** metainfo.
 
-Completeness pass: wire up previously-unapplied pieces, fill non-icon component
-gaps, and a large icon expansion. All additive; no breaking changes.
-
-### Wiring (Global Theme now applies everything)
-- **Cursors**: the SGI IRIX cursor theme (`TenshiSTEP-IRIX`, 69 Xcursors) is now
-  installed and selected by the Global Theme (`cursorTheme=TenshiSTEP-IRIX`) —
-  previously it shipped but was never applied.
-- **Widget style**: `widgetStyle=kvantum` by default; `install.sh` installs and
-  selects the Kvantum theme non-destructively (graceful Breeze fallback if the
-  engine is absent).
-- **GTK + wallpaper**: `install.sh` now installs the GTK theme and the wallpaper
-  package too.
-
-### New components (light + dark)
-- **GTK3/4 theme** — NeXT chiselled CSS so GTK/GNOME apps stop falling back to
-  Adwaita/Breeze.
-- **Symbolic icons (56)** — true monochrome, recolorable (`ColorScheme-Text`)
-  panel/tray glyphs: network/battery/audio/bluetooth/notification status, common
-  actions, core devices.
-- **Plasma Style widgets** — tabbar, scrollbar, slider, checkmarks, tasks,
-  `dialogs/shutdowndialog` (generated by extending `gen_plasma_style.py`).
-- **Aurorae buttons** — alldesktops, keepabove, keepbelow, shade, help, menu
-  (all six states each).
-- **Wallpaper** — packaged as a selectable Plasma `Wallpaper/Images` package.
-
-### Icons (expanded)
-- **apps** ~96 → **588** — browsers, IDEs & dev tools, office suites (LibreOffice/
-  OpenOffice/StarOffice/MS/iWork/Google), the KDE app/Edu/Games/Calligra suites,
-  GNOME/Xfce/LXQt accessories, media players & DAWs, emulators/VMs, package
-  managers, chat/IRC/social, and non-KDE games/launchers.
-- **actions** → **199** (full freedesktop toolbar/menu set), **status** → **202**,
-  **devices** → **106**, **emblems** → **38**; plus the `jar` (java-archive)
-  mimetype.
-
-### Packaging / distribution
-- **PKGBUILD** (`packaging/`) for a system-wide Arch install of the whole suite.
-- **AppStream MetaInfo** (`org.tenshistep.desktop.metainfo.xml`) for KDE Store /
-  distro metadata.
-
-### Experimental
-- A custom **lock screen** greeter (`LockScreenUi.qml`, light + dark), built
-  against the documented kscreenlocker contract (`authenticator.respond()` +
-  succeeded/failed/message signals), in the NeXT dialog idiom. It has **not**
-  been verified on a live Plasma session and third-party lockscreens can drift
-  across Plasma versions, so treat it as experimental: **test before relying on
-  it.** Recovery if unlock ever fails — TTY (Ctrl+Alt+F2) → `loginctl
-  unlock-sessions`, then `lookandfeeltool -a org.kde.breeze.desktop` (or delete
-  the package's `contents/lockscreen/` dir).
-
-## [1.0.0] — 2026-07-02
-
-First stable release: a complete NeXTSTEP / OPENSTEP-inspired theme suite for the
-whole boot-to-desktop chain, in coordinated **light** and **dark** variants.
-Brand: *TenshiNET*; emblem: a stylized OPENSTEP angel.
-
-### Global theme (KDE Plasma)
-- **Look-and-Feel** Global Theme `org.tenshistep.desktop` tying colours, icons,
-  decoration and splash together, with the angel as its icon.
-- **KColorScheme** `TenshiSTEP.colors` — metallic indigo / gunmetal palette.
-- **Aurorae** window decoration — NeXT 9-slice bevels, symmetric close-X, and an
-  8 px NeXT-style bottom resize bar with grooved handles.
-- **Konsole** colour scheme.
-- **Plasma Style** (desktop/widget theme) — NeXT inset wells on combobox /
-  spinbox dropdowns and slider / scrollbar dimples.
-- **Kvantum** theme, **QSS**, and a native **QStyle** proxy (`TenshiSTEPStyle`).
-
-### Icon theme (light + dark)
-~550 hand-authored source icons per variant (≈1,090 names including aliases),
-NeXT-idiom with `#1a1a1a` chiselled outlines:
-- **apps** (96) — desktop utilities, browsers, terminals (kitty, alacritty,
-  xterm, foot, wezterm, cool-retro-term, konsole), the GNUstep suite, 40+ brand
-  apps, games & launchers, package managers, and Discover backends.
-- **mimetypes** (305) — an encyclopedic set across 20+ emblem families:
-  packages (incl. four magic-differentiated `.pkg` variants: macOS, NeXTSTEP,
-  FreeBSD, SysV), archives & compression, encoded text, video, image, AI/ML
-  models (safetensors, GGUF, ONNX, …), audio, libraries & executables, config /
-  registry / plist, disk & VM images, shell / perl / awk scripts, build systems,
-  office documents (RTF, CSV, AbiWord, iWork, StarOffice), fonts, e-books,
-  vintage software (console ROMs & retro disks), uncommon & vintage languages,
-  scientific / data (FITS, Parquet, HDF, …), CAD / 3D, GIS, network captures
-  (pcap/pcapng/HAR), and MIDI / DAW project files.
-- **status** (61) incl. software-update states and monochrome `-symbolic` tray
-  badges (KDE `ColorScheme-Text`).
-- **devices**, **places**, **actions**.
-
-### Boot chain
-- **SDDM** greeter (aspect-aware panel drop for 4:3 / 5:4).
-- **Plymouth** boot splash.
-- **rEFInd** theme (light + dark) with banner, selection, 46 OS icons and
-  `.desktop`-style aliases; HiDPI EFI splashes.
-- A canonical high angel position held across **EFI → rEFInd → Plymouth → SDDM →
-  desktop**, with matching handoff wallpapers, so each stage cross-fades.
-- Boot-sequence animation (`demo/boot-sequence.gif`).
-
-### Applications & MIME
-- 56 branded `.desktop` launchers with `StartupWMClass` hints and `openapp`
-  fallbacks for GNUstep apps.
-- shared-mime-info definitions (`mime/packages/tenshistep-*.xml`) for the
-  non-standard types, with content **magic** where available (xar!, SVR4
-  datastream, GGUF, HDF5, registry hive `regf`, FITS, Parquet, pcap, tracker
-  modules, …).
-
-### Software-update stack
-- `tenshistep-update-notifier` — detects pacman/apt/dnf/zypper/flatpak and
-  notifies with the themed icons; ships a **systemd user timer** and example
-  pacman/apt hooks.
-- A **KRunner** "check for updates" D-Bus runner.
-- An **updates plasmoid** (panel applet) showing status + count.
-- Discover backend icons (Flathub, Snap Store, fwupd, repository).
-
-### Install
-- `tenshistep-plasma/install.sh` installs every component into the user's
-  `~/.local` tree (colour scheme, decoration, Konsole, icons, Plasma style,
-  Global Theme, plasmoid, launchers, MIME types, update notifier, KRunner) and
-  refreshes the relevant caches.
-- 23 rendered preview sheets under `tenshistep-plasma/previews/`.
-
-### Notes
-- Visual assets were authored and validated via an SVG→PNG mock pipeline on
-  macOS (no live Plasma/KWin/SDDM/rEFInd on hand); icons are NeXT-idiom
-  reinterpretations, not official logos. Verify on live KDE.
-
-[1.1.2]: #112--2026-07-06
-[1.1.1]: #111--2026-07-06
-[1.1.0]: #110--2026-07-06
-[1.0.0]: #100--2026-07-02
+[0.1.0]: https://github.com/jadenekotenshi/tenshistep-themes/releases/tag/0.1.0

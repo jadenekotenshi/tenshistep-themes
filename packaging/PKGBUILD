@@ -8,7 +8,7 @@
 # variant that tracks main.
 
 pkgname=tenshistep-theme
-pkgver=1.1.2
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="NeXTSTEP/OPENSTEP-inspired Plasma theme suite (light + dark): Global Theme, icons, cursors, Aurorae, Kvantum, GTK, SDDM, Plymouth"
 arch=('any')
@@ -22,7 +22,7 @@ optdepends=(
   'kde-gtk-config: apply the bundled GTK theme to GTK apps'
 )
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')  # pinned to v1.1.2 tarball in a follow-up
+sha256sums=('SKIP')  # pinned to v0.1.0 tarball in a follow-up
 
 package() {
   cd "$srcdir/tenshistep-themes-$pkgver"
