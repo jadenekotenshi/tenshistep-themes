@@ -28,6 +28,17 @@ project follows [Semantic Versioning](https://semver.org/).
   in the suite confirmed against an actual compiled render rather than
   authored blind.
 
+### Fixed — lock screen unlock hang (all three variants)
+- `lockscreen/LockScreenUi.qml`'s `onSucceeded` handler only called
+  `Qt.quit()` when `authenticator.hadPrompt` was true, with no fallback for
+  the false case (unlike the stock greeter, which routes to a follow-up
+  screen there). Since this custom UI only supports password auth and has
+  no such fallback screen, a `hadPrompt == false` success silently did
+  nothing — the screen would sit there after a correct password with no
+  error and no unlock. Fixed in all six copies (light, dark, zirconium ×
+  standalone + Global Theme bundle) by unconditionally quitting on any
+  successful authentication.
+
 ## [0.1.0] — 2026-07-08
 
 Initial release of **TenshiSTEP** — a NeXTSTEP / OPENSTEP-inspired KDE Plasma

@@ -178,8 +178,11 @@ Item {
         target: (typeof authenticator !== "undefined") ? authenticator : null
         ignoreUnknownSignals: true
         function onSucceeded() {
-            // password unlock: quit the greeter so kscreenlocker unlocks the session
-            if (authenticator.hadPrompt) Qt.quit()
+            // this UI only supports password auth (no fingerprint/smartcard flow to
+            // fall back to), so any success -- prompted or not -- means unlock now. The
+            // stock greeter's hadPrompt-gated branch left this silently doing nothing
+            // when hadPrompt was false, hanging the screen after a correct password.
+            Qt.quit()
         }
         function onFailed(kind) {
             if (kind !== undefined && kind !== 0) return   // ignore non-interactive authenticators
