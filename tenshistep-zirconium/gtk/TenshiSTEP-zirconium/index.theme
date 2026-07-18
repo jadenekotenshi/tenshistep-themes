@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GTK-Theme-Directory
+Name=TenshiSTEP-zirconium
+Comment=OPENSTEP/NeXT chiselled GTK theme (brushed zirconium metal)
+
+[X-GTK-Theme]
+Name=TenshiSTEP-zirconium
+GTK=3.0;4.0
+Variant=light

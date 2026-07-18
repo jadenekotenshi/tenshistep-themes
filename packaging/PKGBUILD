@@ -1,8 +1,9 @@
 # Maintainer: TenshiNET <jadenekotenshi@users.noreply.github.com>
 #
-# System-wide install of the TenshiSTEP / TenshiNET theme suite (light + dark):
-# Global Theme, colour schemes, Aurorae decoration, Plasma style, Kvantum, GTK
-# theme, icons, IRIX cursors, wallpapers, SDDM, Plymouth and MIME definitions.
+# System-wide install of the TenshiSTEP / TenshiNET theme suite (light, dark,
+# brushed-metal): Global Theme, colour schemes, Aurorae decoration, Plasma
+# style, Kvantum, GTK theme, icons, IRIX cursors, wallpapers, SDDM, Plymouth
+# and MIME definitions.
 #
 # Build a release tarball for the tag first (see CHANGELOG), or use the -git
 # variant that tracks main.
@@ -10,7 +11,7 @@
 pkgname=tenshistep-theme
 pkgver=0.1.0
 pkgrel=1
-pkgdesc="NeXTSTEP/OPENSTEP-inspired Plasma theme suite (light + dark): Global Theme, icons, cursors, Aurorae, Kvantum, GTK, SDDM, Plymouth"
+pkgdesc="NeXTSTEP/OPENSTEP-inspired Plasma theme suite (light, dark, brushed-metal): Global Theme, icons, cursors, Aurorae, Kvantum, GTK, SDDM, Plymouth"
 arch=('any')
 url="https://github.com/jadenekotenshi/tenshistep-themes"
 license=('MIT')
@@ -33,9 +34,10 @@ package() {
     cp -R "$1"/. "$pkgdir/$S/$2/"
   }
 
-  # --- light + dark shared components -------------------------------------
+  # --- light + dark + brushed-metal shared components ----------------------
   for v in "tenshistep-plasma:TenshiSTEP:org.tenshistep.desktop" \
-           "tenshistep-darkmode:TenshiSTEP-darkmode:org.tenshistep.darkmode.desktop"; do
+           "tenshistep-darkmode:TenshiSTEP-darkmode:org.tenshistep.darkmode.desktop" \
+           "tenshistep-zirconium:TenshiSTEP-zirconium:org.tenshistep.zirconium.desktop"; do
     IFS=: read -r dir name lnf <<<"$v"
     install -Dm644 "$dir/color-schemes/$name.colors" "$pkgdir/$S/color-schemes/$name.colors"
     _install_tree "$dir/aurorae/$name"                "aurorae/themes/$name"

@@ -4,6 +4,30 @@ All notable changes to the **TenshiSTEP / TenshiNET** theme suite are documented
 here. Format based on [Keep a Changelog](https://keepachangelog.com/); this
 project follows [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added — `tenshistep-zirconium`, a brushed-metal third variant
+- A third Global Theme sibling to light/dark: the same NeXT chrome, a cool
+  **steel-blue accent** replacing the NeXT indigo, and a literal
+  **brushed-aluminum streak texture** baked into every flat chrome surface
+  (title bars, buttons, panels, wallpaper) — via SVG-pattern streaks in
+  Aurorae/Kvantum/Plasma Style, real `QPainter`-drawn streaks in the native
+  QStyle plugin, and `repeating-linear-gradient` in GTK3/4.
+- Reuses the light theme's **icon set unchanged** (view/content areas stay
+  the same near-white as light, so no dark-mode-style outline recolour is
+  needed) — only the chrome goes metallic.
+- New **wallpaper**: a genuine noise + horizontal-motion-blur brushed-metal
+  texture (not just a flat gradient), matching the Plymouth boot gradient
+  for a seamless boot-to-desktop handoff, at 1280×720 through 3840×2160.
+- Full component set at parity with the dark variant: colour scheme,
+  Aurorae, Konsole, SDDM (Qt5 + Qt6), Plasma Style, Kvantum, QSS, native
+  QStyle, GTK3/4, Plymouth, Global Theme (splash + logout + Alt-Tab
+  switcher), `install.sh`.
+- The QStyle plugin was **built and screenshot-verified** in this pass (Qt 6
+  / KDE Frameworks 6) via the `qstyle-preview` harness — the first variant
+  in the suite confirmed against an actual compiled render rather than
+  authored blind.
+
 ## [0.1.0] — 2026-07-08
 
 Initial release of **TenshiSTEP** — a NeXTSTEP / OPENSTEP-inspired KDE Plasma

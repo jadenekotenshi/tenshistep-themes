@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium desktop/monitor -->
+  <rect x="5" y="9" width="38" height="25" rx="1" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6"/>
+  <rect x="9" y="13" width="30" height="17" fill="#202020"/>
+  <path d="M9 13 H39 M9 13 V30" fill="none" stroke="#101010" stroke-width="1"/>
+  <path d="M6 10.5 H41.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <rect x="20" y="34" width="8" height="4" fill="#8494a6" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="13" y="38" width="22" height="3.5" rx="1" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.2"/>
+</svg>

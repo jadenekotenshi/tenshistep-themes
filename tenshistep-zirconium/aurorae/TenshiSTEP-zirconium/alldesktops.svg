@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="16">
+  <!-- NeXT square button, raised bevel; glyph = alldesktops. States laid out in a row. -->
+
+  <g id="alldesktops" transform="translate(0,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#cacdd1"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
+    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
+    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
+    <rect x="5" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="5" y="9" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="9" width="3" height="3" fill="#000000"/>
+  </g>
+
+  <g id="active-center" transform="translate(22,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#cacdd1"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
+    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
+    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
+    <rect x="5" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="5" y="9" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="9" width="3" height="3" fill="#000000"/>
+  </g>
+
+  <g id="hover-center" transform="translate(44,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#dbdde0"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
+    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
+    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
+    <rect x="5" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="5" width="3" height="3" fill="#000000"/>
+    <rect x="5" y="9" width="3" height="3" fill="#000000"/>
+    <rect x="9" y="9" width="3" height="3" fill="#000000"/>
+  </g>
+
+  <g id="pressed-center" transform="translate(66,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#b2b5b9"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#7c8188"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#7c8188"/>
+    <rect x="1" y="14" width="16" height="1" fill="#ffffff"/>
+    <rect x="16" y="1" width="1" height="14" fill="#ffffff"/>
+    <rect x="6" y="6" width="3" height="3" fill="#000000"/>
+    <rect x="10" y="6" width="3" height="3" fill="#000000"/>
+    <rect x="6" y="10" width="3" height="3" fill="#000000"/>
+    <rect x="10" y="10" width="3" height="3" fill="#000000"/>
+  </g>
+
+  <g id="inactive-center" transform="translate(88,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#494949"/>
+    <rect x="1" y="1" width="16" height="14" fill="#c7c7c7"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#ebebeb"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#ebebeb"/>
+    <rect x="1" y="14" width="16" height="1" fill="#a9a9a9"/>
+    <rect x="16" y="1" width="1" height="14" fill="#a9a9a9"/>
+    <rect x="5" y="5" width="3" height="3" fill="#555555"/>
+    <rect x="9" y="5" width="3" height="3" fill="#555555"/>
+    <rect x="5" y="9" width="3" height="3" fill="#555555"/>
+    <rect x="9" y="9" width="3" height="3" fill="#555555"/>
+  </g>
+
+  <g id="deactivated-center" transform="translate(110,0)">
+    <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
+    <rect x="0" y="0" width="18" height="16" fill="#494949"/>
+    <rect x="1" y="1" width="16" height="14" fill="#c7c7c7"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#ebebeb"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#ebebeb"/>
+    <rect x="1" y="14" width="16" height="1" fill="#a9a9a9"/>
+    <rect x="16" y="1" width="1" height="14" fill="#a9a9a9"/>
+    <rect x="5" y="5" width="3" height="3" fill="#777777"/>
+    <rect x="9" y="5" width="3" height="3" fill="#777777"/>
+    <rect x="5" y="9" width="3" height="3" fill="#777777"/>
+    <rect x="9" y="9" width="3" height="3" fill="#777777"/>
+  </g>
+
+</svg>

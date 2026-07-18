@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="1 1 46 46">
+  <!-- TenshiSTEP-zirconium insert object -->
+  <path d="M9 12 H33 V36 H9 Z" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M10.2 13.2 H31.8 M10.2 13.2 V34.8" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M31.8 13.2 V34.8 M10.2 34.8 H31.8" fill="none" stroke="#5d6975" stroke-width="1.1"/>
+  <path d="M33 12 L42 8 V32 L33 36 Z" fill="#5d6975" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M9 12 L18 8 H42 L33 12 Z" fill="#c3d0dd" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M39 24 H45 M42 21 V27" fill="none" stroke="#3e8e5a" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

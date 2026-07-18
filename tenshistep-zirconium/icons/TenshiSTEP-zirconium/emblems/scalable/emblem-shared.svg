@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium shared emblem: linked nodes -->
+  <g stroke="#1a1a1a" stroke-width="3" stroke-linecap="round">
+    <path d="M16 16 L32 24 M16 32 L32 24"/>
+  </g>
+  <circle cx="14" cy="14" r="5" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="34" cy="24" r="5" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="2"/>
+  <circle cx="14" cy="34" r="5" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="2"/>
+</svg>

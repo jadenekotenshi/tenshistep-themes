@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0.5 0.5 47 47">
+  <!-- TenshiSTEP-zirconium mail forward -->
+  <path d="M6 14 H32 V34 H6 Z" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M6 14 L19 25 L32 14" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M7.2 15.1 H30.8 M7.2 15.1 V32.8" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M31 32.8 H7.2 M31 15.4 V32.8" fill="none" stroke="#5d6975" stroke-width="1.1"/>
+  <path d="M28 28 L40 28 V23 L46 31 L40 39 V34 H28 Z" fill="#3e8e5a" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M29.2 33 V29 H40 V25" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+</svg>

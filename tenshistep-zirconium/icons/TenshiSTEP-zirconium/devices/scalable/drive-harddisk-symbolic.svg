@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs><style>.ColorScheme-Text{color:#232629;}</style></defs>
+  <g class="ColorScheme-Text" fill="currentColor">
+    <path fill-rule="evenodd" d="M1.5 4 h13 v8 h-13 zM10.1 10 a1.4 1.4 0 1 0 2.8 0 a1.4 1.4 0 1 0 -2.8 0 zM3 6 h6 v1.3 h-6 z"/>
+  </g>
+</svg>

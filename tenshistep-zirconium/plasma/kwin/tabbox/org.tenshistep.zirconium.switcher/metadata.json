@@ -1,0 +1,16 @@
+{
+    "KPackageStructure": "KWin/WindowSwitcher",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "themes"
+            }
+        ],
+        "Category": "",
+        "Description": "OPENSTEP-inspired NeXT window switcher — chiselled bevel, steel-blue panel, accent selection",
+        "Id": "org.tenshistep.zirconium.switcher",
+        "License": "MIT",
+        "Name": "TenshiSTEP-zirconium",
+        "Version": "1.0"
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3 3 42 42">
+  <!-- TenshiSTEP-zirconium bookmark-new: ribbon bookmark + green plus -->
+  <path d="M13 6 H29 V41 L21 33.5 L13 41 Z" fill="#c25a4d" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M14.4 7.4 V37.5 M14.4 7.4 H27.5" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M27.6 7.5 V37.5" fill="none" stroke="#74362e" stroke-width="1.1"/>
+  <circle cx="36" cy="34" r="7.5" fill="#3e8e5a" stroke="#1a1a1a" stroke-width="1.5"/>
+  <path d="M31.8 31.2 A5.2 5.2 0 0 1 34.6 28.9" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+  <path d="M36 30 V38 M32 34 H40" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round"/>
+</svg>

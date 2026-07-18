@@ -1,0 +1,61 @@
+[Icon Theme]
+Name=TenshiSTEP-zirconium
+Comment=OPENSTEP-inspired colour icon theme with a chiselled NeXT bevel
+Example=folder
+DisplayDepth=8
+
+# Unprovided icons fall back to Breeze, then hicolor. This bundle ships a
+# curated NeXT-style core set (folders, common mimetypes, devices, key
+# actions); everything else inherits from the themes below.
+Inherits=breeze,hicolor
+
+Directories=places/scalable,mimetypes/scalable,devices/scalable,actions/scalable,apps/scalable,status/scalable,emblems/scalable
+
+[places/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Places
+Type=Scalable
+
+[mimetypes/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=MimeTypes
+Type=Scalable
+
+[devices/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Devices
+Type=Scalable
+
+[actions/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Actions
+Type=Scalable
+
+[apps/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Applications
+Type=Scalable
+
+[status/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Status
+Type=Scalable
+
+[emblems/scalable]
+Size=48
+MinSize=8
+MaxSize=512
+Context=Emblems
+Type=Scalable

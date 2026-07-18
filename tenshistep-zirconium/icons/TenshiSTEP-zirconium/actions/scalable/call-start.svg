@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium call start -->
+  <path d="M12 6 C9 6 6 9 6 12 C6 28 20 42 36 42 C39 42 42 39 42 36 L42 30 L31 27 L27 32 C22 29 19 26 16 21 L21 17 L18 6 Z" fill="#3e8e5a" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M12 7.4 C9.5 7.4 7.4 9.5 7.4 12 M17.2 7.4 L19.6 16.6 L15.6 20" fill="none" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M40.6 30.8 L40.6 36 C40.6 38.2 38.2 40.6 36 40.6" fill="none" stroke="#2f6a44" stroke-width="1.1" stroke-linejoin="round"/>
+</svg>

@@ -9,10 +9,11 @@
   <description>
     <p>
       TenshiSTEP (brand: TenshiNET) is a complete NeXTSTEP / OPENSTEP-inspired
-      theme suite for the whole boot-to-desktop chain, in coordinated light and
-      dark variants: Global Theme, colour scheme, Aurorae window decoration,
-      Plasma style, Kvantum widget style, a GTK3/4 theme, an encyclopedic icon
-      theme, SGI IRIX-idiom cursors, wallpapers, SDDM and Plymouth.
+      theme suite for the whole boot-to-desktop chain, in coordinated light,
+      dark, and brushed-metal variants: Global Theme, colour scheme, Aurorae
+      window decoration, Plasma style, Kvantum widget style, a GTK3/4 theme,
+      an encyclopedic icon theme, SGI IRIX-idiom cursors, wallpapers, SDDM
+      and Plymouth.
     </p>
   </description>
   <categories>

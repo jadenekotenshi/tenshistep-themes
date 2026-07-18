@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium presence: offline -->
+  <circle cx="24" cy="24" r="14" fill="#e8e8e8" stroke="#1a1a1a" stroke-width="3"/>
+  <path d="M19 19 L29 29 M29 19 L19 29" fill="none" stroke="#8a8a8a" stroke-width="3" stroke-linecap="round"/>
+</svg>

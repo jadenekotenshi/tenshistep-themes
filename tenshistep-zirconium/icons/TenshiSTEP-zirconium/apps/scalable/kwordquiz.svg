@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3 3 42 42">
+  <rect x="7" y="12" width="24" height="30" rx="2" fill="#d8b83a" stroke="#1a1a1a" stroke-width="1.4" transform="rotate(-8 19 27)"/>
+  <rect x="16" y="8" width="26" height="30" rx="2" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5" transform="rotate(6 29 23)"/>
+  <text x="29" y="27" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#3b6fb0" transform="rotate(6 29 23)">Q</text>
+</svg>

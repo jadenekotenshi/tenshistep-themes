@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "X-Plasma-APIVersion": "2",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "themes"
+            }
+        ],
+        "Category": "",
+        "Description": "OPENSTEP-inspired colour Global Theme \u2014 chiselled NeXT bevel, gold folders, steel-blue accents",
+        "Id": "org.tenshistep.zirconium.desktop",
+        "License": "MIT",
+        "Name": "TenshiSTEP-zirconium",
+        "Version": "1.0",
+        "Icon": "tenshistep"
+    }
+}

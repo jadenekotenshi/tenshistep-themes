@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium source: JSON -->
+  <path d="M11 5 H30 L38 13 V43 H11 Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M30 5 V13 H38 Z" fill="#b0b0b0" stroke="#1a1a1a" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M16 18 H30 M16 22 H27" fill="none" stroke="#c8c8c8" stroke-width="1.5"/>
+  <rect x="11" y="28" width="27" height="11" fill="#2e2768"/>
+  <text x="24.5" y="35.9" font-family="Helvetica,Arial,sans-serif" font-size="6.2" font-weight="bold" text-anchor="middle" fill="#ffffff">JSON</text>
+</svg>

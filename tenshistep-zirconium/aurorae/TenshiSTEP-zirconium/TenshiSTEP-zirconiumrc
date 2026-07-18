@@ -1,0 +1,46 @@
+[General]
+TitleAlignment=Center
+TitleVerticalAlignment=Center
+ActiveTextColor=0,0,0,255
+InactiveTextColor=85,85,85,255
+UseTextShadow=false
+Animation=0
+
+[Layout]
+; Outer window borders (2px chiselled dark frame; bottom is the NeXT resize bar)
+; NOTE: BorderLeft/Right MUST equal the decoration.svg side-column width, else a
+; transparent gap appears between the content and the border.
+BorderLeft=2
+BorderRight=2
+BorderBottom=8
+BorderTop=0
+
+; Padding is used by the SVG to draw shadows; NeXT has no soft shadow
+PaddingLeft=0
+PaddingRight=0
+PaddingTop=0
+PaddingBottom=0
+
+; Title bar geometry
+TitleEdgeTop=2
+TitleEdgeBottom=2
+; Inset the buttons a few px from the window edges
+TitleEdgeLeft=5
+TitleEdgeRight=5
+TitleBorderLeft=4
+TitleBorderRight=4
+TitleHeight=20
+
+; Maximized: keep the same title geometry as normal so buttons stay aligned
+; (Aurorae defaults these to 0, which shifts the buttons when maximized)
+TitleEdgeTopMaximized=2
+TitleEdgeBottomMaximized=2
+TitleEdgeLeftMaximized=5
+TitleEdgeRightMaximized=5
+
+; Square NeXT-style buttons
+ButtonWidth=18
+ButtonHeight=16
+ButtonSpacing=1
+ButtonMarginTop=2
+ExplicitButtonSpacer=4

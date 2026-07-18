@@ -4,7 +4,7 @@
 // widgets, and renders the result to a PNG -- so you can eyeball a style change
 // without installing the plugin or applying it to a live Plasma session.
 //
-//   styletest <plugin.so> <styleKey> <out.png> [light|dark]
+//   styletest <plugin.so> <styleKey> <out.png> [light|dark|zirconium]
 //
 // e.g.
 //   styletest ../tenshistep-plasma/qstyle/build/libtenshistepstyle.so \
@@ -15,7 +15,8 @@
 //  * Pass an ABSOLUTE path to the plugin .so -- QPluginLoader resolves relative
 //    paths against the current directory and otherwise just reports
 //    "The shared library was not found."
-//  * Style keys: "TenshiSTEP" (light), "TenshiSTEP-darkmode" (dark).
+//  * Style keys: "TenshiSTEP" (light), "TenshiSTEP-darkmode" (dark),
+//    "TenshiSTEP-zirconium" (brushed-metal light variant).
 
 #include <QApplication>
 #include <QPluginLoader>
@@ -37,16 +38,23 @@
 
 // Approximate each theme's palette so the widgets render in context (the plugin
 // itself hard-codes most control colours; these mainly set field/window/text).
-static QPalette themePalette(bool dark)
+static QPalette themePalette(const QString &variant)
 {
     QPalette pal;
-    if (dark) {
+    if (variant == QLatin1String("dark")) {
         pal.setColor(QPalette::Window,     QColor(0x2b, 0x2e, 0x34));
         pal.setColor(QPalette::WindowText, QColor(0xdc, 0xdf, 0xe4));
         pal.setColor(QPalette::Base,       QColor(0x20, 0x22, 0x26));
         pal.setColor(QPalette::Text,       QColor(0xdc, 0xdf, 0xe4));
         pal.setColor(QPalette::Button,     QColor(0x3b, 0x40, 0x48));
         pal.setColor(QPalette::ButtonText, QColor(0xdc, 0xdf, 0xe4));
+    } else if (variant == QLatin1String("zirconium")) {
+        pal.setColor(QPalette::Window,     QColor(0xc4, 0xc7, 0xcb));
+        pal.setColor(QPalette::WindowText, QColor(0x1a, 0x1a, 0x1a));
+        pal.setColor(QPalette::Base,       QColor(0xff, 0xff, 0xff));
+        pal.setColor(QPalette::Text,       QColor(0x1a, 0x1a, 0x1a));
+        pal.setColor(QPalette::Button,     QColor(0xca, 0xcd, 0xd1));
+        pal.setColor(QPalette::ButtonText, QColor(0x1a, 0x1a, 0x1a));
     } else {
         pal.setColor(QPalette::Window,     QColor(0xa0, 0xa7, 0xb2));
         pal.setColor(QPalette::WindowText, QColor(0x1a, 0x1a, 0x1a));
@@ -61,7 +69,7 @@ static QPalette themePalette(bool dark)
 int main(int argc, char **argv)
 {
     if (argc < 4) {
-        qWarning("usage: %s <plugin.so> <styleKey> <out.png> [light|dark]", argv[0]);
+        qWarning("usage: %s <plugin.so> <styleKey> <out.png> [light|dark|zirconium]", argv[0]);
         return 64;
     }
     qputenv("QT_QPA_PLATFORM", "offscreen");
@@ -74,8 +82,8 @@ int main(int argc, char **argv)
     QStyle *style = sp ? sp->create(argv[2]) : nullptr;
     if (!style) { qWarning("style create '%s' failed", argv[2]); return 2; }
 
-    const bool dark = (argc > 4 && QString(argv[4]) == QLatin1String("dark"));
-    const QPalette pal = themePalette(dark);
+    const QString variant = argc > 4 ? QString(argv[4]) : QString();
+    const QPalette pal = themePalette(variant);
     app.setStyle(style);
     app.setPalette(pal);
 

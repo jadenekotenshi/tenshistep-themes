@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium bsnes: SNES cartridge -->
+  <path d="M13 7 H35 V37 Q35 41 31 41 H17 Q13 41 13 37 Z" fill="#b8bcc2" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M16 10 H32 M16 12.5 H32 M16 15 H32" fill="none" stroke="#8a9099" stroke-width="1.1"/>
+  <rect x="16" y="18" width="16" height="13" rx="1" fill="#eef1f4" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="24" cy="21.5" r="1.5" fill="#3b6fb0"/>
+  <circle cx="28" cy="24.5" r="1.5" fill="#c0492f"/>
+  <circle cx="24" cy="27.5" r="1.5" fill="#d8b83a"/>
+  <circle cx="20" cy="24.5" r="1.5" fill="#3e8e5a"/>
+  <rect x="18" y="37" width="12" height="2.2" rx="1" fill="#8a9099"/>
+</svg>

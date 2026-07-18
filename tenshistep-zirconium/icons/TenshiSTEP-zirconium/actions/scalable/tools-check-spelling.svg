@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- TenshiSTEP-zirconium check spelling -->
+  <path d="M5 30 L10 14 L15 30 M6.4 25 H13.6" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 12 H24 A5 5 0 0 1 24 22 H18 Z M18 22 H25 A5 5 0 0 1 25 32 H18 Z" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M40 14 A9 9 0 1 0 44 21.5" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M22 34 L30 42 L46 24" fill="none" stroke="#3e8e5a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.4 34.6 L30 41" fill="none" stroke="#ffffff" stroke-width="1.1" stroke-linecap="round"/>
+</svg>

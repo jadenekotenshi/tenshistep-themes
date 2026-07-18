@@ -1,0 +1,495 @@
+/*
+ * TenshiSTEP-zirconium - GTK 3 theme
+ * OPENSTEP/NeXT chiselled look. Brushed-zirconium metal variant.
+ * Self-contained core (no Adwaita @import).
+ */
+
+@define-color bg          #cacdd1;
+@define-color bg_dark     #b5b8bc;
+@define-color fg          #1a1a1a;
+@define-color fg_dim      #6a6e74;
+@define-color accent      #487697;
+@define-color accent_fg   #ffffff;
+@define-color light       #ffffff;
+@define-color shadow      #7c8188;
+@define-color field       #ffffff;
+@define-color field_fg    #1a1a1a;
+
+* {
+  -gtk-icon-shadow: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0;
+  font-family: "Helvetica", "Helvetica Neue", "Nimbus Sans", "Arial", sans-serif;
+}
+
+/* ---- Windows / backgrounds ---- */
+window,
+.background,
+window.background,
+.view,
+dialog,
+popover,
+box,
+grid,
+notebook,
+paned,
+scrolledwindow,
+viewport {
+  background-color: @bg;
+  /* literal brushed-aluminum streak, repeating every 3px */
+  background-image: repeating-linear-gradient(to bottom,
+      alpha(@light, 0.10) 0px, alpha(@light, 0.10) 1px,
+      alpha(@fg, 0.045) 1px, alpha(@fg, 0.045) 2px,
+      alpha(@light, 0) 2px, alpha(@light, 0) 3px);
+  color: @fg;
+}
+
+window.csd {
+  border: 1px solid @shadow;
+}
+
+label {
+  color: @fg;
+}
+
+label:disabled,
+*:disabled {
+  color: @fg_dim;
+}
+
+/* ---- Chiselled bevel helper (buttons, entries, frames) ---- */
+
+/* ---- Headerbar / titlebar ---- */
+headerbar,
+.titlebar,
+.header-bar {
+  background-color: @bg;
+  background-image: repeating-linear-gradient(to bottom,
+      alpha(@light, 0.14) 0px, alpha(@light, 0.14) 1px,
+      alpha(@fg, 0.05) 1px, alpha(@fg, 0.05) 2px,
+      alpha(@light, 0) 2px, alpha(@light, 0) 3px);
+  color: @fg;
+  border: 0;
+  border-top: 1px solid @light;
+  border-bottom: 1px solid @shadow;
+  padding: 4px 6px;
+  min-height: 28px;
+}
+
+headerbar .title,
+.titlebar .title {
+  font-weight: bold;
+  color: @fg;
+}
+
+headerbar button,
+.titlebar button {
+  min-height: 20px;
+  min-width: 20px;
+}
+
+/* ---- Buttons ---- */
+button {
+  background-color: @bg;
+  background-image: repeating-linear-gradient(to bottom,
+      alpha(@light, 0.14) 0px, alpha(@light, 0.14) 1px,
+      alpha(@fg, 0.05) 1px, alpha(@fg, 0.05) 2px,
+      alpha(@light, 0) 2px, alpha(@light, 0) 3px);
+  color: @fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  padding: 3px 10px;
+  min-height: 18px;
+}
+
+button:hover {
+  background-color: @bg_dark;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+button:active,
+button:checked {
+  background-color: @bg_dark;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+button:disabled {
+  color: @fg_dim;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+button.flat {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+button.flat:hover {
+  background-color: @bg_dark;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+button.flat:active {
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+/* ---- Entries / recessed fields ---- */
+entry,
+spinbutton,
+.entry {
+  background-color: @field;
+  color: @field_fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  padding: 3px 5px;
+  min-height: 18px;
+}
+
+entry:focus,
+spinbutton:focus,
+entry:focus-within {
+  border-color: @accent;
+}
+
+entry:disabled {
+  color: @fg_dim;
+  background-color: @bg;
+}
+
+entry selection {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+/* ---- Frames ---- */
+frame,
+frame > border,
+.frame {
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+}
+
+/* ---- Menus ---- */
+menubar,
+.menubar {
+  background-color: @bg;
+  color: @fg;
+  border-bottom: 1px solid @shadow;
+}
+
+menubar > menuitem {
+  padding: 3px 8px;
+}
+
+menu,
+.menu,
+.context-menu {
+  background-color: @bg;
+  color: @fg;
+  border: 1px solid @shadow;
+  border-top-color: @light;
+  border-left-color: @light;
+  padding: 1px;
+}
+
+menuitem {
+  color: @fg;
+  padding: 3px 8px;
+}
+
+menuitem:hover,
+menuitem:active {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+menuitem:disabled {
+  color: @fg_dim;
+}
+
+separator {
+  background-color: @shadow;
+  border: 0;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+menu separator {
+  background-color: @shadow;
+  margin: 2px 0;
+}
+
+/* ---- Notebook / tabs ---- */
+notebook > header {
+  background-color: @bg;
+  border-color: @shadow;
+}
+
+notebook > header > tabs > tab {
+  background-color: @bg;
+  color: @fg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  padding: 3px 10px;
+  min-height: 18px;
+}
+
+notebook > header > tabs > tab:checked {
+  background-color: @bg_dark;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @bg_dark;
+  font-weight: bold;
+}
+
+notebook > header > tabs > tab:hover:not(:checked) {
+  background-color: @bg_dark;
+}
+
+/* ---- Check / radio buttons ---- */
+checkbutton,
+radiobutton {
+  color: @fg;
+}
+
+check,
+radio {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+}
+
+radio {
+  border-radius: 50%;
+}
+
+check:checked,
+check:indeterminate {
+  background-color: @accent;
+  color: @accent_fg;
+  -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
+}
+
+radio:checked {
+  background-color: @accent;
+  color: @accent_fg;
+  -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
+}
+
+/* ---- Scrollbars ---- */
+scrollbar {
+  background-color: @bg_dark;
+  border: 1px solid @shadow;
+}
+
+scrollbar slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 14px;
+  min-height: 14px;
+  border-radius: 0;
+}
+
+scrollbar slider:hover {
+  background-color: @bg_dark;
+}
+
+scrollbar.horizontal slider {
+  min-height: 14px;
+}
+
+scrollbar.vertical slider {
+  min-width: 14px;
+}
+
+scrollbar,
+scrollbar.horizontal,
+scrollbar.vertical {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+scrollbar button {
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+}
+
+/* ---- Treeview / lists ---- */
+treeview.view,
+list,
+list row,
+columnview,
+.view {
+  background-color: @field;
+  color: @field_fg;
+  border-radius: 0;
+}
+
+treeview.view:selected,
+list row:selected,
+row:selected,
+.view:selected {
+  background-color: @accent;
+  color: @accent_fg;
+}
+
+treeview.view header button {
+  background-color: @bg;
+  color: @fg;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+}
+
+/* ---- Tooltip ---- */
+tooltip,
+tooltip.background {
+  background-color: #ffffe1;
+  color: #1a1a1a;
+  border: 1px solid @shadow;
+  border-radius: 0;
+}
+
+tooltip label {
+  color: #1a1a1a;
+  padding: 2px 4px;
+}
+
+/* ---- Switch ---- */
+switch {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-width: 36px;
+  min-height: 18px;
+}
+
+switch:checked {
+  background-color: @accent;
+}
+
+switch slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* ---- Progressbar ---- */
+progressbar {
+  color: @fg;
+}
+
+progressbar trough,
+trough {
+  background-color: @field;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @shadow;
+  border-left-color: @shadow;
+  border-right-color: @light;
+  border-bottom-color: @light;
+  min-height: 14px;
+}
+
+progressbar progress {
+  background-color: @accent;
+  border: 0;
+  min-height: 14px;
+}
+
+/* ---- Scale / slider ---- */
+scale slider {
+  background-color: @bg;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: @light;
+  border-left-color: @light;
+  border-right-color: @shadow;
+  border-bottom-color: @shadow;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+scale trough {
+  background-color: @field;
+  border: 1px solid @shadow;
+  min-height: 6px;
+}
+
+scale highlight {
+  background-color: @accent;
+}
+
+/* ---- Separators (toolbar/box) ---- */
+separator.horizontal {
+  min-height: 1px;
+  background-color: @shadow;
+}
+
+separator.vertical {
+  min-width: 1px;
+  background-color: @shadow;
+}
+
+/* ---- Spinbutton buttons ---- */
+spinbutton button {
+  border-width: 1px;
+  min-height: 14px;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium NEdit: Motif-era editor window -->
+  <rect x="5" y="7" width="38" height="34" rx="1" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6"/>
+  <rect x="6.5" y="8.5" width="35" height="5" fill="#8494a6"/>
+  <path d="M6.5 8.5 H41.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <rect x="6.5" y="13.7" width="35" height="3.6" fill="#a4a4a4"/>
+  <g fill="#5d6975"><rect x="9" y="14.6" width="5" height="2"/><rect x="16" y="14.6" width="5" height="2"/><rect x="23" y="14.6" width="5" height="2"/></g>
+  <rect x="8" y="19" width="32" height="19" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M11 23 H30 M11 27 H35 M11 31 H24" fill="none" stroke="#5d6975" stroke-width="1.4"/>
+  <rect x="25" y="29.6" width="2.4" height="3.4" fill="#1a1a1a"/>
+</svg>

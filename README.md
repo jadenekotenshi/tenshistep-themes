@@ -1,8 +1,8 @@
 # TenshiSTEP — a NeXTSTEP/OPENSTEP theme suite for KDE Plasma
 
 A complete NeXTSTEP / OPENSTEP-inspired desktop and boot theme, branded
-**TenshiNET** (emblem: a stylized OPENSTEP angel), in coordinated **light** and
-**dark** variants.
+**TenshiNET** (emblem: a stylized OPENSTEP angel), in coordinated **light**,
+**dark**, and **brushed-metal** variants.
 
 ## Bundles
 
@@ -10,7 +10,8 @@ A complete NeXTSTEP / OPENSTEP-inspired desktop and boot theme, branded
 |---|---|
 | `tenshistep-plasma/` | The light theme: Global Theme, colour scheme, Aurorae decoration, Konsole, Plasma style, Kvantum/QSS/QStyle, GTK3/4 theme, icon theme (~1,650 files — 588 apps, 521 mimetypes, 199 actions, 202 status, 106 devices), wallpaper package, SDDM, Plymouth, launchers, MIME types, and the software-update stack. Run `install.sh`. |
 | `tenshistep-darkmode/` | The dark variant (`TenshiSTEP-darkmode`) — icons, colours, Aurorae, Plasma style, Kvantum, GTK theme, wallpaper. |
-| `tenshistep-cursors/` | The **TenshiSTEP-CURSORS** Xcursor theme (SGI IRIX / 4Dwm idiom); wired into both Global Themes. |
+| `tenshistep-zirconium/` | The brushed-metal variant (`TenshiSTEP-zirconium`) — light chrome recoloured to brushed silver with a steel-blue accent and a literal brushed-aluminum streak texture; reuses the light icon set unchanged. Colours, Aurorae, Plasma style, Kvantum, QSS, native QStyle, GTK theme, SDDM, Plymouth, wallpaper. |
+| `tenshistep-cursors/` | The **TenshiSTEP-CURSORS** Xcursor theme (SGI IRIX / 4Dwm idiom); wired into all three Global Themes. |
 | `tenshistep-refind/` | rEFInd boot theme (light + dark) with 46 OS icons and HiDPI EFI splashes. |
 | `demo/` | The `EFI → rEFInd → Plymouth → SDDM → desktop` boot-sequence animation. |
 | `packaging/` | Arch `PKGBUILD` + AppStream MetaInfo for system-wide / KDE-Store distribution. |

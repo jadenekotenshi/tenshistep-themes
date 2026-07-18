@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium-zirconium-zirconium-zirconium-zirconium application grid -->
+  <g fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.5">
+    <rect x="9" y="9" width="8" height="8" rx="1"/><rect x="20" y="9" width="8" height="8" rx="1"/><rect x="31" y="9" width="8" height="8" rx="1"/>
+    <rect x="9" y="20" width="8" height="8" rx="1"/><rect x="20" y="20" width="8" height="8" rx="1"/><rect x="31" y="20" width="8" height="8" rx="1"/>
+    <rect x="9" y="31" width="8" height="8" rx="1"/><rect x="20" y="31" width="8" height="8" rx="1"/><rect x="31" y="31" width="8" height="8" rx="1"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="0.9">
+    <path d="M10 10 H16 M10 10 V16"/><path d="M21 10 H27 M21 10 V16"/><path d="M32 10 H38 M32 10 V16"/>
+    <path d="M10 21 H16 M10 21 V27"/><path d="M21 21 H27 M21 21 V27"/><path d="M32 21 H38 M32 21 V27"/>
+    <path d="M10 32 H16 M10 32 V38"/><path d="M21 32 H27 M21 32 V38"/><path d="M32 32 H38 M32 32 V38"/>
+  </g>
+</svg>

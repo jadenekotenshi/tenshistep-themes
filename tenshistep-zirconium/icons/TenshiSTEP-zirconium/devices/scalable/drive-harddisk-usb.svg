@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium USB hard disk -->
+  <rect x="7" y="14" width="34" height="20" rx="2" fill="#9cafc4" stroke="#1a1a1a" stroke-width="1.6"/>
+  <path d="M8.5 15.5 H39.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M8.5 32.5 H39.5" fill="none" stroke="#5d6975" stroke-width="1"/>
+  <rect x="11" y="20" width="14" height="2.4" fill="#5d6975"/>
+  <rect x="11" y="25" width="9" height="2.4" fill="#5d6975"/>
+  <!-- USB trident badge -->
+  <g stroke="#31353c" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M33 30 V19"/>
+    <circle cx="33" cy="18" r="1.4" fill="#31353c" stroke="none"/>
+    <path d="M33 24 L29 21 M29 21 V23.5"/>
+    <path d="M33 26 L37 23"/>
+  </g>
+  <rect x="30.5" y="22.6" width="3" height="3" rx="0.4" fill="#31353c" stroke="none"/>
+  <circle cx="27.5" cy="20.6" r="1.3" fill="#5fd07a" stroke="#1a1a1a" stroke-width="0.6"/>
+</svg>

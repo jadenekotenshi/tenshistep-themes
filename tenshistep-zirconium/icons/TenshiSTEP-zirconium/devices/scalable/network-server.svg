@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium-zirconium-zirconium server: stacked units -->
+  <g stroke="#1a1a1a" stroke-width="1.6">
+    <rect x="10" y="8" width="28" height="10" rx="1.5" fill="#9cafc4"/>
+    <rect x="10" y="20" width="28" height="10" rx="1.5" fill="#9cafc4"/>
+    <rect x="10" y="32" width="28" height="8" rx="1.5" fill="#9cafc4"/>
+  </g>
+  <g fill="#3a3a3a"><circle cx="32" cy="13" r="1.7"/><circle cx="32" cy="25" r="1.7"/><circle cx="32" cy="36" r="1.7"/></g>
+  <g fill="none" stroke="#5d6975" stroke-width="1.6"><path d="M14 13 H24"/><path d="M14 25 H24"/><path d="M14 36 H22"/></g>
+  <path d="M11.5 9.5 H36 M11.5 21.5 H36 M11.5 33.5 H36" fill="none" stroke="#ffffff" stroke-width="0.8"/>
+</svg>

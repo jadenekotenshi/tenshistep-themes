@@ -26,4 +26,6 @@ render "$REPO/tenshistep-plasma/qstyle/build/libtenshistepstyle.so" \
        TenshiSTEP "$HERE/preview-light.png" light
 render "$REPO/tenshistep-darkmode/qstyle/build/libtenshistepdarkmodestyle.so" \
        TenshiSTEP-darkmode "$HERE/preview-dark.png" dark
+render "$REPO/tenshistep-zirconium/qstyle/build/libtenshistepzirconiumstyle.so" \
+       TenshiSTEP-zirconium "$HERE/preview-zirconium.png" zirconium
 echo "Done."

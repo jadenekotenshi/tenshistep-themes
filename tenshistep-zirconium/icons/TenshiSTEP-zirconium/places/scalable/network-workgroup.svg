@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="3.5 3.5 41 41">
+  <!-- TenshiSTEP-zirconium-zirconium network workgroup: globe -->
+  <circle cx="24" cy="24" r="16" fill="#4a3fa0" stroke="#1a1a1a" stroke-width="1.8"/>
+  <g fill="none" stroke="#5a5a5a" stroke-width="1.3">
+    <ellipse cx="24" cy="24" rx="6.5" ry="16"/>
+    <path d="M8 24 H40 M10 16 H38 M10 32 H38"/>
+  </g>
+  <path d="M24 8 A16 16 0 0 0 10.5 15.5" fill="none" stroke="#ffffff" stroke-width="1.3"/>
+</svg>

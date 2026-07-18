@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=TenshiSTEP-zirconium
+Description=OPENSTEP-inspired boot splash — chiselled cube on a brushed-zirconium gradient
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/tenshistep-zirconium
+ScriptFile=/usr/share/plymouth/themes/tenshistep-zirconium/tenshistep-zirconium.script
