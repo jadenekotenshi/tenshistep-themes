@@ -4,14 +4,14 @@
  * Self-contained core (no Adwaita @import).
  */
 
-@define-color bg          #cacdd1;
-@define-color bg_dark     #b5b8bc;
+@define-color bg          #9a9d9f;
+@define-color bg_dark     #82858a;
 @define-color fg          #1a1a1a;
-@define-color fg_dim      #6a6e74;
+@define-color fg_dim      #4a4c4e;
 @define-color accent      #487697;
 @define-color accent_fg   #ffffff;
 @define-color light       #ffffff;
-@define-color shadow      #7c8188;
+@define-color shadow      #5c5e60;
 @define-color field       #ffffff;
 @define-color field_fg    #1a1a1a;
 
@@ -39,7 +39,7 @@ scrolledwindow,
 viewport {
   background-color: @bg;
   /* literal brushed-aluminum streak, repeating every 3px */
-  background-image: repeating-linear-gradient(to bottom,
+  background-image: repeating-linear-gradient(187deg,
       alpha(@light, 0.10) 0px, alpha(@light, 0.10) 1px,
       alpha(@fg, 0.045) 1px, alpha(@fg, 0.045) 2px,
       alpha(@light, 0) 2px, alpha(@light, 0) 3px);
@@ -66,7 +66,7 @@ headerbar,
 .titlebar,
 .header-bar {
   background-color: @bg;
-  background-image: repeating-linear-gradient(to bottom,
+  background-image: repeating-linear-gradient(187deg,
       alpha(@light, 0.14) 0px, alpha(@light, 0.14) 1px,
       alpha(@fg, 0.05) 1px, alpha(@fg, 0.05) 2px,
       alpha(@light, 0) 2px, alpha(@light, 0) 3px);
@@ -93,7 +93,7 @@ headerbar button,
 /* ---- Buttons ---- */
 button {
   background-color: @bg;
-  background-image: repeating-linear-gradient(to bottom,
+  background-image: repeating-linear-gradient(187deg,
       alpha(@light, 0.14) 0px, alpha(@light, 0.14) 1px,
       alpha(@fg, 0.05) 1px, alpha(@fg, 0.05) 2px,
       alpha(@light, 0) 2px, alpha(@light, 0) 3px);

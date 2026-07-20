@@ -15,10 +15,10 @@ Item {
     property int screenHeight: 600
 
     // NeXT bevel palette (brushed zirconium metal).
-    readonly property color colBase:      "#cacdd1"
+    readonly property color colBase:      "#9a9d9f"
     readonly property color colFrame:     "#1a1a1a"
     readonly property color colHighlight: "#ffffff"
-    readonly property color colShadow:    "#7c8188"
+    readonly property color colShadow:    "#5c5e60"
     readonly property color colAccent:    "#487697"
     readonly property color colText:      "#101010"
     readonly property color colTextSel:   "#ffffff"

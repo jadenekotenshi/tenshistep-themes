@@ -4,7 +4,7 @@ Rectangle {
     id: root
     width: 1024
     height: 768
-    color: "#8e97a1"
+    color: "#6f7274"
 
     property int sessionIndex: 0
     property string sessionName: "Default"
@@ -18,8 +18,8 @@ Rectangle {
     }
 
     gradient: Gradient {
-        GradientStop { position: 0.0; color: root.cfg("backgroundTop", "#bdc5cd") }
-        GradientStop { position: 1.0; color: root.cfg("backgroundBottom", "#86909c") }
+        GradientStop { position: 0.0; color: root.cfg("backgroundTop", "#a8abae") }
+        GradientStop { position: 1.0; color: root.cfg("backgroundBottom", "#6e7173") }
     }
 
     Image {
@@ -73,7 +73,7 @@ Rectangle {
         height: 58 + body.implicitHeight
         anchors.horizontalCenter: parent.horizontalCenter
         y: Math.round(root.height * root.panelFrac)
-        base: root.cfg("panelColor", "#cacdd1")
+        base: root.cfg("panelColor", "#9a9d9f")
         raised: true
 
         // literal brushed-aluminum streak across the panel body
@@ -161,7 +161,7 @@ Rectangle {
 
             Item {
                 width: parent.width; height: 3
-                Rectangle { width: parent.width; height: 1; color: "#7c8188" }
+                Rectangle { width: parent.width; height: 1; color: "#5c5e60" }
                 Rectangle { y: 1; width: parent.width; height: 1; color: "#ffffff" }
             }
 

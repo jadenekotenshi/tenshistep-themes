@@ -6,11 +6,11 @@ import QtQuick 2.0
 // Add child items directly; they stack above the bevel edges.
 Item {
     id: p
-    property color base: "#cacdd1"
+    property color base: "#9a9d9f"
     property color frame: "#1a1a1a"
     property bool raised: true
-    property color _tl: raised ? "#ffffff" : "#acaeb1"
-    property color _br: raised ? "#7c8188" : "#ffffff"
+    property color _tl: raised ? "#ffffff" : "#7a7c7e"
+    property color _br: raised ? "#5c5e60" : "#ffffff"
 
     Rectangle { anchors.fill: parent; color: p.base; border.color: p.frame; border.width: 1 }
     Rectangle { x: 1; y: 1; width: p.width - 2; height: 1; color: p._tl }

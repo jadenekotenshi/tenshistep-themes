@@ -29,8 +29,8 @@ Item {
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
-            GradientStop { position: 0.0; color: "#bdc5cd" }
-            GradientStop { position: 1.0; color: "#86909c" }
+            GradientStop { position: 0.0; color: "#a8abae" }
+            GradientStop { position: 1.0; color: "#6e7173" }
         }
     }
 
@@ -79,7 +79,7 @@ Item {
         height: 58 + body.implicitHeight
         anchors.horizontalCenter: parent.horizontalCenter
         y: Math.round(root.height * 0.50)
-        base: "#cacdd1"
+        base: "#9a9d9f"
         raised: true
 
         // literal brushed-aluminum streak across the panel body
@@ -136,7 +136,7 @@ Item {
             // NeXT groove separator
             Item {
                 width: parent.width; height: 3
-                Rectangle { width: parent.width; height: 1; color: "#7c8188" }
+                Rectangle { width: parent.width; height: 1; color: "#5c5e60" }
                 Rectangle { y: 1; width: parent.width; height: 1; color: "#ffffff" }
             }
 
@@ -145,7 +145,7 @@ Item {
                 width: parent.width; height: 30
                 NeXTButton {
                     anchors.left: parent.left; anchors.verticalCenter: parent.verticalCenter
-                    width: 120; height: 28; text: "Cancel"; textColor: "#7c8188"
+                    width: 120; height: 28; text: "Cancel"; textColor: "#5c5e60"
                     onClicked: { pw.text = ""; root.message = ""; pw.field.forceActiveFocus() }
                 }
                 NeXTButton {

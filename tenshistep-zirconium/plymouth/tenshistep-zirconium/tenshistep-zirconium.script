@@ -4,8 +4,8 @@
 //   angel centred horizontally, top at 7% of screen height, height 26% —
 //   high enough to sit above the SDDM login box in the handoff.
 
-Window.SetBackgroundTopColor(0.741, 0.773, 0.804);
-Window.SetBackgroundBottomColor(0.525, 0.565, 0.612);
+Window.SetBackgroundTopColor(0.659, 0.671, 0.682);
+Window.SetBackgroundBottomColor(0.431, 0.443, 0.451);
 
 screen_w = Window.GetWidth();
 screen_h = Window.GetHeight();

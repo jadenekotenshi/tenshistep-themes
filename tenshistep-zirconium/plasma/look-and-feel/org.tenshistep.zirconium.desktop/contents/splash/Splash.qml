@@ -7,8 +7,8 @@ Rectangle {
     property int stage
 
     gradient: Gradient {
-        GradientStop { position: 0.0; color: "#bdc5cd" }
-        GradientStop { position: 1.0; color: "#86909c" }
+        GradientStop { position: 0.0; color: "#a8abae" }
+        GradientStop { position: 1.0; color: "#6e7173" }
     }
 
     Column {
@@ -36,8 +36,8 @@ Rectangle {
 
             Rectangle {
                 anchors.fill: parent
-                color: "#bec3c7"; border.color: "#1a1a1a"; border.width: 1
-                Rectangle { x: 1; y: 1; width: parent.width - 2; height: 1; color: "#86909c" } // inset top shadow
+                color: "#8b8e90"; border.color: "#1a1a1a"; border.width: 1
+                Rectangle { x: 1; y: 1; width: parent.width - 2; height: 1; color: "#6e7173" } // inset top shadow
                 Rectangle { x: 1; y: parent.height - 2; width: parent.width - 2; height: 1; color: "#ffffff" }
             }
             Rectangle {

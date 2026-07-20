@@ -27,8 +27,8 @@ Item {
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
-            GradientStop { position: 0.0; color: "#bdc5cd" }
-            GradientStop { position: 1.0; color: "#86909c" }
+            GradientStop { position: 0.0; color: "#a8abae" }
+            GradientStop { position: 1.0; color: "#6e7173" }
         }
         opacity: 0.9
         MouseArea { anchors.fill: parent; onClicked: root.cancelRequested() }
@@ -39,7 +39,7 @@ Item {
         anchors.centerIn: parent
         width: 420
         height: 40 + col.implicitHeight
-        base: "#cacdd1"
+        base: "#9a9d9f"
         raised: true
 
         Rectangle {

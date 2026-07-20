@@ -30,6 +30,7 @@
 #include <QLineEdit>
 #include <QSlider>
 #include <QProgressBar>
+#include <QTabBar>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QWidget>
@@ -49,11 +50,11 @@ static QPalette themePalette(const QString &variant)
         pal.setColor(QPalette::Button,     QColor(0x3b, 0x40, 0x48));
         pal.setColor(QPalette::ButtonText, QColor(0xdc, 0xdf, 0xe4));
     } else if (variant == QLatin1String("zirconium")) {
-        pal.setColor(QPalette::Window,     QColor(0xc4, 0xc7, 0xcb));
+        pal.setColor(QPalette::Window,     QColor(0x91, 0x94, 0x97));
         pal.setColor(QPalette::WindowText, QColor(0x1a, 0x1a, 0x1a));
         pal.setColor(QPalette::Base,       QColor(0xff, 0xff, 0xff));
         pal.setColor(QPalette::Text,       QColor(0x1a, 0x1a, 0x1a));
-        pal.setColor(QPalette::Button,     QColor(0xca, 0xcd, 0xd1));
+        pal.setColor(QPalette::Button,     QColor(0x9a, 0x9d, 0x9f));
         pal.setColor(QPalette::ButtonText, QColor(0x1a, 0x1a, 0x1a));
     } else {
         pal.setColor(QPalette::Window,     QColor(0xa0, 0xa7, 0xb2));
@@ -98,6 +99,9 @@ int main(int argc, char **argv)
     root->addLayout(colA);
     root->addLayout(colB);
 
+    auto *tabs  = new QTabBar; tabs->addTab("Tab one"); tabs->addTab("Tab two"); tabs->addTab("Tab three");
+    colA->addWidget(tabs);
+
     auto *pb    = new QPushButton("Push button");
     auto *cbOn  = new QCheckBox("Checkbox on");  cbOn->setChecked(true);
     auto *cbOff = new QCheckBox("Checkbox off");
@@ -126,7 +130,7 @@ int main(int argc, char **argv)
     for (QWidget *k : kids) k->setPalette(pal);
     win.setPalette(pal);
 
-    win.resize(460, 210);
+    win.resize(460, 240);
     win.show();
     app.processEvents();
     app.processEvents();

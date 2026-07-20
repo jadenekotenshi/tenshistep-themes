@@ -5,72 +5,72 @@
   <g id="restore" transform="translate(0,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
     <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
-    <rect x="1" y="1" width="16" height="14" fill="#cacdd1"/>
+    <rect x="1" y="1" width="16" height="14" fill="#9a9d9f"/>
     <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
     <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
-    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
-    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
-    <rect x="6" y="3" width="7" height="7" fill="#cacdd1" stroke="#000000" stroke-width="1.3"/>
-    <rect x="4" y="6" width="7" height="7" fill="#cacdd1" stroke="#000000" stroke-width="1.3"/>
+    <rect x="1" y="14" width="16" height="1" fill="#5c5e60"/>
+    <rect x="16" y="1" width="1" height="14" fill="#5c5e60"/>
+    <rect x="6" y="3" width="7" height="7" fill="#9a9d9f" stroke="#000000" stroke-width="1.3"/>
+    <rect x="4" y="6" width="7" height="7" fill="#9a9d9f" stroke="#000000" stroke-width="1.3"/>
   </g>
 
   <g id="active-center" transform="translate(22,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
     <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
-    <rect x="1" y="1" width="16" height="14" fill="#cacdd1"/>
+    <rect x="1" y="1" width="16" height="14" fill="#9a9d9f"/>
     <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
     <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
-    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
-    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
-    <rect x="6" y="3" width="7" height="7" fill="#cacdd1" stroke="#000000" stroke-width="1.3"/>
-    <rect x="4" y="6" width="7" height="7" fill="#cacdd1" stroke="#000000" stroke-width="1.3"/>
+    <rect x="1" y="14" width="16" height="1" fill="#5c5e60"/>
+    <rect x="16" y="1" width="1" height="14" fill="#5c5e60"/>
+    <rect x="6" y="3" width="7" height="7" fill="#9a9d9f" stroke="#000000" stroke-width="1.3"/>
+    <rect x="4" y="6" width="7" height="7" fill="#9a9d9f" stroke="#000000" stroke-width="1.3"/>
   </g>
 
   <g id="hover-center" transform="translate(44,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
     <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
-    <rect x="1" y="1" width="16" height="14" fill="#dbdde0"/>
+    <rect x="1" y="1" width="16" height="14" fill="#a6a9ab"/>
     <rect x="1" y="1" width="16" height="1"  fill="#ffffff"/>
     <rect x="1" y="1" width="1"  height="14" fill="#ffffff"/>
-    <rect x="1" y="14" width="16" height="1" fill="#7c8188"/>
-    <rect x="16" y="1" width="1" height="14" fill="#7c8188"/>
-    <rect x="6" y="3" width="7" height="7" fill="#dbdde0" stroke="#000000" stroke-width="1.3"/>
-    <rect x="4" y="6" width="7" height="7" fill="#dbdde0" stroke="#000000" stroke-width="1.3"/>
+    <rect x="1" y="14" width="16" height="1" fill="#5c5e60"/>
+    <rect x="16" y="1" width="1" height="14" fill="#5c5e60"/>
+    <rect x="6" y="3" width="7" height="7" fill="#a6a9ab" stroke="#000000" stroke-width="1.3"/>
+    <rect x="4" y="6" width="7" height="7" fill="#a6a9ab" stroke="#000000" stroke-width="1.3"/>
   </g>
 
   <g id="pressed-center" transform="translate(66,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
     <rect x="0" y="0" width="18" height="16" fill="#1a1a1a"/>
-    <rect x="1" y="1" width="16" height="14" fill="#b2b5b9"/>
-    <rect x="1" y="1" width="16" height="1"  fill="#7c8188"/>
-    <rect x="1" y="1" width="1"  height="14" fill="#7c8188"/>
+    <rect x="1" y="1" width="16" height="14" fill="#82858a"/>
+    <rect x="1" y="1" width="16" height="1"  fill="#5c5e60"/>
+    <rect x="1" y="1" width="1"  height="14" fill="#5c5e60"/>
     <rect x="1" y="14" width="16" height="1" fill="#ffffff"/>
     <rect x="16" y="1" width="1" height="14" fill="#ffffff"/>
-    <rect x="7" y="4" width="7" height="7" fill="#b2b5b9" stroke="#000000" stroke-width="1.3"/>
-    <rect x="5" y="7" width="7" height="7" fill="#b2b5b9" stroke="#000000" stroke-width="1.3"/>
+    <rect x="7" y="4" width="7" height="7" fill="#82858a" stroke="#000000" stroke-width="1.3"/>
+    <rect x="5" y="7" width="7" height="7" fill="#82858a" stroke="#000000" stroke-width="1.3"/>
   </g>
 
   <g id="inactive-center" transform="translate(88,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
-    <rect x="0" y="0" width="18" height="16" fill="#494949"/>
-    <rect x="1" y="1" width="16" height="14" fill="#c7c7c7"/>
+    <rect x="0" y="0" width="18" height="16" fill="#4a4a4a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#9d9d9d"/>
     <rect x="1" y="1" width="16" height="1"  fill="#ebebeb"/>
     <rect x="1" y="1" width="1"  height="14" fill="#ebebeb"/>
     <rect x="1" y="14" width="16" height="1" fill="#a9a9a9"/>
     <rect x="16" y="1" width="1" height="14" fill="#a9a9a9"/>
-    <rect x="6" y="3" width="7" height="7" fill="#c7c7c7" stroke="#555555" stroke-width="1.3"/>
-    <rect x="4" y="6" width="7" height="7" fill="#c7c7c7" stroke="#555555" stroke-width="1.3"/>
+    <rect x="6" y="3" width="7" height="7" fill="#9d9d9d" stroke="#555555" stroke-width="1.3"/>
+    <rect x="4" y="6" width="7" height="7" fill="#9d9d9d" stroke="#555555" stroke-width="1.3"/>
   </g>
 
   <g id="deactivated-center" transform="translate(110,0)">
     <rect x="0" y="0" width="18" height="16" fill="#000000" fill-opacity="0"/>
-    <rect x="0" y="0" width="18" height="16" fill="#494949"/>
-    <rect x="1" y="1" width="16" height="14" fill="#c7c7c7"/>
+    <rect x="0" y="0" width="18" height="16" fill="#4a4a4a"/>
+    <rect x="1" y="1" width="16" height="14" fill="#9d9d9d"/>
     <rect x="1" y="1" width="16" height="1"  fill="#ebebeb"/>
     <rect x="1" y="1" width="1"  height="14" fill="#ebebeb"/>
     <rect x="1" y="14" width="16" height="1" fill="#a9a9a9"/>
     <rect x="16" y="1" width="1" height="14" fill="#a9a9a9"/>
-    <rect x="6" y="3" width="7" height="7" fill="#c7c7c7" stroke="#777777" stroke-width="1.3"/>
-    <rect x="4" y="6" width="7" height="7" fill="#c7c7c7" stroke="#777777" stroke-width="1.3"/>
+    <rect x="6" y="3" width="7" height="7" fill="#9d9d9d" stroke="#777777" stroke-width="1.3"/>
+    <rect x="4" y="6" width="7" height="7" fill="#9d9d9d" stroke="#777777" stroke-width="1.3"/>
   </g>
 </svg>

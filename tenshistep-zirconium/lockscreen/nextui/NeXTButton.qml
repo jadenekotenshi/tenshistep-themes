@@ -7,7 +7,7 @@ Panel {
     property color textColor: "#1a1a1a"
     signal clicked()
 
-    base: "#cacdd1"
+    base: "#9a9d9f"
     raised: !ma.pressed
     height: 28
 

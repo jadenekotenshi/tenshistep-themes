@@ -29,7 +29,7 @@ Panel {
     Text {
         anchors.left: parent.left; anchors.leftMargin: 9
         anchors.verticalCenter: parent.verticalCenter
-        text: f.placeholder; color: "#bcbfc1"
+        text: f.placeholder; color: "#8b8e90"
         font.family: "Helvetica"; font.pixelSize: 14
         visible: input.text.length === 0 && !input.activeFocus
     }

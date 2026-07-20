@@ -10,52 +10,109 @@
 #include <QStyleOptionProgressBar>
 #include <QStyleOptionComboBox>
 #include <QStyleOptionSpinBox>
+#include <QStyleOptionTab>
+#include <cmath>
 
 // --- zirconium (brushed-metal) OPENSTEP-muted palette constants ------------
+// Medium steel gray, aiming for the old Enlightenment "BrushedMetal" family
+// rather than a bright silver -- a proper mid-tone anodized-aluminum chrome.
 static const QColor kDark  (0x1a, 0x1a, 0x1a);
 static const QColor kHi    (0xff, 0xff, 0xff);
-static const QColor kSh    (0x7c, 0x81, 0x88);
+static const QColor kSh    (0x5c, 0x5e, 0x60);
 static const QColor kBlue  (0x48, 0x76, 0x97);
-static const QColor kButton(0xca, 0xcd, 0xd1);
-static const QColor kWindow(0xc4, 0xc7, 0xcb);
-static const QColor kGroove(0xb3, 0xb6, 0xba);
+static const QColor kButton(0x9a, 0x9d, 0x9f);
+static const QColor kWindow(0x91, 0x94, 0x97);
+static const QColor kGroove(0x82, 0x85, 0x87);
 static const QColor kGreen (0x4a, 0x7a, 0x3a);
 static const QColor kRadio (0x22, 0x3f, 0x53);
 
 // --- helpers ----------------------------------------------------------------
 
-// Literal brushed-aluminum texture: faint alternating horizontal streaks,
-// drawn over a flat (or gradient) fill before the chiselled bevel edges go on
-// top. This is the zirconium variant's signature over the plain light/dark themes.
-static void paintBrushedStreaks(QPainter *p, const QRect &r)
+// Cheap, stable (not time-varying) hash -> [0,1). Seeded by integer position
+// so the same pixel always gets the same grain: painting must be idempotent
+// across repaints (hover/resize), or the texture would visibly jitter.
+static inline float grainNoise(int seed)
 {
-    if (r.width() < 10 || r.height() < 10) return;
-    const int x1 = r.left() + 2, x2 = r.right() - 2;
+    quint32 x = static_cast<quint32>(seed);
+    x ^= x << 13; x ^= x >> 17; x ^= x << 5;
+    return (x & 0xFFFFFFu) / float(0xFFFFFFu);
+}
+
+// A soft directional sheen rather than a flat tint -- evokes a curved,
+// anodized aluminum bar catching light near the top third, the way the old
+// Enlightenment BrushedMetal bevels graded rather than reading as a solid
+// colour swatch.
+static QLinearGradient metalSheen(const QRect &r, const QColor &base)
+{
+    QLinearGradient g(r.topLeft(), r.bottomLeft());
+    g.setColorAt(0.00, base.lighter(112));
+    g.setColorAt(0.16, base.lighter(124));
+    g.setColorAt(0.42, base.lighter(106));
+    g.setColorAt(0.72, base.darker(103));
+    g.setColorAt(1.00, base.darker(114));
+    return g;
+}
+
+// Irregular brushed-aluminum grain: uneven row spacing, variable opacity, and
+// streaks that don't run the full width -- reads as an actual brushed surface
+// rather than an engineered, perfectly regular ruled-line pattern. Streaks run
+// at a slight consistent angle (as if the metal were brushed in one diagonal
+// pass) rather than dead-horizontal, which is what read as "engineered" before.
+static constexpr double kGrainSlope = 0.12;   // ~7 degrees
+
+static void paintBrushedMetal(QPainter *p, const QRect &r, int grainSeed)
+{
+    if (r.width() < 8 || r.height() < 8) return;
+    const int x1 = r.left() + 1, x2 = r.right() - 1;
     if (x2 <= x1) return;
     p->save();
     p->setRenderHint(QPainter::Antialiasing, false);
-    for (int y = r.top() + 2; y < r.bottom() - 1; y += 3) {
-        p->setPen(QColor(255, 255, 255, 26));   // ~0.10 alpha
-        p->drawLine(x1, y, x2, y);
-        if (y + 1 < r.bottom() - 1) {
-            p->setPen(QColor(0, 0, 0, 14));     // ~0.055 alpha
-            p->drawLine(x1, y + 1, x2, y + 1);
+    p->setClipRect(r.adjusted(1, 1, -1, -1));
+    int y = r.top() + 1;
+    const int bottom = r.bottom() - 1;
+    while (y < bottom) {
+        const int ry = y - r.top();
+        const float n1 = grainNoise(ry * 7 + grainSeed);
+        const float n2 = grainNoise(ry * 13 + grainSeed + 91);
+        const float n3 = grainNoise(ry * 31 + grainSeed + 233);
+        const int step = 1 + int(n3 * 3.4f);   // 1..4px, irregular pitch
+        if (n1 > 0.34f) {                       // not every row gets a stroke
+            const bool bright = n2 > 0.46f;
+            const int alpha = bright ? (10 + int(n2 * 24)) : (6 + int(n1 * 14));
+            p->setPen(bright ? QColor(255, 255, 255, alpha) : QColor(0, 0, 0, alpha));
+            const int inset = int(r.width() * 0.22f);
+            const int lx1 = x1 + int(grainNoise(ry * 17 + grainSeed + 5) * inset);
+            const int lx2 = x2 - int(grainNoise(ry * 23 + grainSeed + 9) * inset);
+            if (lx2 > lx1) {
+                const int dy = int(std::lround((lx2 - lx1) * kGrainSlope));
+                p->drawLine(lx1, y, lx2, y + dy);
+            }
         }
+        y += step;
     }
     p->restore();
 }
 
-// Chiselled bevel: fill + brushed streaks + 1px dark frame + white top/left
-// highlight and dark bottom/right shadow (inverted when sunken). `fill` may
-// be a gradient brush.
+// Chiselled bevel: fill (a flat colour becomes a metal sheen gradient; an
+// existing gradient/pattern brush, e.g. the progress fill, is left alone) +
+// brushed grain + 1px dark frame + white top/left highlight and dark
+// bottom/right shadow (inverted when sunken). `metal` gates the sheen/grain
+// treatment -- content areas (line edits, item views) stay flat: real
+// brushed-metal UIs only texture the chrome, never the paper-white surfaces
+// you read/type on.
 static void paintBevel(QPainter *p, const QRect &r, const QBrush &fill,
-                       bool sunken, const QColor &frame = kDark, bool edges = true)
+                       bool sunken, const QColor &frame = kDark, bool edges = true,
+                       bool metal = true)
 {
     if (r.width() < 2 || r.height() < 2) { p->fillRect(r, fill); return; }
     p->save();
     p->setRenderHint(QPainter::Antialiasing, false);
-    p->fillRect(r, fill);
-    paintBrushedStreaks(p, r);
+    if (metal && fill.style() == Qt::SolidPattern && fill.color().alpha() > 0) {
+        p->fillRect(r, metalSheen(r, fill.color()));
+        paintBrushedMetal(p, r, r.width() * 131 + r.height() * 977);
+    } else {
+        p->fillRect(r, fill);
+    }
     const int L = r.left(), T = r.top(), R = r.right(), B = r.bottom();
     p->setPen(frame);                       // outer frame
     p->drawRect(QRect(L, T, r.width() - 1, r.height() - 1));
@@ -120,14 +177,14 @@ static void applyPalette(QPalette &pal)
     pal.setColor(QPalette::AlternateBase,   QColor(0xee, 0xee, 0xee));
     pal.setColor(QPalette::Button,          kButton);
     pal.setColor(QPalette::Light,           kHi);
-    pal.setColor(QPalette::Midlight,        QColor(0xe0, 0xe2, 0xe5));
+    pal.setColor(QPalette::Midlight,        QColor(0xb3, 0xb6, 0xb8));
     pal.setColor(QPalette::Mid,             kSh);
     pal.setColor(QPalette::Dark,            kDark);
     pal.setColor(QPalette::Shadow,          kDark);
     pal.setColor(QPalette::WindowText,      kDark);
     pal.setColor(QPalette::Text,            kDark);
     pal.setColor(QPalette::ButtonText,      kDark);
-    pal.setColor(QPalette::ToolTipBase,     QColor(0xe9, 0xe8, 0xe2));
+    pal.setColor(QPalette::ToolTipBase,     QColor(0xca, 0xc8, 0xc2));
     pal.setColor(QPalette::ToolTipText,     kDark);
     pal.setColor(QPalette::Highlight,       kBlue);
     pal.setColor(QPalette::HighlightedText, QColor(Qt::white));
@@ -173,14 +230,14 @@ void TenshiSTEPZirconiumStyle::drawPrimitive(PrimitiveElement pe, const QStyleOp
     }
     case PE_PanelLineEdit: {
         const bool focus = opt->state & State_HasFocus;
-        paintBevel(p, opt->rect, opt->palette.base().color(), true, focus ? kBlue : kDark);
+        paintBevel(p, opt->rect, opt->palette.base().color(), true, focus ? kBlue : kDark, true, false);
         return;
     }
     case PE_FrameLineEdit:
         return; // the panel already draws the recessed frame
     case PE_IndicatorCheckBox: {
         // NeXT-style: grey RAISED bevel with a darker silvery-grey check
-        paintBevel(p, opt->rect, QColor(0xda, 0xdd, 0xe0), false,
+        paintBevel(p, opt->rect, QColor(0xb3, 0xb6, 0xb8), false,
                    (opt->state & State_HasFocus) ? kBlue : kDark);
         if (opt->state & State_On) {
             const QRect r = opt->rect.adjusted(3, 3, -3, -3);
@@ -256,13 +313,19 @@ void TenshiSTEPZirconiumStyle::drawControl(ControlElement ce, const QStyleOption
         QRect fill(r.left(), r.top(), int(r.width() * frac), r.height());
         if (fill.width() < 1) return;
         p->save();
-        p->fillRect(fill, metalFill(fill));
-        paintBrushedStreaks(p, fill);
+        p->fillRect(fill, metalFill(fill));             // glossy indicator fill -- no brush grain
         p->setPen(QColor(0xe6, 0xf1, 0xf9));            // top sheen
         p->drawLine(fill.left(), fill.top() + 1, fill.right(), fill.top() + 1);
         p->setPen(QColor(0x14, 0x27, 0x33));            // dark bottom edge
         p->drawLine(fill.left(), fill.bottom(), fill.right(), fill.bottom());
         p->restore();
+        return;
+    }
+    case CE_TabBarTabShape: {
+        // NeXT idiom: the selected tab reads as a raised button; unselected
+        // tabs sit recessed behind it, same bevel language as everything else.
+        const bool selected = opt->state & State_Selected;
+        paintBevel(p, opt->rect, kButton, !selected);
         return;
     }
     default:
@@ -339,7 +402,7 @@ void TenshiSTEPZirconiumStyle::drawComplexControl(ComplexControl cc, const QStyl
 
         // recessed track
         p->fillRect(groove, kGroove);
-        paintBrushedStreaks(p, groove);
+        paintBrushedMetal(p, groove, groove.width() * 131 + groove.height() * 977);
         p->setPen(kDark);
         p->drawRect(opt->rect.adjusted(0, 0, -1, -1));
 
@@ -376,7 +439,7 @@ void TenshiSTEPZirconiumStyle::drawComplexControl(ComplexControl cc, const QStyl
         const bool editable = cb && cb->editable;
         const bool sunken = opt->state & (State_On | State_Sunken);
         // body: editable combo -> recessed field; pop-up button -> raised bevel
-        if (editable) paintBevel(p, opt->rect, opt->palette.base(), true);
+        if (editable) paintBevel(p, opt->rect, opt->palette.base(), true, kDark, true, false);
         else          paintBevel(p, opt->rect, kButton, false);
         // NeXT pop-up: a raised inset button holds the arrow (sinks when pressed),
         // so it reads as a raised control rather than a recessed well.
@@ -418,7 +481,7 @@ void TenshiSTEPZirconiumStyle::drawComplexControl(ComplexControl cc, const QStyl
         // splits it from the text field and divides the up/down halves; the pressed
         // half darkens.
         const auto *sb = qstyleoption_cast<const QStyleOptionSpinBox *>(opt);
-        paintBevel(p, opt->rect, opt->palette.base(), true);
+        paintBevel(p, opt->rect, opt->palette.base(), true, kDark, true, false);
         const QRect up   = subControlRect(cc, opt, SC_SpinBoxUp,   w);
         const QRect down = subControlRect(cc, opt, SC_SpinBoxDown, w);
         const bool upSunk   = sb && (sb->activeSubControls & SC_SpinBoxUp)   && (opt->state & State_Sunken);
@@ -429,7 +492,7 @@ void TenshiSTEPZirconiumStyle::drawComplexControl(ComplexControl cc, const QStyl
             const int midY = up.bottom();
             p->save();
             p->fillRect(colR, kButton);
-            paintBrushedStreaks(p, colR);
+            paintBrushedMetal(p, colR, colR.width() * 131 + colR.height() * 977);
             if (upSunk)   p->fillRect(QRect(colR.left(), colR.top(), colR.width(), midY - colR.top() + 1), kGroove);
             if (downSunk) p->fillRect(QRect(colR.left(), midY + 1, colR.width(), colR.bottom() - midY), kGroove);
             p->setPen(kSh);
