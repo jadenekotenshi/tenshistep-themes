@@ -29,15 +29,31 @@ project follows [Semantic Versioning](https://semver.org/).
   authored blind.
 
 ### Fixed — lock screen unlock hang (all three variants)
-- `lockscreen/LockScreenUi.qml`'s `onSucceeded` handler only called
-  `Qt.quit()` when `authenticator.hadPrompt` was true, with no fallback for
-  the false case (unlike the stock greeter, which routes to a follow-up
-  screen there). Since this custom UI only supports password auth and has
-  no such fallback screen, a `hadPrompt == false` success silently did
-  nothing — the screen would sit there after a correct password with no
-  error and no unlock. Fixed in all six copies (light, dark, zirconium ×
-  standalone + Global Theme bundle) by unconditionally quitting on any
-  successful authentication.
+Found and fixed live, on a running Plasma 6 session, via `journalctl`-traced
+reproduction (not guesswork) across `lockscreen/LockScreenUi.qml`'s six
+copies (light, dark, zirconium × standalone + Global Theme bundle):
+
+- **`onSucceeded` had no fallback for `hadPrompt == false`.** The stock
+  greeter routes that case to a follow-up screen; this minimal password-only
+  UI had no such screen and did nothing at all, silently hanging after a
+  correct password with no error and no unlock. Fixed by unconditionally
+  calling `Qt.quit()` on any successful authentication.
+- **The real cause of "type correct password, click Unlock, nothing
+  happens" on a timeout-triggered lock (manual `Meta+L` always worked
+  fine):** the `pam_kwallet5` PAM stack goes idle-stale if the on-screen
+  `authenticator` conversation started at load sits untouched for a real
+  few minutes, which only manifests for the slower correct-password
+  unwrap/setcred path — never reproduced by short manual-lock tests or by
+  synthetic wrong-password checks, which fail fast before ever exercising
+  it. A `startAuthenticating()` call issued fresh right before an attempt
+  always worked instantly, so the fix keeps the conversation warm with a
+  30-second keep-alive re-arm while the screen sits locked and idle,
+  instead of waiting to react after the fact.
+- Two supporting hardenings from the investigation, kept as defense in
+  depth: a **submit-in-flight guard** (`authInFlight`) so a single Enter
+  press can't fire more than one `respond()` into an outstanding PAM
+  prompt, and a **4-second watchdog** that force-restarts the conversation
+  and lets the user retry if a submitted response ever goes unanswered.
 
 ## [0.1.0] — 2026-07-08
 

@@ -157,13 +157,45 @@ Item {
         }
     }
 
+    // Guards against a single Enter press (or Unlock click) resulting in
+    // more than one authenticator.respond() call. This is the actual root
+    // cause found live: on some systems Return key-repeat fires TextInput's
+    // accepted() several times in quick succession; PAM only expects one
+    // answer per outstanding prompt, and multiple respond() calls for the
+    // same prompt corrupted/hung the conversation until the watchdog forced
+    // a restart. The stock greeter avoids this by disabling its password
+    // field while a response is in flight -- this does the same via a flag.
+    property bool authInFlight: false
+
     function submit() {
+        if (root.authInFlight) {
+            return
+        }
         root.message = ""
         if (typeof authenticator !== "undefined" && authenticator
                 && typeof authenticator.respond === "function") {
+            root.authInFlight = true
             authenticator.respond(pw.text)
+            submitWatchdog.restart()
         } else {
             root.message = "Authentication backend unavailable."
+        }
+    }
+
+    // Self-healing backstop: if a submitted response produces neither
+    // onSucceeded nor onFailed within a few seconds -- the PAM conversation
+    // went stale (e.g. this screen sat idle a while after a timeout-lock,
+    // as opposed to an immediate manual unlock) -- re-arm and let the user
+    // try again instead of leaving the screen stuck with no feedback.
+    Timer {
+        id: submitWatchdog
+        interval: 4000
+        onTriggered: {
+            root.authInFlight = false
+            root.message = "Reconnecting — please try again."
+            pw.text = ""
+            pw.field.forceActiveFocus()
+            root.startAuth()
         }
     }
 
@@ -182,10 +214,14 @@ Item {
             // fall back to), so any success -- prompted or not -- means unlock now. The
             // stock greeter's hadPrompt-gated branch left this silently doing nothing
             // when hadPrompt was false, hanging the screen after a correct password.
+            root.authInFlight = false
+            submitWatchdog.stop()
             Qt.quit()
         }
         function onFailed(kind) {
             if (kind !== undefined && kind !== 0) return   // ignore non-interactive authenticators
+            root.authInFlight = false
+            submitWatchdog.stop()
             root.message = "Authentication failed — please try again."
             pw.text = ""
             pw.field.forceActiveFocus()
@@ -206,5 +242,22 @@ Item {
     }
 
     Keys.onEscapePressed: { pw.text = ""; root.message = "" }
+    // Found live (journalctl-confirmed) that the PAM/kwallet conversation
+    // started at load goes idle-stale if the screen sits locked a real few
+    // minutes (the normal case for a timeout-lock, vs. an immediate manual
+    // unlock): pam_kwallet5's slower unwrap/setcred path silently never
+    // completes for the first respond() after a long gap, while a FRESH
+    // startAuthenticating() issued right before an attempt always works
+    // instantly. Neither call timing (synchronous vs. deferred) nor
+    // duplicate-call suppression changed this -- it is server-side kwallet/
+    // PAM idle behaviour, not a QML sequencing bug. Rather than reactively
+    // detecting and retrying (the submitWatchdog below still does that as a
+    // backstop), proactively keep the conversation warm with a periodic
+    // re-arm while locked and idle, so it's never more than 30s stale by
+    // the time a real attempt happens.
     Component.onCompleted: { root.startAuth(); pw.field.forceActiveFocus() }
+    Timer {
+        interval: 30000; running: true; repeat: true
+        onTriggered: if (!root.authInFlight) root.startAuth()
+    }
 }
