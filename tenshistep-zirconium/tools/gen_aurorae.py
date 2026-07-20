@@ -34,8 +34,9 @@ def sheen(base_hex):
 
 def brushed_band(x, y, w, h, base):
     """A full sheen+grain fill for a band wide enough to carry the texture."""
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{sheen(base)}"/>' + \
-           brushed_metal_svg(x, y, w, h, x * 131 + y * 977 + w * 13 + h * 29)
+    clip_def, body = brushed_metal_svg(x, y, w, h, x * 131 + y * 977 + w * 13 + h * 29)
+    _defs.append(clip_def)
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{sheen(base)}"/>' + body
 
 g = []  # (id, content) pairs, each wrapped in <g transform=...>
 

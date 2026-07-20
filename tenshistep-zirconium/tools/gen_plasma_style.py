@@ -33,7 +33,9 @@ def region(ox, oy, w, h, rowpos, colpos, base, frame, raised, grained=True):
     fillref = sheen_fill(base) if grained else base
     r = [f'<rect x="{ox}" y="{oy}" width="{w}" height="{h}" fill="{fillref}"/>']
     if rowpos == 'mid' and colpos == 'mid' and grained:
-        r.append(brushed_metal_svg(ox, oy, w, h, ox * 131 + oy * 977 + w * 13 + h * 29))
+        clip_def, body = brushed_metal_svg(ox, oy, w, h, ox * 131 + oy * 977 + w * 13 + h * 29)
+        _defs.append(clip_def)
+        r.append(body)
     if rowpos == 'top':    r.append(f'<rect x="{ox}" y="{oy}" width="{w}" height="1" fill="{frame}"/>')
     if rowpos == 'bottom': r.append(f'<rect x="{ox}" y="{oy+h-1}" width="{w}" height="1" fill="{frame}"/>')
     if colpos == 'left':   r.append(f'<rect x="{ox}" y="{oy}" width="1" height="{h}" fill="{frame}"/>')

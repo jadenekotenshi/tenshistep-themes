@@ -52,16 +52,21 @@ _clip_counter = [0]
 
 
 def brushed_metal_svg(x, y, w, h, grain_seed):
-    """Render the grain as a string of SVG <line> elements, clipped to the rect."""
+    """Render the grain as (clip_def, body): clip_def is a <clipPath> that the
+    caller MUST place inside <defs> -- Qt's QSvgRenderer (used by Aurorae,
+    Plasma Style and Kvantum) renders the preceding sibling as solid black
+    when a <clipPath> appears inline instead of in <defs>, even though
+    librsvg-based tools render it fine either way. body is the clipped <g>
+    of grain <line> elements, safe to place inline."""
     _clip_counter[0] += 1
     clip_id = f'gc{grain_seed & 0xffff}_{_clip_counter[0]}'
-    out = [f'<clipPath id="{clip_id}"><rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h-2}"/></clipPath>',
-           f'<g clip-path="url(#{clip_id})">']
+    clip_def = f'<clipPath id="{clip_id}"><rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h-2}"/></clipPath>'
+    out = [f'<g clip-path="url(#{clip_id})">']
     for lx1, ly1, lx2, ly2, color, alpha in brushed_metal_lines(x, y, w, h, grain_seed):
         out.append(f'<line x1="{lx1}" y1="{ly1}" x2="{lx2}" y2="{ly2}" '
                     f'stroke="{color}" stroke-opacity="{alpha:.3f}"/>')
     out.append('</g>')
-    return ''.join(out)
+    return clip_def, ''.join(out)
 
 
 def metal_sheen_stops(base_hex):
