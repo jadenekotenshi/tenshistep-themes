@@ -48,9 +48,13 @@ def brushed_metal_lines(x, y, w, h, grain_seed):
         row += step
 
 
+_clip_counter = [0]
+
+
 def brushed_metal_svg(x, y, w, h, grain_seed):
     """Render the grain as a string of SVG <line> elements, clipped to the rect."""
-    clip_id = f'gc{grain_seed & 0xffff}'
+    _clip_counter[0] += 1
+    clip_id = f'gc{grain_seed & 0xffff}_{_clip_counter[0]}'
     out = [f'<clipPath id="{clip_id}"><rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h-2}"/></clipPath>',
            f'<g clip-path="url(#{clip_id})">']
     for lx1, ly1, lx2, ly2, color, alpha in brushed_metal_lines(x, y, w, h, grain_seed):
